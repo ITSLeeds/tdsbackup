@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Schedule – Transport Data Science</title>
+<title>Reading List – Transport Data Science</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -65,16 +85,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
-<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
-<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
-<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
-<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
-<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
-<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
 
 </head>
@@ -88,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./schedule.html">Schedule</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./reading.html">Reading list</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link active">
+  <a href="./schedule.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Schedule</span></a>
   </div>
 </li>
@@ -148,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./reading.html" class="sidebar-item-text sidebar-link">
+  <a href="./reading.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Reading list</span></a>
   </div>
 </li>
@@ -157,15 +167,28 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#core-reading" id="toc-core-reading" class="nav-link active" data-scroll-target="#core-reading"><span class="header-section-number">1</span> Core Reading</a></li>
+  <li><a href="#software-and-tools" id="toc-software-and-tools" class="nav-link" data-scroll-target="#software-and-tools"><span class="header-section-number">2</span> Software and Tools</a></li>
+  <li><a href="#research-applications" id="toc-research-applications" class="nav-link" data-scroll-target="#research-applications"><span class="header-section-number">3</span> Research Applications</a></li>
+  <li><a href="#data-visualization" id="toc-data-visualization" class="nav-link" data-scroll-target="#data-visualization"><span class="header-section-number">4</span> Data Visualization</a>
+  <ul class="collapse">
+  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous"><span class="header-section-number">4.1</span> Miscellaneous</a></li>
+  </ul></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references"><span class="header-section-number">5</span> References</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Schedule</h1>
+<h1 class="title">Reading List</h1>
 </div>
 
 
@@ -182,18 +205,160 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<!-- From https://timetable.leeds.ac.uk/teaching/202425/reporting/Individual?objectclass=module&idtype=name&identifier=TRAN5340M01&&template=SWSCUST+module+Individual&days=1-7&weeks=1-52&periods=1-21 -->
-<p>The timetable below is a user-friently representation of the timetable for the module (see github for <a href="https://github.com/itsleeds/tds/blob/main/timetable.csv">.csv</a> and <a href="https://github.com/itsleeds/tds/releases/download/2025/timetable.ics">.ics</a> versions). See <a href="https://timetable.leeds.ac.uk/teaching/202425/reporting/Individual?objectclass=module&amp;idtype=name&amp;identifier=TRAN5340M01&amp;&amp;template=SWSCUST+module+Individual&amp;days=1-7&amp;weeks=1-52&amp;periods=1-21">timetable.leeds.ac.uk</a> for the official timetable. If you spot any discrepancies, please let us know.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-2ef72f763d01ea141e4c" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-2ef72f763d01ea141e4c">{"x":{"filter":"none","vertical":false,"data":[["<a href='p1'>p1<\/a>","<a href='d1'>d1<\/a>","<a href='p2'>p2<\/a>","<a href='p3'>p3<\/a>","<a href='s1'>s1<\/a>","<a href='d2'>d2<\/a>","<a href='p4'>p4<\/a>","<a href='s2'>s2<\/a>","<a href='p5'>p5<\/a>","<a href='p6'>p6<\/a>","<a href='d3'>d3<\/a>"],["TDS Practical 1: Introduction to transport data science (RL, MM, ZW, YY) Located in Richard Hughes Cluster (1.40)","Computer set-up","TDS Practical 2: Getting transport data (RL, YY) Located in Richard Hughes Cluster (1.40)","TDS Practical 3: Origin-destination data (RL, YY) Located in Richard Hughes Cluster (1.40)","Seminar 1: TBC","Draft portfolio","TDS Practical 4: Routing (MM, YY) Located in Richard Hughes Cluster (1.40)","Seminar 2 Will Deakin, Network Rail","TDS Practical 5: Visualising transport data (RL, YY) Located in Richard Hughes Cluster (1.40)","TDS Practical 6: Project work (RL, MM, ZW, YY) Located in Richard Hughes Cluster (1.40)","Deadline: coursework, 2pm"],["2025-01-30 10:00","2025-01-31 13:00","2025-02-06 10:00","2025-02-13 10:00","2025-02-20 10:00","2025-02-21 13:00","2025-03-06 10:00","2025-03-20 14:00","2025-03-27 10:00","2025-05-01 10:00","2025-05-16 13:00"],[3,2,3,3,1,0,3,3,3,3,0],["Richard Hughes Cluster (1.40)","Online - Teams","Richard Hughes Cluster (1.40)","Richard Hughes Cluster (1.40)","Institute for Transport Studies 1.11","Online - Teams","Richard Hughes Cluster (1.40)","Institute for Transport Studies 1.11","Richard Hughes Cluster (1.40)","Richard Hughes Cluster (1.40)","Online - Teams"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Session ID<\/th>\n      <th>Description<\/th>\n      <th>Time<\/th>\n      <th>Duration<\/th>\n      <th>Location<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"columnDefs":[{"className":"dt-right","targets":3},{"name":"Session ID","targets":0},{"name":"Description","targets":1},{"name":"Time","targets":2},{"name":"Duration","targets":3},{"name":"Location","targets":4}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<p>This reading list contains key resources for the Transport Data Science module, organized by topic.</p>
+<section id="core-reading" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Core Reading</h1>
+<ul>
+<li><a href="https://r4ds.had.co.nz/">R for Data Science</a> <span class="citation" data-cites="wickham_data_2023">(<a href="#ref-wickham_data_2023" role="doc-biblioref">Wickham et al., 2023</a>)</span>
+<ul>
+<li>This is an excellent and very popular applied introduction to data science with R, covering the Tidyverse and data visualization. It is open access and based on open code, check out the source code at <a href="https://github.com/hadley/r4ds">github.com/hadley/r4ds</a> for insights into how they use Quarto and embed code in their book.</li>
+</ul></li>
+<li><a href="https://r.geocompx.org/">Geocomputation with R</a> <span class="citation" data-cites="lovelace_geocomputation_2025">(<a href="#ref-lovelace_geocomputation_2025" role="doc-biblioref">Lovelace et al., 2025</a>)</span>
+<ul>
+<li>A comprehensive guide to geographic data analysis, visualization, and modeling using R. Essential for understanding spatial aspects of transport data.</li>
+</ul></li>
+</ul>
+</section>
+<section id="software-and-tools" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Software and Tools</h1>
+<ul>
+<li><a href="https://quarto.org/">Quarto</a> <span class="citation" data-cites="allaire_quarto_2024">(<a href="#ref-allaire_quarto_2024" role="doc-biblioref">Allaire et al., 2024</a>)</span>
+<ul>
+<li>The software used to create this document, Quarto is a powerful tool for creating reproducible documents with code and data.</li>
+</ul></li>
+<li><a href="https://github.com/skills/introduction-to-github">Introduction to GitHub</a> <span class="citation" data-cites="heis_introduction_2025">(<a href="#ref-heis_introduction_2025" role="doc-biblioref">Heis, 2025</a>)</span>
+<ul>
+<li>A good starting point for learning how to use GitHub for version control and collaboration.</li>
+</ul></li>
+<li><a href="https://itsleeds.github.io/stats19/">stats19</a> <span class="citation" data-cites="lovelace_stats19_2019">(<a href="#ref-lovelace_stats19_2019" role="doc-biblioref">Lovelace et al., 2019</a>)</span>
+<ul>
+<li>R package for working with official road crash data</li>
+</ul></li>
+<li><a href="https://doi.org/10.32614/RJ-2018-053">stplanr: A Package for Transport Planning</a> <span class="citation" data-cites="lovelace_stplanr_2018">(<a href="#ref-lovelace_stplanr_2018" role="doc-biblioref">Lovelace and Ellison, 2018</a>)</span>
+<ul>
+<li>R package for transport planning with various routing and analysis functions</li>
+</ul></li>
+<li><a href="https://doi.org/10/gbvjxq">OSMnx: New Methods for Acquiring, Constructing, Analyzing, and Visualizing Complex Street Networks</a> <span class="citation" data-cites="boeing_osmnx_2017">(<a href="#ref-boeing_osmnx_2017" role="doc-biblioref">Boeing, 2017</a>)</span>
+<ul>
+<li>Useful, if slightly out of date, paper for anyone working with street network data in Python.</li>
+</ul></li>
+</ul>
+</section>
+<section id="research-applications" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Research Applications</h1>
+<ul>
+<li><a href="https://doi.org/10.5198/jtlu.2016.862">The Propensity to Cycle Tool</a> <span class="citation" data-cites="lovelace_propensity_2017">(<a href="#ref-lovelace_propensity_2017" role="doc-biblioref">Lovelace et al., 2017</a>)</span>
+<ul>
+<li>Case study of an open source transport planning tool</li>
+</ul></li>
+<li><a href="https://doi.org/10/gmf8dc">Data-Driven Strategies for Optimal Bicycle Network Growth</a> <span class="citation" data-cites="nateraorozco_datadriven_2020">(<a href="#ref-nateraorozco_datadriven_2020" role="doc-biblioref">Natera Orozco et al., 2020</a>)</span>
+<ul>
+<li>Data-driven approach to bicycle infrastructure planning using data science</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-visualization" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Data Visualization</h1>
+<ul>
+<li><a href="https://www.edwardtufte.com/tufte/books_vdqi">The Visual Display of Quantitative Information</a> <span class="citation" data-cites="tufte_visual_2001">(<a href="#ref-tufte_visual_2001" role="doc-biblioref">Tufte, 2001</a>)</span>
+<ul>
+<li>Classic work on the principles of data visualization</li>
+</ul></li>
+<li><a href="https://bookdown.org/yihui/rmarkdown/">R Markdown: The Definitive Guide</a> <span class="citation" data-cites="xie_markdown_2018">(<a href="#ref-xie_markdown_2018" role="doc-biblioref">Xie et al., 2018</a>)</span>
+<ul>
+<li>Essential reference for creating reproducible documents in R</li>
+</ul></li>
+</ul>
+<section id="miscellaneous" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="miscellaneous"><span class="header-section-number">4.1</span> Miscellaneous</h2>
+<ul>
+<li><a href="https://doi.org/10.1007/978-3-319-72953-4">Data Science for Transport: A Self-Study Guide with Computer Exercises</a> <span class="citation" data-cites="fox_data_2018">(<a href="#ref-fox_data_2018" role="doc-biblioref">Fox, 2018</a>)</span>
+<ul>
+<li>An introduction to transport data science with hands-on examples, slightly out of date as of 2025.</li>
+</ul></li>
+<li><a href="https://itsleeds.github.io/rrsrr/">Reproducible Road Safety Research with R</a> <span class="citation" data-cites="lovelace_reproducible_2020">(<a href="#ref-lovelace_reproducible_2020" role="doc-biblioref">Lovelace, 2020</a>)</span>
+<ul>
+<li>Comprehensive guide for analyzing road safety data in R</li>
+</ul></li>
+<li><a href="https://doi.org/10/ghtnrp">Open source tools for geographic analysis in transport planning</a> <span class="citation" data-cites="lovelace_open_2021">(<a href="#ref-lovelace_open_2021" role="doc-biblioref">Lovelace, 2021</a>)</span>
+<ul>
+<li>A comprehensive review of open source tools available for transport planning and analysis.</li>
+</ul></li>
+<li><a href="https://aeturrell.github.io/python4DS/">Python for Data Science</a> <span class="citation" data-cites="turrell_python_2025">(<a href="#ref-turrell_python_2025" role="doc-biblioref">Turrell et al., 2025</a>)</span>
+<ul>
+<li>A modern guide to data science using Python based on R for Data Science, with practical examples and clear explanations.</li>
+</ul></li>
+<li><a href="https://transportgeography.org/">The Geography of Transport Systems</a> <span class="citation" data-cites="rodrigue_geography_2013">(<a href="#ref-rodrigue_geography_2013" role="doc-biblioref">Rodrigue et al., 2013</a>)</span>
+<ul>
+<li>Comprehensive textbook on transport geography and systems</li>
+</ul></li>
+<li><a href="https://www.wiley.com/en-us/Modelling+Transport%2C+4th+Edition-p-9781118941485">Modelling Transport</a> <span class="citation" data-cites="ortuzars._modelling_2001">(<a href="#ref-ortuzars._modelling_2001" role="doc-biblioref">Ortúzar S. and Willumsen, 2001</a>)</span>
+<ul>
+<li>Foundational text on transport modeling methods</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="references" class="level1" data-number="5">
+
+
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">5 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-allaire_quarto_2024" class="csl-entry" role="listitem">
+Allaire, J.J., Teague, C., Scheidegger, C., Xie, Y., Dervieux, C., Woodhull, G., 2024. Quarto. <a href="https://doi.org/10.5281/zenodo.5960048">https://doi.org/10.5281/zenodo.5960048</a>
 </div>
+<div id="ref-boeing_osmnx_2017" class="csl-entry" role="listitem">
+Boeing, G., 2017. <span>OSMnx</span>: <span>New Methods</span> for <span>Acquiring</span>, <span>Constructing</span>, <span>Analyzing</span>, and <span>Visualizing Complex Street Networks</span>. Computers, Environment and Urban Systems 65, 126–139. <a href="https://doi.org/10/gbvjxq">https://doi.org/10/gbvjxq</a>
 </div>
-
-
-
-</main> <!-- /main -->
+<div id="ref-fox_data_2018" class="csl-entry" role="listitem">
+Fox, C., 2018. Data <span>Science</span> for <span>Transport</span>: <span>A Self-Study Guide</span> with <span>Computer Exercises</span>, 1st ed. 2018 edition. ed. Springer, New York, NY.
+</div>
+<div id="ref-heis_introduction_2025" class="csl-entry" role="listitem">
+Heis, K., 2025. <a href="https://github.com/skills/introduction-to-github">Introduction to <span>GitHub</span></a>.
+</div>
+<div id="ref-lovelace_open_2021" class="csl-entry" role="listitem">
+Lovelace, R., 2021. Open source tools for geographic analysis in transport planning. J Geogr Syst 23. <a href="https://doi.org/10/ghtnrp">https://doi.org/10/ghtnrp</a>
+</div>
+<div id="ref-lovelace_reproducible_2020" class="csl-entry" role="listitem">
+Lovelace, R., 2020. <a href="https://www.racfoundation.org/wp-content/uploads/Reproducible_road_safety_research_with_R_Lovelace_December_2020.pdf">Reproducible road safety research with <span>R</span></a>. RAC Foundation.
+</div>
+<div id="ref-lovelace_stplanr_2018" class="csl-entry" role="listitem">
+Lovelace, R., Ellison, R., 2018. Stplanr: <span>A Package</span> for <span>Transport Planning</span>. The R Journal 10, 7–23. <a href="https://doi.org/10/gkb499">https://doi.org/10/gkb499</a>
+</div>
+<div id="ref-lovelace_propensity_2017" class="csl-entry" role="listitem">
+Lovelace, R., Goodman, A., Aldred, R., Berkoff, N., Abbas, A., Woodcock, J., 2017. The <span>Propensity</span> to <span>Cycle Tool</span>: <span>An</span> open source online system for sustainable transport planning. JTLU 10. <a href="https://doi.org/10.5198/jtlu.2016.862">https://doi.org/10.5198/jtlu.2016.862</a>
+</div>
+<div id="ref-lovelace_stats19_2019" class="csl-entry" role="listitem">
+Lovelace, R., Morgan, M., Hama, L., Padgham, M., 2019. Stats19: <span>A</span> package for working with open road crash data. Journal of Open Source Software. <a href="https://doi.org/10/gkb498">https://doi.org/10/gkb498</a>
+</div>
+<div id="ref-lovelace_geocomputation_2025" class="csl-entry" role="listitem">
+Lovelace, R., Nowosad, J., Münchow, J., 2025. <a href="https://r.geocompx.org/">Geocomputation with <span>R</span></a>. CRC Press.
+</div>
+<div id="ref-nateraorozco_datadriven_2020" class="csl-entry" role="listitem">
+Natera Orozco, L.G., Battiston, F., Iñiguez, G., Szell, M., 2020. Data-driven strategies for optimal bicycle network growth. Royal Society Open Science 7, 201130. <a href="https://doi.org/10/gmf8dc">https://doi.org/10/gmf8dc</a>
+</div>
+<div id="ref-ortuzars._modelling_2001" class="csl-entry" role="listitem">
+Ortúzar S., J. de D., Willumsen, L.G., 2001. Modelling transport, 3rd ed. ed. J. Wiley, Chichester New York.
+</div>
+<div id="ref-rodrigue_geography_2013" class="csl-entry" role="listitem">
+Rodrigue, J.-P., Comtois, C., Slack, B., 2013. The <span>Geography</span> of <span>Transport Systems</span>, Third. ed. Routledge, London, New York.
+</div>
+<div id="ref-tufte_visual_2001" class="csl-entry" role="listitem">
+Tufte, E.R., 2001. The <span>Visual Display</span> of <span>Quantitative Information</span>, 2nd ed. ed. Graphics Press, Cheshire, Conn.
+</div>
+<div id="ref-turrell_python_2025" class="csl-entry" role="listitem">
+Turrell, A., Monticone, P., Akyol, Z., Holman, J., Huang, Y., 2025. Python for <span>Data Science</span>. Zenodo. <a href="https://doi.org/10.5281/ZENODO.10518241">https://doi.org/10.5281/ZENODO.10518241</a>
+</div>
+<div id="ref-wickham_data_2023" class="csl-entry" role="listitem">
+Wickham, H., Cetinkaya-Rundel, M., Grolemund, G., 2023. <a href="https://r4ds.hadley.nz/">R for <span>Data Science</span>: <span>Import</span>, <span>Tidy</span>, <span>Transform</span>, <span>Visualize</span>, and <span>Model Data</span></a>, 2nd edition. ed. O’Reilly Media, Beijing Boston Farnham Sebastopol Tokyo.
+</div>
+<div id="ref-xie_markdown_2018" class="csl-entry" role="listitem">
+Xie, Y., Allaire, J.J., Grolemund, G., 2018. R <span>Markdown</span>: <span>The Definitive Guide</span>, 1 edition. ed. <span>Chapman and Hall/CRC</span>, Boca Raton.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
