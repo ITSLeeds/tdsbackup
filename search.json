@@ -1,337 +1,10 @@
 [
   {
-    "objectID": "p1/index.html",
-    "href": "p1/index.html",
-    "title": "Practical 1: Introduction to Transport Data Science",
+    "objectID": "d3/index.html",
+    "href": "d3/index.html",
+    "title": "Deadline: coursework, 2pm",
     "section": "",
-    "text": "Lecture: an introduction to Transport Data Science (30 min)\nQ&A (15 min) \nBreak and networking (15 min) \nData science and a good research question (30 min)\nData science foundations (guided): Project set-up and using RStudio or VS Code as an integrated development environment (30 min)\nFocussed work (1 hr)\n\n\nWorking through the questions on processing OD data and running the code in Sections 13.1 to 13.4 the Transport chapter of Geocomputation with R and answering the questions for the Bristol dataset"
-  },
-  {
-    "objectID": "p1/index.html#agenda",
-    "href": "p1/index.html#agenda",
-    "title": "Practical 1: Introduction to Transport Data Science",
-    "section": "",
-    "text": "Lecture: an introduction to Transport Data Science (30 min)\nQ&A (15 min) \nBreak and networking (15 min) \nData science and a good research question (30 min)\nData science foundations (guided): Project set-up and using RStudio or VS Code as an integrated development environment (30 min)\nFocussed work (1 hr)\n\n\nWorking through the questions on processing OD data and running the code in Sections 13.1 to 13.4 the Transport chapter of Geocomputation with R and answering the questions for the Bristol dataset"
-  },
-  {
-    "objectID": "p1/index.html#how-to-come-up-with-a-good-research-question",
-    "href": "p1/index.html#how-to-come-up-with-a-good-research-question",
-    "title": "Practical 1: Introduction to Transport Data Science",
-    "section": "How to come up with a good research question",
-    "text": "How to come up with a good research question\n\nThink about the data you have access to\nThink about the problems you want to solve\nThink about the methods you want to use and skills you want to learn\nThink about how the final report will look and hold-together\n\n\nHow much potential is there for cycling across the transport network?\n\n\n\nHow can travel to schools be made safer?\n\n\nHow can hospitals encourage visitors to get there safely?\n\n\nWhere’s the best place to build electric car charging points?\nSee openstreetmap.org or search for other open access datasets for more ideas"
-  },
-  {
-    "objectID": "slides/intro.html#who-transport-data-science-team",
-    "href": "slides/intro.html#who-transport-data-science-team",
-    "title": "Introduction to transport data science",
-    "section": "Who: Transport Data Science team",
-    "text": "Who: Transport Data Science team\nRobin Lovelace\n\nAssociate Professor of Transport Data Science\nResearching transport futures and active travel planning\nR developer and teacher, author of Geocomputation with R\n\nYuanxuan Yang\n\nLecturer in Data Science of Transport\nNew and Emerging Forms of Data: Investigating novel data sources and their applications in urban mobility and transport planning."
-  },
-  {
-    "objectID": "slides/intro.html#tds-team-ii",
-    "href": "slides/intro.html#tds-team-ii",
-    "title": "Introduction to transport data science",
-    "section": "TDS Team II",
-    "text": "TDS Team II\nMalcolm Morgan\n\nSenior researcher at ITS with expertise in routing + web\nDeveloper of the Propensity to Cycle Tool and PBCC\n\nZhao Wang\n\nCivil Engineer and Data Scientist with expertise in machine learning\n\nDemonstrators\n\nJuan Pablo Fonseca Zamora\n\nYou!"
-  },
-  {
-    "objectID": "slides/intro.html#what-is-transport-data-science",
-    "href": "slides/intro.html#what-is-transport-data-science",
-    "title": "Introduction to transport data science",
-    "section": "What is transport data science?",
-    "text": "What is transport data science?\n\n\nThe application of data science to transport datasets and problems\nRaising the question…\nWhat is data science?\nA discipline “that allows you to turn raw data into understanding, insight, and knowledge” (Grolemund, 2016)\n\nIn other words…\n\nStatistics that is actually useful!"
-  },
-  {
-    "objectID": "slides/intro.html#why-take-transport-data-science",
-    "href": "slides/intro.html#why-take-transport-data-science",
-    "title": "Introduction to transport data science",
-    "section": "Why take Transport Data Science",
-    "text": "Why take Transport Data Science\n\n\n\n\nNew skills (cutting edge R and/or Python packages)\nPotential for impacts\nAllows you to do new things with data\nIt might get you a job!"
-  },
-  {
-    "objectID": "slides/intro.html#live-demo-npt.scot-web-app",
-    "href": "slides/intro.html#live-demo-npt.scot-web-app",
-    "title": "Introduction to transport data science",
-    "section": "Live demo: npt.scot web app",
-    "text": "Live demo: npt.scot web app"
-  },
-  {
-    "objectID": "slides/intro.html#the-history-of-tds",
-    "href": "slides/intro.html#the-history-of-tds",
-    "title": "Introduction to transport data science",
-    "section": "The history of TDS",
-    "text": "The history of TDS\n\n2017: Transport Data Science created, led by Dr Charles Fox, Computer Scientist, author of Transport Data Science book (Fox, 2018)\nThe focus was on databases and Bayesian methods\n2019: I inherited the module, which was attended by ITS students\nSummer 2019: Python code published in the module ‘repo’:\n\ngithub.com/ITSLeeds"
-  },
-  {
-    "objectID": "slides/intro.html#history-of-tds-ii",
-    "href": "slides/intro.html#history-of-tds-ii",
-    "title": "Introduction to transport data science",
-    "section": "History of TDS II",
-    "text": "History of TDS II\n\nJanuary 2020: Available, Data Science MSc course\nMarch 2020: Switch to online teaching\n2021-2023: Updated module, focus on methods\n2024: Switch to combined practical sessions and lectures\n2025+: Expand, online course? book? stay in touch!\n\n\n\nMilestone passed in my academic career, first online-only delivery of lecture @ITSLeeds, seems to have worked, live code demo with #rstats/@rstudio, recording, chat + all🎉Thanks students for ‘attending’ + remote participation, we’ll get through this together.#coronavirus pic.twitter.com/wlAUxmZj5r\n\n— Robin Lovelace (@robinlovelace) March 17, 2020"
-  },
-  {
-    "objectID": "slides/intro.html#essential-reading",
-    "href": "slides/intro.html#essential-reading",
-    "title": "Introduction to transport data science",
-    "section": "Essential reading",
-    "text": "Essential reading\n\nChapter 12, Transportation of Geocomputation with R, a open book on geographic data in R (available free online) (Lovelace et al. 2019)\nReproducible Road Safety Research with R (RRSRR): https://itsleeds.github.io/rrsrr/"
-  },
-  {
-    "objectID": "slides/intro.html#core-reading-materials",
-    "href": "slides/intro.html#core-reading-materials",
-    "title": "Introduction to transport data science",
-    "section": "Core reading materials",
-    "text": "Core reading materials\n\nR for Data Science, an introduction to data science with R (available free online)\nPython equivalent"
-  },
-  {
-    "objectID": "slides/intro.html#optional",
-    "href": "slides/intro.html#optional",
-    "title": "Introduction to transport data science",
-    "section": "Optional",
-    "text": "Optional\nThere are many good resources on data science for transport applications. Do your own research and reading! The following are good:\n\nIf you’re interested in network analysis/Python, see this paper on analysing OSM data in Python (Boeing and Waddell, 2017) (available online)\nIf you’re interested in the range of transport modelling tools, see Lovelace (2021). \n\nFor more references, see the bibliography at github.com/ITSLeeds/TDS"
-  },
-  {
-    "objectID": "slides/intro.html#objectives",
-    "href": "slides/intro.html#objectives",
-    "title": "Introduction to transport data science",
-    "section": "Objectives",
-    "text": "Objectives\n\n\nUnderstand the structure of transport datasets\nUnderstand how to obtain, clean and store transport related data\nGain proficiency in command-line tools for handling large transport datasets\nProduce data visualizations, static and interactive\n Learn how to join together the components of transport data science into a cohesive project portfolio"
-  },
-  {
-    "objectID": "slides/intro.html#assessment-for-those-doing-this-as-credit-bearing",
-    "href": "slides/intro.html#assessment-for-those-doing-this-as-credit-bearing",
-    "title": "Introduction to transport data science",
-    "section": "Assessment (for those doing this as credit-bearing)",
-    "text": "Assessment (for those doing this as credit-bearing)\n\nYou will build-up a portfolio of work\n100% coursework assessed, you will submit by\nWritten in code - will be graded for reproducibility\nCode chunks and figures are encouraged\nYou will submit a non-assessed 2 page pdf + qmd"
-  },
-  {
-    "objectID": "slides/intro.html#schedule",
-    "href": "slides/intro.html#schedule",
-    "title": "Introduction to transport data science",
-    "section": "Schedule",
-    "text": "Schedule"
-  },
-  {
-    "objectID": "slides/intro.html#feedback",
-    "href": "slides/intro.html#feedback",
-    "title": "Introduction to transport data science",
-    "section": "Feedback",
-    "text": "Feedback\n\nThe module is taught by two really well organised and enthusiastic professors, great module, the seminars, structured and unstructured learning was great and well thought out, all came together well\n\n\nI wish this module was 60 credits instead of 15 because i just want more of it."
-  },
-  {
-    "objectID": "p2/index.html",
-    "href": "p2/index.html",
-    "title": "Origin-destination data",
-    "section": "",
-    "text": "You should now be familiar with the basics of R and the tidyverse. If you have not completed these tasks go back and do them first:\n\nRead Chapters 2, 3, and 4 of Reproducible road safety research with R\nRead Chapters 3 and 5 of R for Data Science"
-  },
-  {
-    "objectID": "p2/index.html#pre-requisites",
-    "href": "p2/index.html#pre-requisites",
-    "title": "Origin-destination data",
-    "section": "Pre-requisites",
-    "text": "Pre-requisites\nYou need to have a number of packages installed and loaded. Install the packages by typing in the following commands into RStudio (you do not need to add the comments after the # symbol)\nIf you need to install any of these packages use:\n\nRPython\n\n\n\nif (!require(\"pak\")) install.packages(\"pak\")\npak::pkg_install(c(\"sf\", \"tidyverse\", \"remotes\"))\n# GitHub pkgs\npak::pkg_install(\"Nowosad/spDataLarge\")\n\n\nlibrary(sf)          # vector data package \nlibrary(tidyverse)   # tidyverse packages\nlibrary(spData)  # spatial data package \n\n\n\n\n# Install necessary packages (uncomment if not already installed)\n# !pip install geopandas pandas matplotlib seaborn\n\nimport geopandas as gpd       # vector data package\nimport pandas as pd           # data manipulation\nimport matplotlib.pyplot as plt  # plotting\nimport seaborn as sns            # advanced plotting\n# For spatial data, geopandas comes with sample datasets\n# Alternatively, we can use the naturalearth datasets\nimport geopandas.datasets\n\n\n\n\n\nCheck your packages are up-to-date with update.packages() in R (or equivalent in Python)\nCreate a project folder with an appropriate name for this session (e.g. practical2)\nCreate appropriate folders for code, data and anything else (e.g. images)\nCreate a script called learning-OD.R, e.g. with the following command:\n\nmkdir code\ncode code/learning-OD.R # for R\ncode code/learning-OD.py # for Python"
-  },
-  {
-    "objectID": "p2/index.html#basic-sf-operations",
-    "href": "p2/index.html#basic-sf-operations",
-    "title": "Origin-destination data",
-    "section": "2.1 Basic sf operations",
-    "text": "2.1 Basic sf operations\nWe will start with a simple map of the world. Load the world object from the spData package. Notice the use of :: to say that you want the world object from the spData package.\n\nRPython\n\n\n\nworld = spData::world\n\n\n\n\nworld = gpd.read_file(\n    'https://naturalearth.s3.amazonaws.com/110m_cultural/ne_110m_admin_0_countries.zip'\n)\n\n\n\n\nUse some basic R functions to explore the world object. e.g. class(world), dim(world), head(world), summary(world). Also view the world object by clicking on it in the Environment panel.\nsf objects can be plotted with plot().\n\nRPython\n\n\n\nplot(world)\n\n\n\n\n\n\n\n\n\n\n\nprint(type(world))       # Equivalent to class(world)\nprint(world.shape)       # Equivalent to dim(world)\nprint(world.head())      # Equivalent to head(world)\nprint(world.describe())  # Equivalent to summary(world)\n\n# Plotting the world GeoDataFrame\nworld.plot(figsize=(12, 8))\nplt.title('World Map')\nplt.show()\n\n\n\n\nNote that this makes a map of each column in the data frame. Try some other plotting options\n\nRPython\n\n\n\nplot(world[3:6])\n\n\n\n\n\n\n\nplot(world[\"pop\"])\n\n\n\n\n\n\n\n\n\n\n\n# Since world is a GeoDataFrame, we can select columns by position\n# However, GeoPandas plots the geometry, so we need to specify columns\nfig, axes = plt.subplots(1, 3, figsize=(15, 5))\nworld.plot(column='POP_EST', ax=axes[0])\nworld.plot(column='GDP_YEAR', ax=axes[1])\nworld.plot(column='CONTINENT', ax=axes[2])\nplt.show()"
-  },
-  {
-    "objectID": "p2/index.html#basic-spatial-operations",
-    "href": "p2/index.html#basic-spatial-operations",
-    "title": "Origin-destination data",
-    "section": "2.2 Basic spatial operations",
-    "text": "2.2 Basic spatial operations\nLoad the nz and nz_height datasets from the spData package.\n\nRPython\n\n\n\nnz = spData::nz\nnz_height = spData::nz_height\n\n\n\n\nnz = gpd.read_file(\"https://github.com/Nowosad/spData_files/raw/refs/heads/main/data/nz.gpkg\")\nnz_height = gpd.read_file(\"https://github.com/Nowosad/spData_files/raw/refs/heads/main/data/nz_height.gpkg\")\n\n\n\n\nWe can use tidyverse functions like filter and select on sf objects in the same way you did in Practical 1.\n\nRPython\n\n\n\ncanterbury = nz |&gt; filter(Name == \"Canterbury\")\ncanterbury_height = nz_height[canterbury, ]\n\n\n\n\ncanterbury = nz[nz['Name'] == 'Canterbury']\n\n\n\n\nIn this case we filtered the nz object to only include places called Canterbury and then did and intersection to find objects in the nz_height object that are in Canterbury.\nThis syntax is not very clear. But is the equivalent to\n\nRPython\n\n\n\ncanterbury_height = nz_height[canterbury, , op = st_intersects]\n\n\n\n\ncanterbury_height = gpd.overlay(nz_height, canterbury, how='intersection')\n\n\n\n\nThere are many different types of relationships you can use with op. Try ?st_intersects() to see more. For example this would give all the places not in Canterbury\n\nRPython\n\n\n\nnz_height[canterbury, , op = st_disjoint]\n\n\n\n\ncanterbury_height = gpd.sjoin(nz_height, canterbury, op='intersects')\n\n\n\n\n\n\n\nTopological relations between vector geometries, inspired by Figures 1 and 2 in Egenhofer and Herring (1990). The relations for which the function(x, y) is true are printed for each geometry pair, with x represented in pink and y represented in blue. The nature of the spatial relationship for each pair is described by the Dimensionally Extended 9-Intersection Model string."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Transport Data Science",
-    "section": "",
-    "text": "A module on using data science to solve transport problems. This couse is based at the University of Leeds’ Institute for Transport Studies. It has evolved over a decade of teaching and research in the field and aims to teach you up-to-date and future-proof skills with practical examples and reproducible workflows using industry-standard data science tools.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#hardware",
-    "href": "index.html#hardware",
-    "title": "Transport Data Science",
-    "section": "Hardware",
-    "text": "Hardware\nAccess to a computer that you have permission to install software on, with at least 8 GB of RAM, is highly recommended. You could use a cloud-based service such as RStudio Cloud, Google Colab, or GitHub Codespaces, but you would need to be comfortable with using these services and would miss out on some of the benefits of using your own computer.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#command-line-experience",
-    "href": "index.html#command-line-experience",
-    "title": "Transport Data Science",
-    "section": "Command-line experience",
-    "text": "Command-line experience\nYou should be comfortable with computing in general, for example creating folders, moving files, and installing software. You should be comfortable with using command line interfaces such as PowerShell in Windows, Terminal in macOS, or the Linux shell.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#data-science-experience-prerequisites",
-    "href": "index.html#data-science-experience-prerequisites",
-    "title": "Transport Data Science",
-    "section": "Data science experience prerequisites",
-    "text": "Data science experience prerequisites\nPrior experience of using R or Python (e.g. having used it for work, in previous degrees or having completed an online course) is essential.\nStudents can demonstrate this by showing evidence that they have worked with R before, have completed an online course such as the first 4 sessions in the RStudio Primers series or DataCamp’s Free Introduction to R course.\nEvidence of substantial programming and data science experience in previous professional or academic work, in languages such as R or Python, also constitutes sufficient pre-requisite knowledge for the course.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#quickstart-with-github-codespaces",
-    "href": "index.html#quickstart-with-github-codespaces",
-    "title": "Transport Data Science",
-    "section": "Quickstart with GitHub Codespaces",
-    "text": "Quickstart with GitHub Codespaces\nYou can use GitHub Codespaces to get started with the course materials in a cloud-based environment. Sign-up to GitHub, fork the repository, and click the “Open in GitHub Codespaces” button above to get started. You can also use the following link:\n\n\n\nOpen in GitHub Codespaces",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#r",
-    "href": "index.html#r",
-    "title": "Transport Data Science",
-    "section": "R",
-    "text": "R\nInstall a recent version of R (4.3.0 or above) and RStudio (recommended) or another IDE such as VS Code (if you have prior experience with it) with the the following links:\n\nR from cran.r-project.org\nRStudio from rstudio.com (recommended) or VS Code with the R extension installed.\nR packages, which can be installed by opening RStudio and typing install.packages(\"stats19\") in the R console, for example.\nTo install all the dependencies for the module, run the following command in the R console:\n\n\nif (!requireNamespace(\"remotes\", quietly = TRUE)) {\n  install.packages(\"remotes\")\n}\nremotes::install_github(\"itsleeds/tds\")\n\nSee Section 1.5 of the online guide Reproducible Road Safety Research with R for instructions on how to install key packages we will use in the module.1",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#python",
-    "href": "index.html#python",
-    "title": "Transport Data Science",
-    "section": "Python",
-    "text": "Python\nIf you choose to use Python, you should be able to install it and manage your own Python environment, including installing packages and dealing with package conflicts. If you use Python we recommend using an environment manager such as pixi (which can manage both R and Python environments) or Docker (best practice for reproducibility and isolation).",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#docker-advanced",
-    "href": "index.html#docker-advanced",
-    "title": "Transport Data Science",
-    "section": "Docker (advanced)",
-    "text": "Docker (advanced)\nWe maintain a Docker image that contains all the software you need to complete the course with VS Code, quarto and a Devcontainer set-up. Advantages of this approach include that it ensures reproducibility and can save time installing software. Disadvantages include that it can be hard to install Docker and can be difficult to use if you are not familiar with Docker. We therefore recommend this approach only for people who are confident with Docker and willing to invest time in learning how to use it. See the Docker installation instructions, the devcontainers documentation on github.com and the tds Dockerfile and devcontainer.json for guidance on getting started with Docker.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#footnotes",
-    "href": "index.html#footnotes",
-    "title": "Transport Data Science",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\n For further guidance on setting-up your computer to run R and RStudio for spatial data, see these links, we recommend Chapter 2 of Geocomputation with R (the Prerequisites section contains links for installing spatial software on Mac, Linux and Windows): https://geocompr.robinlovelace.net/spatial-class.html and Chapter 2 of the online book Efficient R Programming, particularly sections 2.3 and 2.5, for details on R installation and set-up and the project management section.↩︎",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "schedule.html",
-    "href": "schedule.html",
-    "title": "Schedule",
-    "section": "",
-    "text": "The timetable below is a user-friently representation of the timetable for the module (see github for .csv and .ics versions). See timetable.leeds.ac.uk for the official timetable. If you spot any discrepancies, please let us know.",
-    "crumbs": [
-      "Schedule"
-    ]
-  },
-  {
-    "objectID": "marking-criteria.html",
-    "href": "marking-criteria.html",
-    "title": "Marking Criteria",
-    "section": "",
-    "text": "Marks are awarded in 4 categories, accounting for the following criteria:\n\n\n\nThe selection and effective use of input datasets that are large (e.g. covering multiple years), complex (e.g. containing multiple variables) and/or diverse (e.g. input datasets from multiple sources are used and where appropriate combined in the analysis)\nDescribe how the data was collected and implications for data quality, and outline how the input datasets were downloaded (with a reproducible example if possible), with a description that will allow others to understand the structure of the inputs and how to import them\nEvidence of data cleaning techniques (e.g. by re-categorising variables)\nAdding value to datasets with joins (key-based or spatial), creation of new variables (also known as feature engineering) and reshaping data (e.g. from wide to long format)\n\nDistinction (70%+): The report makes use of a complex (with many columns and rows) and/or multiple input datasets, efficiently importing them and adding value by creating new variables, recategorising, changing data formats/types, and/or reshaping the data. Selected datasets are very well suited to the research questions, clearly described, with links to the source and understanding of how the datasets were generated.\nMerit (60-69%): The report makes some use of complex or multiple input datasets. The selection, description of, cleaning or value-added to the input datasets show skill and care applied to the data processing stage but with some weaknesses. Selected datasets are appropriate for the research questions, with some description or links to the data source.\nPass (50-59%): There is some evidence of care and attention put into the selection, description of or cleaning of the input datasets but little value has been added. The report makes little use of complex or multiple input datasets. The datasets are not appropriate for the research questions, the datasets are not clearly described, or there are no links to the source or understanding of how the datasets were generated, but the data processing aspect of the work acceptable.\nFail (0-49%): The report does not make use of appropriate input datasets and contains very little or now evidence of data cleaning, adding value to the datasets or reshaping the data. While there may be some evidence of data processing, it is of poor quality and/or not appropriate for the research questions.\n\n\n\n\nCreation of figures that are readable and well-described (e.g. with captions and description)\nHigh quality, attractive or advanced techniques (e.g. multi-layered maps or graphs, facets or other advanced techniques)\nUsing visualisation techniques appropriate to the topic and data and interpreting the results correctly (e.g. mentioning potential confounding factors that could account for observed patterns)\nThe report is well-formatted, accessible (e.g. with legible text size and does not contain excessive code in the submitted report) and clearly communicates the data and analysis visually, with appropriate figure captions, cross-references and a consistent style\n\nDistinction (70%+): The report contains high quality, attractive, advanced and meaningful visualisations that are very well-described and interpreted, showing deep understanding of how visualisation can communicate meaning contained within datasets. The report is very well-formatted, accessible and clearly communicates the data and analysis visually.\nMerit (60-69%): The report contains good visualisations that correctly present the data and highlight key patterns. The report is has appropriate formatting.\nPass (50-59%): The report contains basic visualisations or are not well-described or interpreted correctly or the report is poorly formatted, not accessible or does not clearly communicate the data and analysis visually.\nFail (0-49%): The report is of unacceptable quality (would likely be rejected in a professional setting) and/or has poor quality and/or few visualisations, or the visualisations are inappropriate given the data and research questions.\n\n\n\n\nCode quality in the submitted source code, including using consistent style, appropriate packages, and clear comments\nEfficiency, including pre-processing to reduce input datasets (avoiding having to share large datasets in the submission for example) and computationally efficient implementations\nThe report is fully reproducible, including generation of figures. There are links to online resources for others wanting to reproduce the analysis for another area, and links to the input data\n\nDistinction (70%+): The source code underlying the report contains high quality, efficient and reproducible code that is very well-written, using consistent syntax and good style, well-commented and uses appropriate packages. The report is fully reproducible, with links to online resources for others wanting to reproduce the analysis for another area, and links to the input data.\nMerit (60-69%): The code is readable and describes the outputs in the report but lacks quality, either in terms of comments, efficiency or reproducibility.\nPass (50-59%): The source code underlying the report describes the outputs in the report but is not well-commented, not efficient or has very limited levels of reproduicibility, with few links to online resources for others wanting to reproduce the analysis for another area, and few links to the input data.\nFail (0-49%): The report has little to no reproducible, readable or efficient code. A report that includes limited well-described code in the main text or in associated files would be considered at the borderline between a fail and a pass. A report that includes no code would be considered a low fail under this criterion.\n\n\n\n\nTopic selection, including originality, availability of datasets related to the topic and relevance to solving transport planning problems\nClear research question\nAppropriate reference to the academic, policy and/or technical literature and use of the literature to inform the research question and methods\nUse of appropriate data science methods and techniques\nDiscussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed\nDiscuss further research and/or explain the potential impacts of the work\nThe conclusions are supported by the analysis and results\nThe contents of the report fit together logically and support the aims and/or research questions of the report\n\nDistinction (70%+): The report contains a clear research question, appropriate reference to the academic, policy and/or technical literature, use of appropriate data science methods and techniques, discussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed. The report discusses further research and/or explores of the potential impacts of the work. Conclusions are supported by the analysis and results, and the contents of the report fit together logically as a cohehisive whole that has a clear direction set-out by the aims and/or research questions. To get a Distinction there should also be evidence of considering the generalisability of the methods and reflections on how it could be built on by others in other areas.\nMerit (60-69%): There is a clear research question. There is some reference to the academic, policy and/or technical literature. The report has a good structure and the results are supported by the analysis. There is some discussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed.\nPass (50-59%): The report contains a valid research question but only limited references to appropriate literature or justification. There is evidence of awareness of the limitations of the results and how they inform conclusions, but these are not fully supported by the analysis. The report has a reasonable structure but does not fit together well in a cohesive whole.\nFail (0-49%): The report does not contain a valid research question, has no references to appropriate literature or justification, does not discuss the limitations of the results or how they inform conclusions, or the report does not have a reasonable structure.",
-    "crumbs": [
-      "Marking Criteria"
-    ]
-  },
-  {
-    "objectID": "marking-criteria.html#marks",
-    "href": "marking-criteria.html#marks",
-    "title": "Marking Criteria",
-    "section": "",
-    "text": "Marks are awarded in 4 categories, accounting for the following criteria:\n\n\n\nThe selection and effective use of input datasets that are large (e.g. covering multiple years), complex (e.g. containing multiple variables) and/or diverse (e.g. input datasets from multiple sources are used and where appropriate combined in the analysis)\nDescribe how the data was collected and implications for data quality, and outline how the input datasets were downloaded (with a reproducible example if possible), with a description that will allow others to understand the structure of the inputs and how to import them\nEvidence of data cleaning techniques (e.g. by re-categorising variables)\nAdding value to datasets with joins (key-based or spatial), creation of new variables (also known as feature engineering) and reshaping data (e.g. from wide to long format)\n\nDistinction (70%+): The report makes use of a complex (with many columns and rows) and/or multiple input datasets, efficiently importing them and adding value by creating new variables, recategorising, changing data formats/types, and/or reshaping the data. Selected datasets are very well suited to the research questions, clearly described, with links to the source and understanding of how the datasets were generated.\nMerit (60-69%): The report makes some use of complex or multiple input datasets. The selection, description of, cleaning or value-added to the input datasets show skill and care applied to the data processing stage but with some weaknesses. Selected datasets are appropriate for the research questions, with some description or links to the data source.\nPass (50-59%): There is some evidence of care and attention put into the selection, description of or cleaning of the input datasets but little value has been added. The report makes little use of complex or multiple input datasets. The datasets are not appropriate for the research questions, the datasets are not clearly described, or there are no links to the source or understanding of how the datasets were generated, but the data processing aspect of the work acceptable.\nFail (0-49%): The report does not make use of appropriate input datasets and contains very little or now evidence of data cleaning, adding value to the datasets or reshaping the data. While there may be some evidence of data processing, it is of poor quality and/or not appropriate for the research questions.\n\n\n\n\nCreation of figures that are readable and well-described (e.g. with captions and description)\nHigh quality, attractive or advanced techniques (e.g. multi-layered maps or graphs, facets or other advanced techniques)\nUsing visualisation techniques appropriate to the topic and data and interpreting the results correctly (e.g. mentioning potential confounding factors that could account for observed patterns)\nThe report is well-formatted, accessible (e.g. with legible text size and does not contain excessive code in the submitted report) and clearly communicates the data and analysis visually, with appropriate figure captions, cross-references and a consistent style\n\nDistinction (70%+): The report contains high quality, attractive, advanced and meaningful visualisations that are very well-described and interpreted, showing deep understanding of how visualisation can communicate meaning contained within datasets. The report is very well-formatted, accessible and clearly communicates the data and analysis visually.\nMerit (60-69%): The report contains good visualisations that correctly present the data and highlight key patterns. The report is has appropriate formatting.\nPass (50-59%): The report contains basic visualisations or are not well-described or interpreted correctly or the report is poorly formatted, not accessible or does not clearly communicate the data and analysis visually.\nFail (0-49%): The report is of unacceptable quality (would likely be rejected in a professional setting) and/or has poor quality and/or few visualisations, or the visualisations are inappropriate given the data and research questions.\n\n\n\n\nCode quality in the submitted source code, including using consistent style, appropriate packages, and clear comments\nEfficiency, including pre-processing to reduce input datasets (avoiding having to share large datasets in the submission for example) and computationally efficient implementations\nThe report is fully reproducible, including generation of figures. There are links to online resources for others wanting to reproduce the analysis for another area, and links to the input data\n\nDistinction (70%+): The source code underlying the report contains high quality, efficient and reproducible code that is very well-written, using consistent syntax and good style, well-commented and uses appropriate packages. The report is fully reproducible, with links to online resources for others wanting to reproduce the analysis for another area, and links to the input data.\nMerit (60-69%): The code is readable and describes the outputs in the report but lacks quality, either in terms of comments, efficiency or reproducibility.\nPass (50-59%): The source code underlying the report describes the outputs in the report but is not well-commented, not efficient or has very limited levels of reproduicibility, with few links to online resources for others wanting to reproduce the analysis for another area, and few links to the input data.\nFail (0-49%): The report has little to no reproducible, readable or efficient code. A report that includes limited well-described code in the main text or in associated files would be considered at the borderline between a fail and a pass. A report that includes no code would be considered a low fail under this criterion.\n\n\n\n\nTopic selection, including originality, availability of datasets related to the topic and relevance to solving transport planning problems\nClear research question\nAppropriate reference to the academic, policy and/or technical literature and use of the literature to inform the research question and methods\nUse of appropriate data science methods and techniques\nDiscussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed\nDiscuss further research and/or explain the potential impacts of the work\nThe conclusions are supported by the analysis and results\nThe contents of the report fit together logically and support the aims and/or research questions of the report\n\nDistinction (70%+): The report contains a clear research question, appropriate reference to the academic, policy and/or technical literature, use of appropriate data science methods and techniques, discussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed. The report discusses further research and/or explores of the potential impacts of the work. Conclusions are supported by the analysis and results, and the contents of the report fit together logically as a cohehisive whole that has a clear direction set-out by the aims and/or research questions. To get a Distinction there should also be evidence of considering the generalisability of the methods and reflections on how it could be built on by others in other areas.\nMerit (60-69%): There is a clear research question. There is some reference to the academic, policy and/or technical literature. The report has a good structure and the results are supported by the analysis. There is some discussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed.\nPass (50-59%): The report contains a valid research question but only limited references to appropriate literature or justification. There is evidence of awareness of the limitations of the results and how they inform conclusions, but these are not fully supported by the analysis. The report has a reasonable structure but does not fit together well in a cohesive whole.\nFail (0-49%): The report does not contain a valid research question, has no references to appropriate literature or justification, does not discuss the limitations of the results or how they inform conclusions, or the report does not have a reasonable structure.",
-    "crumbs": [
-      "Marking Criteria"
-    ]
-  },
-  {
-    "objectID": "reading.html",
-    "href": "reading.html",
-    "title": "Reading List",
-    "section": "",
-    "text": "This reading list contains key resources for the Transport Data Science module, organized by topic.",
-    "crumbs": [
-      "Reading list"
-    ]
-  },
-  {
-    "objectID": "reading.html#key-skills",
-    "href": "reading.html#key-skills",
-    "title": "Reading List",
-    "section": "2.1 Key Skills",
-    "text": "2.1 Key Skills\n\nQuarto documentation (Allaire et al., 2024)\n\n\nThe software used to create the Transport Data Science course materials and numerous websites, presentations, dashboards, and books, Quarto is a powerful tool for creating reproducible documents with code and data.\nSee the technical writing page of Quarto’s documentation for key information on how to add references, figure captions, and more.\n\nIntroduction to GitHub (Heis, 2025)\n\nA good starting point for learning how to use GitHub for version control and collaboration. \nSee also their introduction to Devcontainers at docs.github.com/en/codespaces/",
-    "crumbs": [
-      "Reading list"
-    ]
-  },
-  {
-    "objectID": "reading.html#python",
-    "href": "reading.html#python",
-    "title": "Reading List",
-    "section": "2.2 Python",
-    "text": "2.2 Python\n\nCourse Materials for: Geospatial Data Science (Szell, 2025)\n\nCourse materials covering various aspects of geospatial data science, including data analysis, visualization, and working with street networks using Python.\n\nModern Polars (heavey_modern_2025?)\n\nA side-by-side comparison of the Polars and Pandas libraries.\n\nPython Polars: The definitive guide (janssens_python_2025?)\n\nGuide to using the polars for data manipulation in Python, due to be published in February 2025.\n\nA course on Geographic Data Science (Arribas-Bel, 2019)\n\nFree and open source online book on using GeoPandas and other Python libraries for geographic data analysis.\n\nPython for Data Analysis (McKinney, 2022)\n\nDta wrangling with Pandas, NumPy, and Jupyter, written by the creator of the Pandas library.\n\nGeocomputation with Python (Dorman et al., 2025)\n\nResource for working with geographic data using Python, covering both vector and raster data models.",
-    "crumbs": [
-      "Reading list"
-    ]
-  },
-  {
-    "objectID": "reading.html#r",
-    "href": "reading.html#r",
-    "title": "Reading List",
-    "section": "2.3 R",
-    "text": "2.3 R\n\nAdvanced R\n\nA comprehensive guide to advanced programming in R, covering topics such as functional programming and object-oriented programming.",
-    "crumbs": [
-      "Reading list"
-    ]
-  },
-  {
-    "objectID": "reading.html#miscellaneous",
-    "href": "reading.html#miscellaneous",
-    "title": "Reading List",
-    "section": "5.1 Miscellaneous",
-    "text": "5.1 Miscellaneous\n\nData Science for Transport: A Self-Study Guide with Computer Exercises (Fox, 2018)\n\nAn introduction to transport data science with hands-on examples, slightly out of date as of 2025.\n\nReproducible Road Safety Research with R (Lovelace, 2020)\n\nIntroductory guide for analyzing road safety data in R\n\nOpen source tools for geographic analysis in transport planning (Lovelace, 2021)\n\nReview of open source tools available for transport planning and analysis.\n\nPython for Data Science (Turrell et al., 2025)\n\nA modern guide to data science using Python based on R for Data Science, with practical examples and clear explanations.\n\nThe Geography of Transport Systems (Rodrigue et al., 2013)\n\nComprehensive textbook on transport geography and systems\n\nModelling Transport (Ortúzar S. and Willumsen, 2001)\n\nFoundational text on transport modeling methods\n\nBuilding Reproducible Analytical Pipelines with R (rodrigues_building?)\n\nA guide to the data engineering side of data science, with a focus on reproducibility and automation.\n\n\nSee the full bibliography on Zotero for more resources, and feel free to suggest additions by opening an issue in the tds issue tracker.",
-    "crumbs": [
-      "Reading list"
-    ]
-  },
-  {
-    "objectID": "materials.html",
-    "href": "materials.html",
-    "title": "Course Materials",
-    "section": "",
-    "text": "Practical 1\n\nSlides\n\nPractical 2\nPractical 3\nPractical 4\nPractical 5\nPractical 6\nDatasets\nSlides (those not included in the practicals)",
-    "crumbs": [
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "slides/index.html",
-    "href": "slides/index.html",
-    "title": "Transport Data Science",
-    "section": "",
-    "text": "Introduction to Transport Data Science"
+    "text": "This is a placeholder page, contents will be added"
   },
   {
     "objectID": "p1/slides.html#who-transport-data-science-team",
@@ -486,5 +159,395 @@
     "title": "Introduction to transport data science",
     "section": "Practical session will involve…",
     "text": "Practical session will involve…\nSee https://github.com/ITSLeeds/TDS/blob/master/practicals/1-intro.md\nThat’s your working document for today."
+  },
+  {
+    "objectID": "slides/index.html",
+    "href": "slides/index.html",
+    "title": "Transport Data Science",
+    "section": "",
+    "text": "Introduction to Transport Data Science"
+  },
+  {
+    "objectID": "s2/index.html",
+    "href": "s2/index.html",
+    "title": "Seminar 2",
+    "section": "",
+    "text": "This is a placeholder page; content will be added soon."
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Course Materials",
+    "section": "",
+    "text": "Practical 1\n\nSlides\n\nPractical 2\nPractical 3\nPractical 4\nPractical 5\nPractical 6\nDatasets\nSlides (those not included in the practicals)",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "p3/index.html",
+    "href": "p3/index.html",
+    "title": "Practical 3: Origin-destination data",
+    "section": "",
+    "text": "This is a placeholder page; content will be added soon."
+  },
+  {
+    "objectID": "d1/index.html",
+    "href": "d1/index.html",
+    "title": "Computer set-up",
+    "section": "",
+    "text": "This is a placeholder page; content will be added soon."
+  },
+  {
+    "objectID": "d2/index.html",
+    "href": "d2/index.html",
+    "title": "Draft portfolio",
+    "section": "",
+    "text": "This is a placeholder page, contents will be added"
+  },
+  {
+    "objectID": "schedule.html",
+    "href": "schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "The timetable below is a user-friently representation of the timetable for the module (see github for .csv and .ics versions). See timetable.leeds.ac.uk for the official timetable. If you spot any discrepancies, please let us know.",
+    "crumbs": [
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "p5/index.html",
+    "href": "p5/index.html",
+    "title": "Practical 5: Visualising transport data",
+    "section": "",
+    "text": "This is a placeholder page; content will be added soon."
+  },
+  {
+    "objectID": "marking-criteria.html",
+    "href": "marking-criteria.html",
+    "title": "Marking Criteria",
+    "section": "",
+    "text": "Marks are awarded in 4 categories, accounting for the following criteria:\n\n\n\nThe selection and effective use of input datasets that are large (e.g. covering multiple years), complex (e.g. containing multiple variables) and/or diverse (e.g. input datasets from multiple sources are used and where appropriate combined in the analysis)\nDescribe how the data was collected and implications for data quality, and outline how the input datasets were downloaded (with a reproducible example if possible), with a description that will allow others to understand the structure of the inputs and how to import them\nEvidence of data cleaning techniques (e.g. by re-categorising variables)\nAdding value to datasets with joins (key-based or spatial), creation of new variables (also known as feature engineering) and reshaping data (e.g. from wide to long format)\n\nDistinction (70%+): The report makes use of a complex (with many columns and rows) and/or multiple input datasets, efficiently importing them and adding value by creating new variables, recategorising, changing data formats/types, and/or reshaping the data. Selected datasets are very well suited to the research questions, clearly described, with links to the source and understanding of how the datasets were generated.\nMerit (60-69%): The report makes some use of complex or multiple input datasets. The selection, description of, cleaning or value-added to the input datasets show skill and care applied to the data processing stage but with some weaknesses. Selected datasets are appropriate for the research questions, with some description or links to the data source.\nPass (50-59%): There is some evidence of care and attention put into the selection, description of or cleaning of the input datasets but little value has been added. The report makes little use of complex or multiple input datasets. The datasets are not appropriate for the research questions, the datasets are not clearly described, or there are no links to the source or understanding of how the datasets were generated, but the data processing aspect of the work acceptable.\nFail (0-49%): The report does not make use of appropriate input datasets and contains very little or now evidence of data cleaning, adding value to the datasets or reshaping the data. While there may be some evidence of data processing, it is of poor quality and/or not appropriate for the research questions.\n\n\n\n\nCreation of figures that are readable and well-described (e.g. with captions and description)\nHigh quality, attractive or advanced techniques (e.g. multi-layered maps or graphs, facets or other advanced techniques)\nUsing visualisation techniques appropriate to the topic and data and interpreting the results correctly (e.g. mentioning potential confounding factors that could account for observed patterns)\nThe report is well-formatted, accessible (e.g. with legible text size and does not contain excessive code in the submitted report) and clearly communicates the data and analysis visually, with appropriate figure captions, cross-references and a consistent style\n\nDistinction (70%+): The report contains high quality, attractive, advanced and meaningful visualisations that are very well-described and interpreted, showing deep understanding of how visualisation can communicate meaning contained within datasets. The report is very well-formatted, accessible and clearly communicates the data and analysis visually.\nMerit (60-69%): The report contains good visualisations that correctly present the data and highlight key patterns. The report is has appropriate formatting.\nPass (50-59%): The report contains basic visualisations or are not well-described or interpreted correctly or the report is poorly formatted, not accessible or does not clearly communicate the data and analysis visually.\nFail (0-49%): The report is of unacceptable quality (would likely be rejected in a professional setting) and/or has poor quality and/or few visualisations, or the visualisations are inappropriate given the data and research questions.\n\n\n\n\nCode quality in the submitted source code, including using consistent style, appropriate packages, and clear comments\nEfficiency, including pre-processing to reduce input datasets (avoiding having to share large datasets in the submission for example) and computationally efficient implementations\nThe report is fully reproducible, including generation of figures. There are links to online resources for others wanting to reproduce the analysis for another area, and links to the input data\n\nDistinction (70%+): The source code underlying the report contains high quality, efficient and reproducible code that is very well-written, using consistent syntax and good style, well-commented and uses appropriate packages. The report is fully reproducible, with links to online resources for others wanting to reproduce the analysis for another area, and links to the input data.\nMerit (60-69%): The code is readable and describes the outputs in the report but lacks quality, either in terms of comments, efficiency or reproducibility.\nPass (50-59%): The source code underlying the report describes the outputs in the report but is not well-commented, not efficient or has very limited levels of reproduicibility, with few links to online resources for others wanting to reproduce the analysis for another area, and few links to the input data.\nFail (0-49%): The report has little to no reproducible, readable or efficient code. A report that includes limited well-described code in the main text or in associated files would be considered at the borderline between a fail and a pass. A report that includes no code would be considered a low fail under this criterion.\n\n\n\n\nTopic selection, including originality, availability of datasets related to the topic and relevance to solving transport planning problems\nClear research question\nAppropriate reference to the academic, policy and/or technical literature and use of the literature to inform the research question and methods\nUse of appropriate data science methods and techniques\nDiscussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed\nDiscuss further research and/or explain the potential impacts of the work\nThe conclusions are supported by the analysis and results\nThe contents of the report fit together logically and support the aims and/or research questions of the report\n\nDistinction (70%+): The report contains a clear research question, appropriate reference to the academic, policy and/or technical literature, use of appropriate data science methods and techniques, discussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed. The report discusses further research and/or explores of the potential impacts of the work. Conclusions are supported by the analysis and results, and the contents of the report fit together logically as a cohehisive whole that has a clear direction set-out by the aims and/or research questions. To get a Distinction there should also be evidence of considering the generalisability of the methods and reflections on how it could be built on by others in other areas.\nMerit (60-69%): There is a clear research question. There is some reference to the academic, policy and/or technical literature. The report has a good structure and the results are supported by the analysis. There is some discussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed.\nPass (50-59%): The report contains a valid research question but only limited references to appropriate literature or justification. There is evidence of awareness of the limitations of the results and how they inform conclusions, but these are not fully supported by the analysis. The report has a reasonable structure but does not fit together well in a cohesive whole.\nFail (0-49%): The report does not contain a valid research question, has no references to appropriate literature or justification, does not discuss the limitations of the results or how they inform conclusions, or the report does not have a reasonable structure.",
+    "crumbs": [
+      "Marking Criteria"
+    ]
+  },
+  {
+    "objectID": "marking-criteria.html#marks",
+    "href": "marking-criteria.html#marks",
+    "title": "Marking Criteria",
+    "section": "",
+    "text": "Marks are awarded in 4 categories, accounting for the following criteria:\n\n\n\nThe selection and effective use of input datasets that are large (e.g. covering multiple years), complex (e.g. containing multiple variables) and/or diverse (e.g. input datasets from multiple sources are used and where appropriate combined in the analysis)\nDescribe how the data was collected and implications for data quality, and outline how the input datasets were downloaded (with a reproducible example if possible), with a description that will allow others to understand the structure of the inputs and how to import them\nEvidence of data cleaning techniques (e.g. by re-categorising variables)\nAdding value to datasets with joins (key-based or spatial), creation of new variables (also known as feature engineering) and reshaping data (e.g. from wide to long format)\n\nDistinction (70%+): The report makes use of a complex (with many columns and rows) and/or multiple input datasets, efficiently importing them and adding value by creating new variables, recategorising, changing data formats/types, and/or reshaping the data. Selected datasets are very well suited to the research questions, clearly described, with links to the source and understanding of how the datasets were generated.\nMerit (60-69%): The report makes some use of complex or multiple input datasets. The selection, description of, cleaning or value-added to the input datasets show skill and care applied to the data processing stage but with some weaknesses. Selected datasets are appropriate for the research questions, with some description or links to the data source.\nPass (50-59%): There is some evidence of care and attention put into the selection, description of or cleaning of the input datasets but little value has been added. The report makes little use of complex or multiple input datasets. The datasets are not appropriate for the research questions, the datasets are not clearly described, or there are no links to the source or understanding of how the datasets were generated, but the data processing aspect of the work acceptable.\nFail (0-49%): The report does not make use of appropriate input datasets and contains very little or now evidence of data cleaning, adding value to the datasets or reshaping the data. While there may be some evidence of data processing, it is of poor quality and/or not appropriate for the research questions.\n\n\n\n\nCreation of figures that are readable and well-described (e.g. with captions and description)\nHigh quality, attractive or advanced techniques (e.g. multi-layered maps or graphs, facets or other advanced techniques)\nUsing visualisation techniques appropriate to the topic and data and interpreting the results correctly (e.g. mentioning potential confounding factors that could account for observed patterns)\nThe report is well-formatted, accessible (e.g. with legible text size and does not contain excessive code in the submitted report) and clearly communicates the data and analysis visually, with appropriate figure captions, cross-references and a consistent style\n\nDistinction (70%+): The report contains high quality, attractive, advanced and meaningful visualisations that are very well-described and interpreted, showing deep understanding of how visualisation can communicate meaning contained within datasets. The report is very well-formatted, accessible and clearly communicates the data and analysis visually.\nMerit (60-69%): The report contains good visualisations that correctly present the data and highlight key patterns. The report is has appropriate formatting.\nPass (50-59%): The report contains basic visualisations or are not well-described or interpreted correctly or the report is poorly formatted, not accessible or does not clearly communicate the data and analysis visually.\nFail (0-49%): The report is of unacceptable quality (would likely be rejected in a professional setting) and/or has poor quality and/or few visualisations, or the visualisations are inappropriate given the data and research questions.\n\n\n\n\nCode quality in the submitted source code, including using consistent style, appropriate packages, and clear comments\nEfficiency, including pre-processing to reduce input datasets (avoiding having to share large datasets in the submission for example) and computationally efficient implementations\nThe report is fully reproducible, including generation of figures. There are links to online resources for others wanting to reproduce the analysis for another area, and links to the input data\n\nDistinction (70%+): The source code underlying the report contains high quality, efficient and reproducible code that is very well-written, using consistent syntax and good style, well-commented and uses appropriate packages. The report is fully reproducible, with links to online resources for others wanting to reproduce the analysis for another area, and links to the input data.\nMerit (60-69%): The code is readable and describes the outputs in the report but lacks quality, either in terms of comments, efficiency or reproducibility.\nPass (50-59%): The source code underlying the report describes the outputs in the report but is not well-commented, not efficient or has very limited levels of reproduicibility, with few links to online resources for others wanting to reproduce the analysis for another area, and few links to the input data.\nFail (0-49%): The report has little to no reproducible, readable or efficient code. A report that includes limited well-described code in the main text or in associated files would be considered at the borderline between a fail and a pass. A report that includes no code would be considered a low fail under this criterion.\n\n\n\n\nTopic selection, including originality, availability of datasets related to the topic and relevance to solving transport planning problems\nClear research question\nAppropriate reference to the academic, policy and/or technical literature and use of the literature to inform the research question and methods\nUse of appropriate data science methods and techniques\nDiscussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed\nDiscuss further research and/or explain the potential impacts of the work\nThe conclusions are supported by the analysis and results\nThe contents of the report fit together logically and support the aims and/or research questions of the report\n\nDistinction (70%+): The report contains a clear research question, appropriate reference to the academic, policy and/or technical literature, use of appropriate data science methods and techniques, discussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed. The report discusses further research and/or explores of the potential impacts of the work. Conclusions are supported by the analysis and results, and the contents of the report fit together logically as a cohehisive whole that has a clear direction set-out by the aims and/or research questions. To get a Distinction there should also be evidence of considering the generalisability of the methods and reflections on how it could be built on by others in other areas.\nMerit (60-69%): There is a clear research question. There is some reference to the academic, policy and/or technical literature. The report has a good structure and the results are supported by the analysis. There is some discussion of the strengths and weaknesses of the analysis and input datasets and/or how limitations could be addressed.\nPass (50-59%): The report contains a valid research question but only limited references to appropriate literature or justification. There is evidence of awareness of the limitations of the results and how they inform conclusions, but these are not fully supported by the analysis. The report has a reasonable structure but does not fit together well in a cohesive whole.\nFail (0-49%): The report does not contain a valid research question, has no references to appropriate literature or justification, does not discuss the limitations of the results or how they inform conclusions, or the report does not have a reasonable structure.",
+    "crumbs": [
+      "Marking Criteria"
+    ]
+  },
+  {
+    "objectID": "reading.html",
+    "href": "reading.html",
+    "title": "Reading List",
+    "section": "",
+    "text": "This reading list contains key resources for the Transport Data Science module, organized by topic.",
+    "crumbs": [
+      "Reading list"
+    ]
+  },
+  {
+    "objectID": "reading.html#key-skills",
+    "href": "reading.html#key-skills",
+    "title": "Reading List",
+    "section": "2.1 Key Skills",
+    "text": "2.1 Key Skills\n\nQuarto documentation (Allaire et al., 2024)\n\n\nThe software used to create the Transport Data Science course materials and numerous websites, presentations, dashboards, and books, Quarto is a powerful tool for creating reproducible documents with code and data.\nSee the technical writing page of Quarto’s documentation for key information on how to add references, figure captions, and more.\n\nIntroduction to GitHub (Heis, 2025)\n\nA good starting point for learning how to use GitHub for version control and collaboration. \nSee also their introduction to Devcontainers at docs.github.com/en/codespaces/",
+    "crumbs": [
+      "Reading list"
+    ]
+  },
+  {
+    "objectID": "reading.html#python",
+    "href": "reading.html#python",
+    "title": "Reading List",
+    "section": "2.2 Python",
+    "text": "2.2 Python\n\nCourse Materials for: Geospatial Data Science (Szell, 2025)\n\nCourse materials covering various aspects of geospatial data science, including data analysis, visualization, and working with street networks using Python.\n\nModern Polars (heavey_modern_2025?)\n\nA side-by-side comparison of the Polars and Pandas libraries.\n\nPython Polars: The definitive guide (janssens_python_2025?)\n\nGuide to using the polars for data manipulation in Python, due to be published in February 2025.\n\nA course on Geographic Data Science (Arribas-Bel, 2019)\n\nFree and open source online book on using GeoPandas and other Python libraries for geographic data analysis.\n\nPython for Data Analysis (McKinney, 2022)\n\nDta wrangling with Pandas, NumPy, and Jupyter, written by the creator of the Pandas library.\n\nGeocomputation with Python (Dorman et al., 2025)\n\nResource for working with geographic data using Python, covering both vector and raster data models.",
+    "crumbs": [
+      "Reading list"
+    ]
+  },
+  {
+    "objectID": "reading.html#r",
+    "href": "reading.html#r",
+    "title": "Reading List",
+    "section": "2.3 R",
+    "text": "2.3 R\n\nAdvanced R\n\nA comprehensive guide to advanced programming in R, covering topics such as functional programming and object-oriented programming.",
+    "crumbs": [
+      "Reading list"
+    ]
+  },
+  {
+    "objectID": "reading.html#miscellaneous",
+    "href": "reading.html#miscellaneous",
+    "title": "Reading List",
+    "section": "5.1 Miscellaneous",
+    "text": "5.1 Miscellaneous\n\nData Science for Transport: A Self-Study Guide with Computer Exercises (Fox, 2018)\n\nAn introduction to transport data science with hands-on examples, slightly out of date as of 2025.\n\nReproducible Road Safety Research with R (Lovelace, 2020)\n\nIntroductory guide for analyzing road safety data in R\n\nOpen source tools for geographic analysis in transport planning (Lovelace, 2021)\n\nReview of open source tools available for transport planning and analysis.\n\nPython for Data Science (Turrell et al., 2025)\n\nA modern guide to data science using Python based on R for Data Science, with practical examples and clear explanations.\n\nThe Geography of Transport Systems (Rodrigue et al., 2013)\n\nComprehensive textbook on transport geography and systems\n\nModelling Transport (Ortúzar S. and Willumsen, 2001)\n\nFoundational text on transport modeling methods\n\nBuilding Reproducible Analytical Pipelines with R (rodrigues_building?)\n\nA guide to the data engineering side of data science, with a focus on reproducibility and automation.\n\n\nSee the full bibliography on Zotero for more resources, and feel free to suggest additions by opening an issue in the tds issue tracker.",
+    "crumbs": [
+      "Reading list"
+    ]
+  },
+  {
+    "objectID": "p6/index.html",
+    "href": "p6/index.html",
+    "title": "Practical 6: Project work",
+    "section": "",
+    "text": "This is a placeholder page; content will be added soon."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Transport Data Science",
+    "section": "",
+    "text": "A module on using data science to solve transport problems. This couse is based at the University of Leeds’ Institute for Transport Studies. It has evolved over a decade of teaching and research in the field and aims to teach you up-to-date and future-proof skills with practical examples and reproducible workflows using industry-standard data science tools.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#hardware",
+    "href": "index.html#hardware",
+    "title": "Transport Data Science",
+    "section": "Hardware",
+    "text": "Hardware\nAccess to a computer that you have permission to install software on, with at least 8 GB of RAM, is highly recommended. You could use a cloud-based service such as RStudio Cloud, Google Colab, or GitHub Codespaces, but you would need to be comfortable with using these services and would miss out on some of the benefits of using your own computer.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#command-line-experience",
+    "href": "index.html#command-line-experience",
+    "title": "Transport Data Science",
+    "section": "Command-line experience",
+    "text": "Command-line experience\nYou should be comfortable with computing in general, for example creating folders, moving files, and installing software. You should be comfortable with using command line interfaces such as PowerShell in Windows, Terminal in macOS, or the Linux shell.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#data-science-experience-prerequisites",
+    "href": "index.html#data-science-experience-prerequisites",
+    "title": "Transport Data Science",
+    "section": "Data science experience prerequisites",
+    "text": "Data science experience prerequisites\nPrior experience of using R or Python (e.g. having used it for work, in previous degrees or having completed an online course) is essential.\nStudents can demonstrate this by showing evidence that they have worked with R before, have completed an online course such as the first 4 sessions in the RStudio Primers series or DataCamp’s Free Introduction to R course.\nEvidence of substantial programming and data science experience in previous professional or academic work, in languages such as R or Python, also constitutes sufficient pre-requisite knowledge for the course.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#quickstart-with-github-codespaces",
+    "href": "index.html#quickstart-with-github-codespaces",
+    "title": "Transport Data Science",
+    "section": "Quickstart with GitHub Codespaces",
+    "text": "Quickstart with GitHub Codespaces\nYou can use GitHub Codespaces to get started with the course materials in a cloud-based environment. Sign-up to GitHub, fork the repository, and click the “Open in GitHub Codespaces” button above to get started. You can also use the following link:\n\n\n\nOpen in GitHub Codespaces",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#r",
+    "href": "index.html#r",
+    "title": "Transport Data Science",
+    "section": "R",
+    "text": "R\nInstall a recent version of R (4.3.0 or above) and RStudio (recommended) or another IDE such as VS Code (if you have prior experience with it) with the the following links:\n\nR from cran.r-project.org\nRStudio from rstudio.com (recommended) or VS Code with the R extension installed.\nR packages, which can be installed by opening RStudio and typing install.packages(\"stats19\") in the R console, for example.\nTo install all the dependencies for the module, run the following command in the R console:\n\n\nif (!requireNamespace(\"remotes\", quietly = TRUE)) {\n  install.packages(\"remotes\")\n}\nremotes::install_github(\"itsleeds/tds\")\n\nSee Section 1.5 of the online guide Reproducible Road Safety Research with R for instructions on how to install key packages we will use in the module.1",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#python",
+    "href": "index.html#python",
+    "title": "Transport Data Science",
+    "section": "Python",
+    "text": "Python\nIf you choose to use Python, you should be able to install it and manage your own Python environment, including installing packages and dealing with package conflicts. If you use Python we recommend using an environment manager such as pixi (which can manage both R and Python environments) or Docker (best practice for reproducibility and isolation).",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#docker-advanced",
+    "href": "index.html#docker-advanced",
+    "title": "Transport Data Science",
+    "section": "Docker (advanced)",
+    "text": "Docker (advanced)\nWe maintain a Docker image that contains all the software you need to complete the course with VS Code, quarto and a Devcontainer set-up. Advantages of this approach include that it ensures reproducibility and can save time installing software. Disadvantages include that it can be hard to install Docker and can be difficult to use if you are not familiar with Docker. We therefore recommend this approach only for people who are confident with Docker and willing to invest time in learning how to use it. See the Docker installation instructions, the devcontainers documentation on github.com and the tds Dockerfile and devcontainer.json for guidance on getting started with Docker.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "Transport Data Science",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n For further guidance on setting-up your computer to run R and RStudio for spatial data, see these links, we recommend Chapter 2 of Geocomputation with R (the Prerequisites section contains links for installing spatial software on Mac, Linux and Windows): https://geocompr.robinlovelace.net/spatial-class.html and Chapter 2 of the online book Efficient R Programming, particularly sections 2.3 and 2.5, for details on R installation and set-up and the project management section.↩︎",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "s1/index.html",
+    "href": "s1/index.html",
+    "title": "Seminar 1",
+    "section": "",
+    "text": "This is a placeholder page; content will be added soon."
+  },
+  {
+    "objectID": "p2/index.html",
+    "href": "p2/index.html",
+    "title": "Origin-destination data",
+    "section": "",
+    "text": "You should now be familiar with the basics of R and the tidyverse. If you have not completed these tasks go back and do them first:\n\nRead Chapters 2, 3, and 4 of Reproducible road safety research with R\nRead Chapters 3 and 5 of R for Data Science"
+  },
+  {
+    "objectID": "p2/index.html#pre-requisites",
+    "href": "p2/index.html#pre-requisites",
+    "title": "Origin-destination data",
+    "section": "Pre-requisites",
+    "text": "Pre-requisites\nYou need to have a number of packages installed and loaded. Install the packages by typing in the following commands into RStudio (you do not need to add the comments after the # symbol)\nIf you need to install any of these packages use:\n\nRPython\n\n\n\nif (!require(\"pak\")) install.packages(\"pak\")\npak::pkg_install(c(\"sf\", \"tidyverse\", \"remotes\"))\n# GitHub pkgs\npak::pkg_install(\"Nowosad/spDataLarge\")\n\n\nlibrary(sf)          # vector data package \nlibrary(tidyverse)   # tidyverse packages\nlibrary(spData)  # spatial data package \n\n\n\n\n# Install necessary packages (uncomment if not already installed)\n# !pip install geopandas pandas matplotlib seaborn\n\nimport geopandas as gpd       # vector data package\nimport pandas as pd           # data manipulation\nimport matplotlib.pyplot as plt  # plotting\nimport seaborn as sns            # advanced plotting\n# For spatial data, geopandas comes with sample datasets\n# Alternatively, we can use the naturalearth datasets\nimport geopandas.datasets\n\n\n\n\n\nCheck your packages are up-to-date with update.packages() in R (or equivalent in Python)\nCreate a project folder with an appropriate name for this session (e.g. practical2)\nCreate appropriate folders for code, data and anything else (e.g. images)\nCreate a script called learning-OD.R, e.g. with the following command:\n\nmkdir code\ncode code/learning-OD.R # for R\ncode code/learning-OD.py # for Python"
+  },
+  {
+    "objectID": "p2/index.html#basic-sf-operations",
+    "href": "p2/index.html#basic-sf-operations",
+    "title": "Origin-destination data",
+    "section": "2.1 Basic sf operations",
+    "text": "2.1 Basic sf operations\nWe will start with a simple map of the world. Load the world object from the spData package. Notice the use of :: to say that you want the world object from the spData package.\n\nRPython\n\n\n\nworld = spData::world\n\n\n\n\nworld = gpd.read_file(\n    'https://naturalearth.s3.amazonaws.com/110m_cultural/ne_110m_admin_0_countries.zip'\n)\n\n\n\n\nUse some basic R functions to explore the world object. e.g. class(world), dim(world), head(world), summary(world). Also view the world object by clicking on it in the Environment panel.\nsf objects can be plotted with plot().\n\nRPython\n\n\n\nplot(world)\n\n\n\n\n\n\n\n\n\n\n\nprint(type(world))       # Equivalent to class(world)\nprint(world.shape)       # Equivalent to dim(world)\nprint(world.head())      # Equivalent to head(world)\nprint(world.describe())  # Equivalent to summary(world)\n\n# Plotting the world GeoDataFrame\nworld.plot(figsize=(12, 8))\nplt.title('World Map')\nplt.show()\n\n\n\n\nNote that this makes a map of each column in the data frame. Try some other plotting options\n\nRPython\n\n\n\nplot(world[3:6])\n\n\n\n\n\n\n\nplot(world[\"pop\"])\n\n\n\n\n\n\n\n\n\n\n\n# Since world is a GeoDataFrame, we can select columns by position\n# However, GeoPandas plots the geometry, so we need to specify columns\nfig, axes = plt.subplots(1, 3, figsize=(15, 5))\nworld.plot(column='POP_EST', ax=axes[0])\nworld.plot(column='GDP_YEAR', ax=axes[1])\nworld.plot(column='CONTINENT', ax=axes[2])\nplt.show()"
+  },
+  {
+    "objectID": "p2/index.html#basic-spatial-operations",
+    "href": "p2/index.html#basic-spatial-operations",
+    "title": "Origin-destination data",
+    "section": "2.2 Basic spatial operations",
+    "text": "2.2 Basic spatial operations\nLoad the nz and nz_height datasets from the spData package.\n\nRPython\n\n\n\nnz = spData::nz\nnz_height = spData::nz_height\n\n\n\n\nnz = gpd.read_file(\"https://github.com/Nowosad/spData_files/raw/refs/heads/main/data/nz.gpkg\")\nnz_height = gpd.read_file(\"https://github.com/Nowosad/spData_files/raw/refs/heads/main/data/nz_height.gpkg\")\n\n\n\n\nWe can use tidyverse functions like filter and select on sf objects in the same way you did in Practical 1.\n\nRPython\n\n\n\ncanterbury = nz |&gt; filter(Name == \"Canterbury\")\ncanterbury_height = nz_height[canterbury, ]\n\n\n\n\ncanterbury = nz[nz['Name'] == 'Canterbury']\n\n\n\n\nIn this case we filtered the nz object to only include places called Canterbury and then did and intersection to find objects in the nz_height object that are in Canterbury.\nThis syntax is not very clear. But is the equivalent to\n\nRPython\n\n\n\ncanterbury_height = nz_height[canterbury, , op = st_intersects]\n\n\n\n\ncanterbury_height = gpd.overlay(nz_height, canterbury, how='intersection')\n\n\n\n\nThere are many different types of relationships you can use with op. Try ?st_intersects() to see more. For example this would give all the places not in Canterbury\n\nRPython\n\n\n\nnz_height[canterbury, , op = st_disjoint]\n\n\n\n\ncanterbury_height = gpd.sjoin(nz_height, canterbury, op='intersects')\n\n\n\n\n\n\n\nTopological relations between vector geometries, inspired by Figures 1 and 2 in Egenhofer and Herring (1990). The relations for which the function(x, y) is true are printed for each geometry pair, with x represented in pink and y represented in blue. The nature of the spatial relationship for each pair is described by the Dimensionally Extended 9-Intersection Model string."
+  },
+  {
+    "objectID": "p4/index.html",
+    "href": "p4/index.html",
+    "title": "Practical 4: Routing",
+    "section": "",
+    "text": "This is a placeholder page; content will be added soon."
+  },
+  {
+    "objectID": "slides/intro.html#who-transport-data-science-team",
+    "href": "slides/intro.html#who-transport-data-science-team",
+    "title": "Introduction to transport data science",
+    "section": "Who: Transport Data Science team",
+    "text": "Who: Transport Data Science team\nRobin Lovelace\n\nAssociate Professor of Transport Data Science\nResearching transport futures and active travel planning\nR developer and teacher, author of Geocomputation with R\n\nYuanxuan Yang\n\nLecturer in Data Science of Transport\nNew and Emerging Forms of Data: Investigating novel data sources and their applications in urban mobility and transport planning."
+  },
+  {
+    "objectID": "slides/intro.html#tds-team-ii",
+    "href": "slides/intro.html#tds-team-ii",
+    "title": "Introduction to transport data science",
+    "section": "TDS Team II",
+    "text": "TDS Team II\nMalcolm Morgan\n\nSenior researcher at ITS with expertise in routing + web\nDeveloper of the Propensity to Cycle Tool and PBCC\n\nZhao Wang\n\nCivil Engineer and Data Scientist with expertise in machine learning\n\nDemonstrators\n\nJuan Pablo Fonseca Zamora\n\nYou!"
+  },
+  {
+    "objectID": "slides/intro.html#what-is-transport-data-science",
+    "href": "slides/intro.html#what-is-transport-data-science",
+    "title": "Introduction to transport data science",
+    "section": "What is transport data science?",
+    "text": "What is transport data science?\n\n\nThe application of data science to transport datasets and problems\nRaising the question…\nWhat is data science?\nA discipline “that allows you to turn raw data into understanding, insight, and knowledge” (Grolemund, 2016)\n\nIn other words…\n\nStatistics that is actually useful!"
+  },
+  {
+    "objectID": "slides/intro.html#why-take-transport-data-science",
+    "href": "slides/intro.html#why-take-transport-data-science",
+    "title": "Introduction to transport data science",
+    "section": "Why take Transport Data Science",
+    "text": "Why take Transport Data Science\n\n\n\n\nNew skills (cutting edge R and/or Python packages)\nPotential for impacts\nAllows you to do new things with data\nIt might get you a job!"
+  },
+  {
+    "objectID": "slides/intro.html#live-demo-npt.scot-web-app",
+    "href": "slides/intro.html#live-demo-npt.scot-web-app",
+    "title": "Introduction to transport data science",
+    "section": "Live demo: npt.scot web app",
+    "text": "Live demo: npt.scot web app"
+  },
+  {
+    "objectID": "slides/intro.html#the-history-of-tds",
+    "href": "slides/intro.html#the-history-of-tds",
+    "title": "Introduction to transport data science",
+    "section": "The history of TDS",
+    "text": "The history of TDS\n\n2017: Transport Data Science created, led by Dr Charles Fox, Computer Scientist, author of Transport Data Science book (Fox, 2018)\nThe focus was on databases and Bayesian methods\n2019: I inherited the module, which was attended by ITS students\nSummer 2019: Python code published in the module ‘repo’:\n\ngithub.com/ITSLeeds"
+  },
+  {
+    "objectID": "slides/intro.html#history-of-tds-ii",
+    "href": "slides/intro.html#history-of-tds-ii",
+    "title": "Introduction to transport data science",
+    "section": "History of TDS II",
+    "text": "History of TDS II\n\nJanuary 2020: Available, Data Science MSc course\nMarch 2020: Switch to online teaching\n2021-2023: Updated module, focus on methods\n2024: Switch to combined practical sessions and lectures\n2025+: Expand, online course? book? stay in touch!\n\n\n\nMilestone passed in my academic career, first online-only delivery of lecture @ITSLeeds, seems to have worked, live code demo with #rstats/@rstudio, recording, chat + all🎉Thanks students for ‘attending’ + remote participation, we’ll get through this together.#coronavirus pic.twitter.com/wlAUxmZj5r\n\n— Robin Lovelace (@robinlovelace) March 17, 2020"
+  },
+  {
+    "objectID": "slides/intro.html#essential-reading",
+    "href": "slides/intro.html#essential-reading",
+    "title": "Introduction to transport data science",
+    "section": "Essential reading",
+    "text": "Essential reading\n\nChapter 12, Transportation of Geocomputation with R, a open book on geographic data in R (available free online) (Lovelace et al. 2019)\nReproducible Road Safety Research with R (RRSRR): https://itsleeds.github.io/rrsrr/"
+  },
+  {
+    "objectID": "slides/intro.html#core-reading-materials",
+    "href": "slides/intro.html#core-reading-materials",
+    "title": "Introduction to transport data science",
+    "section": "Core reading materials",
+    "text": "Core reading materials\n\nR for Data Science, an introduction to data science with R (available free online)\nPython equivalent"
+  },
+  {
+    "objectID": "slides/intro.html#optional",
+    "href": "slides/intro.html#optional",
+    "title": "Introduction to transport data science",
+    "section": "Optional",
+    "text": "Optional\nThere are many good resources on data science for transport applications. Do your own research and reading! The following are good:\n\nIf you’re interested in network analysis/Python, see this paper on analysing OSM data in Python (Boeing and Waddell, 2017) (available online)\nIf you’re interested in the range of transport modelling tools, see Lovelace (2021). \n\nFor more references, see the bibliography at github.com/ITSLeeds/TDS"
+  },
+  {
+    "objectID": "slides/intro.html#objectives",
+    "href": "slides/intro.html#objectives",
+    "title": "Introduction to transport data science",
+    "section": "Objectives",
+    "text": "Objectives\n\n\nUnderstand the structure of transport datasets\nUnderstand how to obtain, clean and store transport related data\nGain proficiency in command-line tools for handling large transport datasets\nProduce data visualizations, static and interactive\n Learn how to join together the components of transport data science into a cohesive project portfolio"
+  },
+  {
+    "objectID": "slides/intro.html#assessment-for-those-doing-this-as-credit-bearing",
+    "href": "slides/intro.html#assessment-for-those-doing-this-as-credit-bearing",
+    "title": "Introduction to transport data science",
+    "section": "Assessment (for those doing this as credit-bearing)",
+    "text": "Assessment (for those doing this as credit-bearing)\n\nYou will build-up a portfolio of work\n100% coursework assessed, you will submit by\nWritten in code - will be graded for reproducibility\nCode chunks and figures are encouraged\nYou will submit a non-assessed 2 page pdf + qmd"
+  },
+  {
+    "objectID": "slides/intro.html#schedule",
+    "href": "slides/intro.html#schedule",
+    "title": "Introduction to transport data science",
+    "section": "Schedule",
+    "text": "Schedule"
+  },
+  {
+    "objectID": "slides/intro.html#feedback",
+    "href": "slides/intro.html#feedback",
+    "title": "Introduction to transport data science",
+    "section": "Feedback",
+    "text": "Feedback\n\nThe module is taught by two really well organised and enthusiastic professors, great module, the seminars, structured and unstructured learning was great and well thought out, all came together well\n\n\nI wish this module was 60 credits instead of 15 because i just want more of it."
+  },
+  {
+    "objectID": "p1/index.html",
+    "href": "p1/index.html",
+    "title": "Practical 1: Introduction to Transport Data Science",
+    "section": "",
+    "text": "Lecture: an introduction to Transport Data Science (30 min)\nQ&A (15 min) \nBreak and networking (15 min) \nData science and a good research question (30 min)\nData science foundations (guided): Project set-up and using RStudio or VS Code as an integrated development environment (30 min)\nFocussed work (1 hr)\n\n\nWorking through the questions on processing OD data and running the code in Sections 13.1 to 13.4 the Transport chapter of Geocomputation with R and answering the questions for the Bristol dataset"
+  },
+  {
+    "objectID": "p1/index.html#agenda",
+    "href": "p1/index.html#agenda",
+    "title": "Practical 1: Introduction to Transport Data Science",
+    "section": "",
+    "text": "Lecture: an introduction to Transport Data Science (30 min)\nQ&A (15 min) \nBreak and networking (15 min) \nData science and a good research question (30 min)\nData science foundations (guided): Project set-up and using RStudio or VS Code as an integrated development environment (30 min)\nFocussed work (1 hr)\n\n\nWorking through the questions on processing OD data and running the code in Sections 13.1 to 13.4 the Transport chapter of Geocomputation with R and answering the questions for the Bristol dataset"
+  },
+  {
+    "objectID": "p1/index.html#how-to-come-up-with-a-good-research-question",
+    "href": "p1/index.html#how-to-come-up-with-a-good-research-question",
+    "title": "Practical 1: Introduction to Transport Data Science",
+    "section": "How to come up with a good research question",
+    "text": "How to come up with a good research question\n\nThink about the data you have access to\nThink about the problems you want to solve\nThink about the methods you want to use and skills you want to learn\nThink about how the final report will look and hold-together\n\n\nHow much potential is there for cycling across the transport network?\n\n\n\nHow can travel to schools be made safer?\n\n\nHow can hospitals encourage visitors to get there safely?\n\n\nWhere’s the best place to build electric car charging points?\nSee openstreetmap.org or search for other open access datasets for more ideas"
   }
 ]
