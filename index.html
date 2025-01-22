@@ -192,12 +192,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#hardware" id="toc-hardware" class="nav-link" data-scroll-target="#hardware">Hardware</a></li>
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a>
   <ul class="collapse">
+  <li><a href="#quickstart-with-github-codespaces" id="toc-quickstart-with-github-codespaces" class="nav-link" data-scroll-target="#quickstart-with-github-codespaces">Quickstart with GitHub Codespaces</a></li>
   <li><a href="#r-1" id="toc-r-1" class="nav-link" data-scroll-target="#r-1">R</a></li>
   <li><a href="#python-1" id="toc-python-1" class="nav-link" data-scroll-target="#python-1">Python</a></li>
+  <li><a href="#docker-advanced" id="toc-docker-advanced" class="nav-link" data-scroll-target="#docker-advanced">Docker (advanced)</a></li>
   </ul></li>
   <li><a href="#command-line-experience" id="toc-command-line-experience" class="nav-link" data-scroll-target="#command-line-experience">Command-line experience</a></li>
   <li><a href="#data-science-experience-prerequisites" id="toc-data-science-experience-prerequisites" class="nav-link" data-scroll-target="#data-science-experience-prerequisites">Data science experience prerequisites</a></li>
   </ul></li>
+  <li><a href="#contributing-to-the-course" id="toc-contributing-to-the-course" class="nav-link" data-scroll-target="#contributing-to-the-course">Contributing to the course</a></li>
   </ul>
 </nav>
     </div>
@@ -252,11 +255,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="software" class="level2">
 <h2 class="anchored" data-anchor-id="software">Software</h2>
-<p>Although you are free to use any software for the course, the emphasis on reproducibility and interactive data science means that popular popular and established data science languages such as R and Python are recommended.</p>
-<p>The teaching will be delivered primarily in R, with some Python code snippets and examples. Unless you have a good reason to use Python, we recommend you use R for the course.</p>
+<p>You need to install some software to take the course.</p>
+<p>The teaching is be delivered primarily in R, with some Python code and examples, so you need to install R (recommended) or Python or both on your computer. We recommend that most people use R for the practical sessions and the coursework, unless you have a good reason to use Python. If you do choose to use Python or another language, you will have less support: you will need the skills to set-up and manage your own environments. Translations of the R code examples into your chosen language will be very welcome, and contributions to the course materials via <a href="https://github.com/itsleeds/tds/pulls">Pull Requests on GitHub</a> are encouraged.</p>
+<section id="quickstart-with-github-codespaces" class="level3">
+<h3 class="anchored" data-anchor-id="quickstart-with-github-codespaces">Quickstart with GitHub Codespaces</h3>
+<p>You can use GitHub Codespaces to get started with the course materials in a cloud-based environment. Sign-up to GitHub, fork the repository, and click the “Open in GitHub Codespaces” button above to get started. You can also use the following link:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/codespaces/new/itsleeds/tds?quickstart=1"><img src="https://img.shields.io/badge/Open%20in-GitHub%20Codespaces-blue?logo=github.png" class="img-fluid figure-img" alt="Open in GitHub Codespaces"></a></p>
+<figcaption>Open in GitHub Codespaces</figcaption>
+</figure>
+</div>
+</section>
 <section id="r-1" class="level3">
 <h3 class="anchored" data-anchor-id="r-1">R</h3>
-<p>You should have the latest stable release of R (4.3.0 or above) and RStudio (recommended) or another IDE such as VS Code (if you have prior experience with it) installed on your computer.</p>
+<p>Install a recent version of R (4.3.0 or above) and RStudio (recommended) or another IDE such as VS Code (if you have prior experience with it) with the the following links:</p>
 <ul>
 <li>R from <a href="https://cran.r-project.org/">cran.r-project.org</a></li>
 <li>RStudio from <a href="https://rstudio.com/products/rstudio/download/#download">rstudio.com</a> (recommended) or VS Code with the R extension installed.</li>
@@ -273,7 +286,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="python-1" class="level3">
 <h3 class="anchored" data-anchor-id="python-1">Python</h3>
-<p>If you choose to use Python, you should be able to install it and manage your own Python environment, including installing packages and dealing with package conflicts. If you use Python we recommend using <code>pixi</code>, which can manage both R and Python environments.</p>
+<p>If you choose to use Python, you should be able to install it and manage your own Python environment, including installing packages and dealing with package conflicts. If you use Python we recommend using an environment manager such as <code>pixi</code> (which can manage both R and Python environments) or Docker (best practice for reproducibility and isolation).</p>
+</section>
+<section id="docker-advanced" class="level3">
+<h3 class="anchored" data-anchor-id="docker-advanced">Docker (advanced)</h3>
+<p>We maintain a Docker image that contains all the software you need to complete the course with VS Code, quarto and a Devcontainer set-up. Advantages of this approach include that it ensures reproducibility and can save time installing software. Disadvantages include that it can be hard to install Docker and can be difficult to use if you are not familiar with Docker. We therefore recommend this approach only for people who are confident with Docker and willing to invest time in learning how to use it. See <a href="https://docs.docker.com/get-docker/">the Docker installation instructions</a>, the <a href="https://github.com/devcontainers">devcontainers documentation on github.com</a> and the tds <a href="https://github.com/itsleeds/tds/blob/main/Dockerfile">Dockerfile</a> and <a href="https://github.com/itsleeds/tds/blob/main/.devcontainer/devcontainer.json">devcontainer.json</a> for guidance on getting started with Docker.</p>
 </section>
 </section>
 <section id="command-line-experience" class="level2">
@@ -285,9 +302,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Prior experience of using R or Python (e.g.&nbsp;having used it for work, in previous degrees or having completed an online course) is essential.</p>
 <p>Students can demonstrate this by showing evidence that they have worked with R before, have completed an online course such as the first 4 sessions in the <a href="https://rstudio.cloud/learn/primers">RStudio Primers series</a> or <a href="https://www.datacamp.com/courses/free-introduction-to-r">DataCamp’s Free Introduction to R course</a>.</p>
 <p>Evidence of substantial programming and data science experience in previous professional or academic work, in languages such as R or Python, also constitutes sufficient pre-requisite knowledge for the course.</p>
-
-
 </section>
+</section>
+<section id="contributing-to-the-course" class="level1">
+<h1>Contributing to the course</h1>
+<p>See the <a href="https://github.com/itsleeds/tds/tree/main?tab=readme-ov-file#quickstart">README</a> for instructions on how to contribute to the course materials.</p>
+
+
 </section>
 
 
