@@ -151,7 +151,7 @@
     "href": "index.html",
     "title": "Transport Data Science",
     "section": "",
-    "text": "A module on using data science to solve transport problems.",
+    "text": "A module on using data science to solve transport problems. This couse is based at the University of Leeds’ Institute for Transport Studies. It has evolved over a decade of teaching and research in the field and aims to teach you up-to-date and future-proof skills with practical examples and reproducible workflows using industry-standard data science tools.",
     "crumbs": [
       "Home"
     ]
@@ -162,16 +162,6 @@
     "title": "Transport Data Science",
     "section": "Hardware",
     "text": "Hardware\nAccess to a computer that you have permission to install software on, with at least 8 GB of RAM, is highly recommended. You could use a cloud-based service such as RStudio Cloud, Google Colab, or GitHub Codespaces, but you would need to be comfortable with using these services and would miss out on some of the benefits of using your own computer.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#software",
-    "href": "index.html#software",
-    "title": "Transport Data Science",
-    "section": "Software",
-    "text": "Software\nYou need to install some software to take the course.\nThe teaching is be delivered primarily in R, with some Python code and examples, so you need to install R (recommended) or Python or both on your computer. We recommend that most people use R for the practical sessions and the coursework, unless you have a good reason to use Python. If you do choose to use Python or another language, you will have less support: you will need the skills to set-up and manage your own environments. Translations of the R code examples into your chosen language will be very welcome, and contributions to the course materials via Pull Requests on GitHub are encouraged.\n\nQuickstart with GitHub Codespaces\nYou can use GitHub Codespaces to get started with the course materials in a cloud-based environment. Sign-up to GitHub, fork the repository, and click the “Open in GitHub Codespaces” button above to get started. You can also use the following link:\n\n\n\nOpen in GitHub Codespaces\n\n\n\n\nR\nInstall a recent version of R (4.3.0 or above) and RStudio (recommended) or another IDE such as VS Code (if you have prior experience with it) with the the following links:\n\nR from cran.r-project.org\nRStudio from rstudio.com (recommended) or VS Code with the R extension installed.\nR packages, which can be installed by opening RStudio and typing install.packages(\"stats19\") in the R console, for example.\nTo install all the dependencies for the module, run the following command in the R console:\n\n\nif (!requireNamespace(\"remotes\", quietly = TRUE)) {\n  install.packages(\"remotes\")\n}\nremotes::install_github(\"itsleeds/tds\")\n\nSee Section 1.5 of the online guide Reproducible Road Safety Research with R for instructions on how to install key packages we will use in the module.1\n\n\nPython\nIf you choose to use Python, you should be able to install it and manage your own Python environment, including installing packages and dealing with package conflicts. If you use Python we recommend using an environment manager such as pixi (which can manage both R and Python environments) or Docker (best practice for reproducibility and isolation).\n\n\nDocker (advanced)\nWe maintain a Docker image that contains all the software you need to complete the course with VS Code, quarto and a Devcontainer set-up. Advantages of this approach include that it ensures reproducibility and can save time installing software. Disadvantages include that it can be hard to install Docker and can be difficult to use if you are not familiar with Docker. We therefore recommend this approach only for people who are confident with Docker and willing to invest time in learning how to use it. See the Docker installation instructions, the devcontainers documentation on github.com and the tds Dockerfile and devcontainer.json for guidance on getting started with Docker.",
     "crumbs": [
       "Home"
     ]
@@ -192,6 +182,46 @@
     "title": "Transport Data Science",
     "section": "Data science experience prerequisites",
     "text": "Data science experience prerequisites\nPrior experience of using R or Python (e.g. having used it for work, in previous degrees or having completed an online course) is essential.\nStudents can demonstrate this by showing evidence that they have worked with R before, have completed an online course such as the first 4 sessions in the RStudio Primers series or DataCamp’s Free Introduction to R course.\nEvidence of substantial programming and data science experience in previous professional or academic work, in languages such as R or Python, also constitutes sufficient pre-requisite knowledge for the course.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#quickstart-with-github-codespaces",
+    "href": "index.html#quickstart-with-github-codespaces",
+    "title": "Transport Data Science",
+    "section": "Quickstart with GitHub Codespaces",
+    "text": "Quickstart with GitHub Codespaces\nYou can use GitHub Codespaces to get started with the course materials in a cloud-based environment. Sign-up to GitHub, fork the repository, and click the “Open in GitHub Codespaces” button above to get started. You can also use the following link:\n\n\n\nOpen in GitHub Codespaces",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#r",
+    "href": "index.html#r",
+    "title": "Transport Data Science",
+    "section": "R",
+    "text": "R\nInstall a recent version of R (4.3.0 or above) and RStudio (recommended) or another IDE such as VS Code (if you have prior experience with it) with the the following links:\n\nR from cran.r-project.org\nRStudio from rstudio.com (recommended) or VS Code with the R extension installed.\nR packages, which can be installed by opening RStudio and typing install.packages(\"stats19\") in the R console, for example.\nTo install all the dependencies for the module, run the following command in the R console:\n\n\nif (!requireNamespace(\"remotes\", quietly = TRUE)) {\n  install.packages(\"remotes\")\n}\nremotes::install_github(\"itsleeds/tds\")\n\nSee Section 1.5 of the online guide Reproducible Road Safety Research with R for instructions on how to install key packages we will use in the module.1",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#python",
+    "href": "index.html#python",
+    "title": "Transport Data Science",
+    "section": "Python",
+    "text": "Python\nIf you choose to use Python, you should be able to install it and manage your own Python environment, including installing packages and dealing with package conflicts. If you use Python we recommend using an environment manager such as pixi (which can manage both R and Python environments) or Docker (best practice for reproducibility and isolation).",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#docker-advanced",
+    "href": "index.html#docker-advanced",
+    "title": "Transport Data Science",
+    "section": "Docker (advanced)",
+    "text": "Docker (advanced)\nWe maintain a Docker image that contains all the software you need to complete the course with VS Code, quarto and a Devcontainer set-up. Advantages of this approach include that it ensures reproducibility and can save time installing software. Disadvantages include that it can be hard to install Docker and can be difficult to use if you are not familiar with Docker. We therefore recommend this approach only for people who are confident with Docker and willing to invest time in learning how to use it. See the Docker installation instructions, the devcontainers documentation on github.com and the tds Dockerfile and devcontainer.json for guidance on getting started with Docker.",
     "crumbs": [
       "Home"
     ]

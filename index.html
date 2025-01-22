@@ -186,20 +186,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#r-python-or-other" id="toc-r-python-or-other" class="nav-link active" data-scroll-target="#r-python-or-other">R, Python or other?</a></li>
-  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites">Prerequisites</a>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link active" data-scroll-target="#prerequisites">Prerequisites</a>
   <ul class="collapse">
   <li><a href="#hardware" id="toc-hardware" class="nav-link" data-scroll-target="#hardware">Hardware</a></li>
-  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a>
-  <ul class="collapse">
-  <li><a href="#quickstart-with-github-codespaces" id="toc-quickstart-with-github-codespaces" class="nav-link" data-scroll-target="#quickstart-with-github-codespaces">Quickstart with GitHub Codespaces</a></li>
-  <li><a href="#r-1" id="toc-r-1" class="nav-link" data-scroll-target="#r-1">R</a></li>
-  <li><a href="#python-1" id="toc-python-1" class="nav-link" data-scroll-target="#python-1">Python</a></li>
-  <li><a href="#docker-advanced" id="toc-docker-advanced" class="nav-link" data-scroll-target="#docker-advanced">Docker (advanced)</a></li>
-  </ul></li>
   <li><a href="#command-line-experience" id="toc-command-line-experience" class="nav-link" data-scroll-target="#command-line-experience">Command-line experience</a></li>
   <li><a href="#data-science-experience-prerequisites" id="toc-data-science-experience-prerequisites" class="nav-link" data-scroll-target="#data-science-experience-prerequisites">Data science experience prerequisites</a></li>
   </ul></li>
+  <li><a href="#software-requirements-and-installation" id="toc-software-requirements-and-installation" class="nav-link" data-scroll-target="#software-requirements-and-installation">Software requirements and installation</a>
+  <ul class="collapse">
+  <li><a href="#quickstart-with-github-codespaces" id="toc-quickstart-with-github-codespaces" class="nav-link" data-scroll-target="#quickstart-with-github-codespaces">Quickstart with GitHub Codespaces</a></li>
+  <li><a href="#r" id="toc-r" class="nav-link" data-scroll-target="#r">R</a></li>
+  <li><a href="#python" id="toc-python" class="nav-link" data-scroll-target="#python">Python</a></li>
+  <li><a href="#docker-advanced" id="toc-docker-advanced" class="nav-link" data-scroll-target="#docker-advanced">Docker (advanced)</a></li>
+  </ul></li>
+  <li><a href="#r-python-or-other" id="toc-r-python-or-other" class="nav-link" data-scroll-target="#r-python-or-other">R, Python or other?</a></li>
   <li><a href="#contributing-to-the-course" id="toc-contributing-to-the-course" class="nav-link" data-scroll-target="#contributing-to-the-course">Contributing to the course</a></li>
   </ul>
 </nav>
@@ -226,72 +226,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>A module on using data science to solve transport problems.</p>
-<section id="r-python-or-other" class="level1">
-<h1>R, Python or other?</h1>
-<p>While the focus of the module is on methods that can be implemented in many languages, we expect most people taking this course will use R for the practicals and for the end our course project. We use R because it is hard to beat in terms of a data science environment <em>with batteries included</em>, with many mature packages for data manipulation, visualisation, and statistical analysis available within seconds, without having to worry about package conflicts or managing environments. R is also the language with which the module team has the most experience.</p>
-<p>Python is another excellent choice for transport data science, and many of the example code chunks we provide in R have been ported to Python examples, as illustrated below, which shows how to load the R package <code>{sf}</code> and the equivalent Python package <code>{geopandas}</code>.</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>geo_data <span class="ot">=</span> <span class="fu">read_sf</span>(<span class="st">"geo_data.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>geo_data <span class="op">=</span> gpd.read_file(<span class="st">"geo_data.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-<p>, but the support for Python should be considered work in progress. If you do choose to use Python, you will be expected to manage your own Python environment, and to be able to translate the R code examples into Python.</p>
-<p>If you are feeling adventurous, you could try using Julia, JavaScript/TypeScript (e.g.&nbsp;via Observable) or another language, but you will be on your own in terms of support.</p>
-</section>
+<p>A module on using data science to solve transport problems. This couse is based at the University of Leeds’ Institute for Transport Studies. It has evolved over a decade of teaching and research in the field and aims to teach you up-to-date and future-proof skills with practical examples and reproducible workflows using industry-standard data science tools.</p>
 <section id="prerequisites" class="level1">
 <h1>Prerequisites</h1>
+<p>We expect you to have some experience with programming, data science and computing in general before taking this course. Experience with geographic data is not required, but is helpful.</p>
 <section id="hardware" class="level2">
 <h2 class="anchored" data-anchor-id="hardware">Hardware</h2>
 <p>Access to a computer that you have permission to install software on, with at least 8 GB of RAM, is highly recommended. You could use a cloud-based service such as RStudio Cloud, Google Colab, or GitHub Codespaces, but you would need to be comfortable with using these services and would miss out on some of the benefits of using your own computer.</p>
-</section>
-<section id="software" class="level2">
-<h2 class="anchored" data-anchor-id="software">Software</h2>
-<p>You need to install some software to take the course.</p>
-<p>The teaching is be delivered primarily in R, with some Python code and examples, so you need to install R (recommended) or Python or both on your computer. We recommend that most people use R for the practical sessions and the coursework, unless you have a good reason to use Python. If you do choose to use Python or another language, you will have less support: you will need the skills to set-up and manage your own environments. Translations of the R code examples into your chosen language will be very welcome, and contributions to the course materials via <a href="https://github.com/itsleeds/tds/pulls">Pull Requests on GitHub</a> are encouraged.</p>
-<section id="quickstart-with-github-codespaces" class="level3">
-<h3 class="anchored" data-anchor-id="quickstart-with-github-codespaces">Quickstart with GitHub Codespaces</h3>
-<p>You can use GitHub Codespaces to get started with the course materials in a cloud-based environment. Sign-up to GitHub, fork the repository, and click the “Open in GitHub Codespaces” button above to get started. You can also use the following link:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="https://github.com/codespaces/new/itsleeds/tds?quickstart=1"><img src="https://img.shields.io/badge/Open%20in-GitHub%20Codespaces-blue?logo=github.png" class="img-fluid figure-img" alt="Open in GitHub Codespaces"></a></p>
-<figcaption>Open in GitHub Codespaces</figcaption>
-</figure>
-</div>
-</section>
-<section id="r-1" class="level3">
-<h3 class="anchored" data-anchor-id="r-1">R</h3>
-<p>Install a recent version of R (4.3.0 or above) and RStudio (recommended) or another IDE such as VS Code (if you have prior experience with it) with the the following links:</p>
-<ul>
-<li>R from <a href="https://cran.r-project.org/">cran.r-project.org</a></li>
-<li>RStudio from <a href="https://rstudio.com/products/rstudio/download/#download">rstudio.com</a> (recommended) or VS Code with the R extension installed.</li>
-<li>R packages, which can be installed by opening RStudio and typing <code>install.packages("stats19")</code> in the R console, for example.</li>
-<li>To install all the dependencies for the module, run the following command in the R console:</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"remotes"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"itsleeds/tds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>See <a href="https://itsleeds.github.io/rrsrr/introduction.html#installing-r-and-rstudio">Section 1.5 of the online guide Reproducible Road Safety Research with R</a> for instructions on how to install key packages we will use in the module.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-</section>
-<section id="python-1" class="level3">
-<h3 class="anchored" data-anchor-id="python-1">Python</h3>
-<p>If you choose to use Python, you should be able to install it and manage your own Python environment, including installing packages and dealing with package conflicts. If you use Python we recommend using an environment manager such as <code>pixi</code> (which can manage both R and Python environments) or Docker (best practice for reproducibility and isolation).</p>
-</section>
-<section id="docker-advanced" class="level3">
-<h3 class="anchored" data-anchor-id="docker-advanced">Docker (advanced)</h3>
-<p>We maintain a Docker image that contains all the software you need to complete the course with VS Code, quarto and a Devcontainer set-up. Advantages of this approach include that it ensures reproducibility and can save time installing software. Disadvantages include that it can be hard to install Docker and can be difficult to use if you are not familiar with Docker. We therefore recommend this approach only for people who are confident with Docker and willing to invest time in learning how to use it. See <a href="https://docs.docker.com/get-docker/">the Docker installation instructions</a>, the <a href="https://github.com/devcontainers">devcontainers documentation on github.com</a> and the tds <a href="https://github.com/itsleeds/tds/blob/main/Dockerfile">Dockerfile</a> and <a href="https://github.com/itsleeds/tds/blob/main/.devcontainer/devcontainer.json">devcontainer.json</a> for guidance on getting started with Docker.</p>
-</section>
 </section>
 <section id="command-line-experience" class="level2">
 <h2 class="anchored" data-anchor-id="command-line-experience">Command-line experience</h2>
@@ -303,6 +244,66 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Students can demonstrate this by showing evidence that they have worked with R before, have completed an online course such as the first 4 sessions in the <a href="https://rstudio.cloud/learn/primers">RStudio Primers series</a> or <a href="https://www.datacamp.com/courses/free-introduction-to-r">DataCamp’s Free Introduction to R course</a>.</p>
 <p>Evidence of substantial programming and data science experience in previous professional or academic work, in languages such as R or Python, also constitutes sufficient pre-requisite knowledge for the course.</p>
 </section>
+</section>
+<section id="software-requirements-and-installation" class="level1">
+<h1>Software requirements and installation</h1>
+<p>You need to install some software to take the course.</p>
+<p>The teaching is be delivered primarily in R, with some Python code and examples, so you need to install R (recommended) or Python or both on your computer. We recommend that most people use R for the practical sessions and the coursework, unless you have a good reason to use Python. If you do choose to use Python or another language, you will have less support: you will need the skills to set-up and manage your own environments. Translations of the R code examples into your chosen language will be very welcome, and contributions to the course materials via <a href="https://github.com/itsleeds/tds/pulls">Pull Requests on GitHub</a> are encouraged.</p>
+<section id="quickstart-with-github-codespaces" class="level2">
+<h2 class="anchored" data-anchor-id="quickstart-with-github-codespaces">Quickstart with GitHub Codespaces</h2>
+<p>You can use GitHub Codespaces to get started with the course materials in a cloud-based environment. Sign-up to GitHub, fork the repository, and click the “Open in GitHub Codespaces” button above to get started. You can also use the following link:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="https://github.com/codespaces/new/itsleeds/tds?quickstart=1"><img src="https://img.shields.io/badge/Open%20in-GitHub%20Codespaces-blue?logo=github.png" class="img-fluid figure-img" alt="Open in GitHub Codespaces"></a></p>
+<figcaption>Open in GitHub Codespaces</figcaption>
+</figure>
+</div>
+</section>
+<section id="r" class="level2">
+<h2 class="anchored" data-anchor-id="r">R</h2>
+<p>Install a recent version of R (4.3.0 or above) and RStudio (recommended) or another IDE such as VS Code (if you have prior experience with it) with the the following links:</p>
+<ul>
+<li>R from <a href="https://cran.r-project.org/">cran.r-project.org</a></li>
+<li>RStudio from <a href="https://rstudio.com/products/rstudio/download/#download">rstudio.com</a> (recommended) or VS Code with the R extension installed.</li>
+<li>R packages, which can be installed by opening RStudio and typing <code>install.packages("stats19")</code> in the R console, for example.</li>
+<li>To install all the dependencies for the module, run the following command in the R console:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="sc">!</span><span class="fu">requireNamespace</span>(<span class="st">"remotes"</span>, <span class="at">quietly =</span> <span class="cn">TRUE</span>)) {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"itsleeds/tds"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>See <a href="https://itsleeds.github.io/rrsrr/introduction.html#installing-r-and-rstudio">Section 1.5 of the online guide Reproducible Road Safety Research with R</a> for instructions on how to install key packages we will use in the module.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+</section>
+<section id="python" class="level2">
+<h2 class="anchored" data-anchor-id="python">Python</h2>
+<p>If you choose to use Python, you should be able to install it and manage your own Python environment, including installing packages and dealing with package conflicts. If you use Python we recommend using an environment manager such as <code>pixi</code> (which can manage both R and Python environments) or Docker (best practice for reproducibility and isolation).</p>
+</section>
+<section id="docker-advanced" class="level2">
+<h2 class="anchored" data-anchor-id="docker-advanced">Docker (advanced)</h2>
+<p>We maintain a Docker image that contains all the software you need to complete the course with VS Code, quarto and a Devcontainer set-up. Advantages of this approach include that it ensures reproducibility and can save time installing software. Disadvantages include that it can be hard to install Docker and can be difficult to use if you are not familiar with Docker. We therefore recommend this approach only for people who are confident with Docker and willing to invest time in learning how to use it. See <a href="https://docs.docker.com/get-docker/">the Docker installation instructions</a>, the <a href="https://github.com/devcontainers">devcontainers documentation on github.com</a> and the tds <a href="https://github.com/itsleeds/tds/blob/main/Dockerfile">Dockerfile</a> and <a href="https://github.com/itsleeds/tds/blob/main/.devcontainer/devcontainer.json">devcontainer.json</a> for guidance on getting started with Docker.</p>
+</section>
+</section>
+<section id="r-python-or-other" class="level1">
+<h1>R, Python or other?</h1>
+<p>While the focus of the module is on methods that can be implemented in many languages, we expect most people taking this course will use R for the practicals and for the end our course project. We use R because it is hard to beat in terms of a data science environment <em>with batteries included</em>, with many mature packages for data manipulation, visualisation, and statistical analysis available within seconds, without having to worry about package conflicts or managing environments. R is also the language with which the module team has the most experience.</p>
+<p>Python is another excellent choice for transport data science, and many of the example code chunks we provide in R have been ported to Python examples, as illustrated below, which shows how to load the R package <code>{sf}</code> and the equivalent Python package <code>{geopandas}</code>.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>geo_data <span class="ot">=</span> <span class="fu">read_sf</span>(<span class="st">"geo_data.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>geo_data <span class="op">=</span> gpd.read_file(<span class="st">"geo_data.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>, but the support for Python should be considered work in progress. If you do choose to use Python, you will be expected to manage your own Python environment, and to be able to translate the R code examples into Python.</p>
+<p>If you are feeling adventurous, you could try using Julia, JavaScript/TypeScript (e.g.&nbsp;via Observable) or another language, but you will be on your own in terms of support.</p>
 </section>
 <section id="contributing-to-the-course" class="level1">
 <h1>Contributing to the course</h1>
