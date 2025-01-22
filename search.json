@@ -247,11 +247,41 @@
     ]
   },
   {
+    "objectID": "reading.html#key-skills",
+    "href": "reading.html#key-skills",
+    "title": "Reading List",
+    "section": "2.1 Key Skills",
+    "text": "2.1 Key Skills\n\nQuarto documentation (Allaire et al., 2024)\n\n\nThe software used to create the Transport Data Science course materials and numerous websites, presentations, dashboards, and books, Quarto is a powerful tool for creating reproducible documents with code and data.\nSee the technical writing page of Quarto’s documentation for key information on how to add references, figure captions, and more.\n\nIntroduction to GitHub (Heis, 2025)\n\nA good starting point for learning how to use GitHub for version control and collaboration. \nSee also their introduction to Devcontainers at docs.github.com/en/codespaces/",
+    "crumbs": [
+      "Reading list"
+    ]
+  },
+  {
+    "objectID": "reading.html#python",
+    "href": "reading.html#python",
+    "title": "Reading List",
+    "section": "2.2 Python",
+    "text": "2.2 Python\n\nCourse Materials for: Geospatial Data Science (Szell, 2025)\n\nCourse materials covering various aspects of geospatial data science, including data analysis, visualization, and working with street networks using Python.\n\nModern Polars (heavey_modern_2025?)\n\nA side-by-side comparison of the Polars and Pandas libraries.\n\nPython Polars: The definitive guide (janssens_python_2025?)\n\nGuide to using the polars for data manipulation in Python, due to be published in February 2025.\n\nA course on Geographic Data Science (Arribas-Bel, 2019)\n\nFree and open source online book on using GeoPandas and other Python libraries for geographic data analysis.\n\nPython for Data Analysis (McKinney, 2022)\n\nDta wrangling with Pandas, NumPy, and Jupyter, written by the creator of the Pandas library.\n\nGeocomputation with Python (Dorman et al., 2025)\n\nResource for working with geographic data using Python, covering both vector and raster data models.",
+    "crumbs": [
+      "Reading list"
+    ]
+  },
+  {
+    "objectID": "reading.html#r",
+    "href": "reading.html#r",
+    "title": "Reading List",
+    "section": "2.3 R",
+    "text": "2.3 R\n\nAdvanced R\n\nA comprehensive guide to advanced programming in R, covering topics such as functional programming and object-oriented programming.",
+    "crumbs": [
+      "Reading list"
+    ]
+  },
+  {
     "objectID": "reading.html#miscellaneous",
     "href": "reading.html#miscellaneous",
     "title": "Reading List",
-    "section": "4.1 Miscellaneous",
-    "text": "4.1 Miscellaneous\n\nData Science for Transport: A Self-Study Guide with Computer Exercises (Fox, 2018)\n\nAn introduction to transport data science with hands-on examples, slightly out of date as of 2025.\n\nReproducible Road Safety Research with R (Lovelace, 2020)\n\nIntroductory guide for analyzing road safety data in R\n\nOpen source tools for geographic analysis in transport planning (Lovelace, 2021)\n\nReview of open source tools available for transport planning and analysis.\n\nPython for Data Science (Turrell et al., 2025)\n\nA modern guide to data science using Python based on R for Data Science, with practical examples and clear explanations.\n\nThe Geography of Transport Systems (Rodrigue et al., 2013)\n\nComprehensive textbook on transport geography and systems\n\nModelling Transport (Ortúzar S. and Willumsen, 2001)\n\nFoundational text on transport modeling methods\n\nBuilding Reproducible Analytical Pipelines with R (rodrigues_building?)\n\nA guide to the data engineering side of data science, with a focus on reproducibility and automation.\n\n\nSee the full bibliography on Zotero for more resources, and feel free to suggest additions by opening an issue in the tds issue tracker.",
+    "section": "5.1 Miscellaneous",
+    "text": "5.1 Miscellaneous\n\nData Science for Transport: A Self-Study Guide with Computer Exercises (Fox, 2018)\n\nAn introduction to transport data science with hands-on examples, slightly out of date as of 2025.\n\nReproducible Road Safety Research with R (Lovelace, 2020)\n\nIntroductory guide for analyzing road safety data in R\n\nOpen source tools for geographic analysis in transport planning (Lovelace, 2021)\n\nReview of open source tools available for transport planning and analysis.\n\nPython for Data Science (Turrell et al., 2025)\n\nA modern guide to data science using Python based on R for Data Science, with practical examples and clear explanations.\n\nThe Geography of Transport Systems (Rodrigue et al., 2013)\n\nComprehensive textbook on transport geography and systems\n\nModelling Transport (Ortúzar S. and Willumsen, 2001)\n\nFoundational text on transport modeling methods\n\nBuilding Reproducible Analytical Pipelines with R (rodrigues_building?)\n\nA guide to the data engineering side of data science, with a focus on reproducibility and automation.\n\n\nSee the full bibliography on Zotero for more resources, and feel free to suggest additions by opening an issue in the tds issue tracker.",
     "crumbs": [
       "Reading list"
     ]
