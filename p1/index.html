@@ -342,12 +342,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="tab-content" data-group="language">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats19)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">"stats19"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Skipping install of 'stats19' from a cran remote, the SHA1 (3.3.1) has not changed since last install.
+  Use `force = TRUE` to force installation</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats19)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Data provided under OGL v3.0. Cite the source and link to:
 www.nationalarchives.gov.uk/doc/open-government-licence/version/3/</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ac <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"collision"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ac <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"collision"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Files identified: dft-road-casualty-statistics-collision-2019.csv</code></pre>
 </div>
@@ -355,18 +360,18 @@ www.nationalarchives.gov.uk/doc/open-government-licence/version/3/</code></pre>
 <pre><code>   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2019.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Data saved at /tmp/Rtmpvl4AJN/dft-road-casualty-statistics-collision-2019.csv</code></pre>
+<pre><code>Data saved at /tmp/RtmpL2TOGn/dft-road-casualty-statistics-collision-2019.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Reading in: </code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/Rtmpvl4AJN/dft-road-casualty-statistics-collision-2019.csv</code></pre>
+<pre><code>/tmp/RtmpL2TOGn/dft-road-casualty-statistics-collision-2019.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>date and time columns present, creating formatted datetime column</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>ca <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"cas"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ca <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"cas"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Files identified: dft-road-casualty-statistics-casualty-2019.csv</code></pre>
 </div>
@@ -374,7 +379,7 @@ www.nationalarchives.gov.uk/doc/open-government-licence/version/3/</code></pre>
 <pre><code>   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2019.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Data saved at /tmp/Rtmpvl4AJN/dft-road-casualty-statistics-casualty-2019.csv</code></pre>
+<pre><code>Data saved at /tmp/RtmpL2TOGn/dft-road-casualty-statistics-casualty-2019.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: The following named parsers don't match the column names:
@@ -405,7 +410,7 @@ vehicle_type</code></pre>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning in asMethod(object): NAs introduced by coercion</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ve <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>ve <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Files identified: dft-road-casualty-statistics-vehicle-2019.csv</code></pre>
 </div>
@@ -413,7 +418,7 @@ vehicle_type</code></pre>
 <pre><code>   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2019.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Data saved at /tmp/Rtmpvl4AJN/dft-road-casualty-statistics-vehicle-2019.csv</code></pre>
+<pre><code>Data saved at /tmp/RtmpL2TOGn/dft-road-casualty-statistics-vehicle-2019.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: The following named parsers don't match the column names: accident_severity, carriageway_hazards, collision_index, collision_reference, collision_year, date, day_of_week, did_police_officer_attend_scene_of_accident, did_police_officer_attend_scene_of_collision, enhanced_collision_severity, first_road_class, first_road_number, junction_control, junction_detail, latitude, legacy_collision_severity, light_conditions, local_authority_district, local_authority_highway, local_authority_ons_district, location_easting_osgr, location_northing_osgr, longitude, lsoa_of_accident_location, lsoa_of_collision_location, number_of_casualties, number_of_vehicles, pedestrian_crossing_human_control, pedestrian_crossing_physical_facilities, police_force, road_surface_conditions, road_type, second_road_class, second_road_number, special_conditions_at_site, speed_limit, time, trunk_road_flag, urban_or_rural_area, weather_conditions, age_band_of_casualty, age_of_casualty, bus_or_coach_passenger, car_passenger, casualty_class, casualty_distance_banding, casualty_home_area_type, casualty_imd_decile, casualty_reference, casualty_severity, casualty_type, enhanced_casualty_severity, lsoa_of_casualty, pedestrian_location, pedestrian_movement, pedestrian_road_maintenance_worker, sex_of_casualty, adjusted_serious, adjusted_slight, injury_based, accident_ref_no, effective_date_of_change, previously_published_value, replacement_value, variable
@@ -423,11 +428,11 @@ NAs introduced by coercion</code></pre>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install stats19</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> stats19</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>ac <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"collision"</span>)</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>ca <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"cas"</span>)</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>ve <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install stats19</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> stats19</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>ac <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"collision"</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>ca <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"cas"</span>)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>ve <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
