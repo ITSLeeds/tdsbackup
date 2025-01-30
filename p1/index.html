@@ -197,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#how-to-come-up-with-a-good-research-question" id="toc-how-to-come-up-with-a-good-research-question" class="nav-link" data-scroll-target="#how-to-come-up-with-a-good-research-question">How to come up with a good research question</a></li>
   </ul></li>
   <li><a href="#data-science-foundations" id="toc-data-science-foundations" class="nav-link" data-scroll-target="#data-science-foundations"><span class="header-section-number">1</span> Data Science foundations</a></li>
-  <li><a href="#data-science-foundations-1" id="toc-data-science-foundations-1" class="nav-link" data-scroll-target="#data-science-foundations-1"><span class="header-section-number">2</span> Data Science foundations</a></li>
+  <li><a href="#data-science-and-transport" id="toc-data-science-and-transport" class="nav-link" data-scroll-target="#data-science-and-transport"><span class="header-section-number">2</span> Data science and transport</a></li>
   <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">3</span> Homework</a></li>
   </ul>
 </nav>
@@ -350,97 +350,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="tab-content" data-group="language">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">"stats19"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Skipping install of 'stats19' from a cran remote, the SHA1 (3.3.1) has not changed since last install.
-  Use `force = TRUE` to force installation</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats19)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Data provided under OGL v3.0. Cite the source and link to:
-www.nationalarchives.gov.uk/doc/open-government-licence/version/3/</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>ac <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"collision"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Files identified: dft-road-casualty-statistics-collision-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Data saved at /tmp/RtmpgJbRDJ/dft-road-casualty-statistics-collision-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Reading in: </code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>/tmp/RtmpgJbRDJ/dft-road-casualty-statistics-collision-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>date and time columns present, creating formatted datetime column</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>ca <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"cas"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Files identified: dft-road-casualty-statistics-casualty-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-casualty-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Data saved at /tmp/RtmpgJbRDJ/dft-road-casualty-statistics-casualty-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The following named parsers don't match the column names:
-accident_severity, carriageway_hazards, collision_index, collision_reference,
-collision_year, date, day_of_week, did_police_officer_attend_scene_of_accident,
-did_police_officer_attend_scene_of_collision, enhanced_collision_severity,
-first_road_class, first_road_number, junction_control, junction_detail,
-latitude, legacy_collision_severity, light_conditions,
-local_authority_district, local_authority_highway,
-local_authority_ons_district, location_easting_osgr, location_northing_osgr,
-longitude, lsoa_of_accident_location, lsoa_of_collision_location,
-number_of_casualties, number_of_vehicles, pedestrian_crossing_human_control,
-pedestrian_crossing_physical_facilities, police_force, road_surface_conditions,
-road_type, second_road_class, second_road_number, special_conditions_at_site,
-speed_limit, time, trunk_road_flag, urban_or_rural_area, weather_conditions,
-adjusted_serious, adjusted_slight, injury_based, accident_ref_no,
-effective_date_of_change, previously_published_value, replacement_value,
-variable, age_band_of_driver, age_of_driver, age_of_vehicle, dir_from_e,
-dir_from_n, dir_to_e, dir_to_n, driver_distance_banding, driver_home_area_type,
-driver_imd_decile, engine_capacity_cc, escooter_flag, first_point_of_impact,
-generic_make_model, hit_object_in_carriageway, hit_object_off_carriageway,
-journey_purpose_of_driver, junction_location, lsoa_of_driver, propulsion_code,
-sex_of_driver, skidding_and_overturning, towing_and_articulation,
-vehicle_direction_from, vehicle_direction_to, vehicle_leaving_carriageway,
-vehicle_left_hand_drive, vehicle_location_restricted_lane, vehicle_manoeuvre,
-vehicle_type</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning in asMethod(object): NAs introduced by coercion</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>ve <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2019</span>, <span class="at">type =</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Files identified: dft-road-casualty-statistics-vehicle-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-vehicle-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Data saved at /tmp/RtmpgJbRDJ/dft-road-casualty-statistics-vehicle-2019.csv</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: The following named parsers don't match the column names: accident_severity, carriageway_hazards, collision_index, collision_reference, collision_year, date, day_of_week, did_police_officer_attend_scene_of_accident, did_police_officer_attend_scene_of_collision, enhanced_collision_severity, first_road_class, first_road_number, junction_control, junction_detail, latitude, legacy_collision_severity, light_conditions, local_authority_district, local_authority_highway, local_authority_ons_district, location_easting_osgr, location_northing_osgr, longitude, lsoa_of_accident_location, lsoa_of_collision_location, number_of_casualties, number_of_vehicles, pedestrian_crossing_human_control, pedestrian_crossing_physical_facilities, police_force, road_surface_conditions, road_type, second_road_class, second_road_number, special_conditions_at_site, speed_limit, time, trunk_road_flag, urban_or_rural_area, weather_conditions, age_band_of_casualty, age_of_casualty, bus_or_coach_passenger, car_passenger, casualty_class, casualty_distance_banding, casualty_home_area_type, casualty_imd_decile, casualty_reference, casualty_severity, casualty_type, enhanced_casualty_severity, lsoa_of_casualty, pedestrian_location, pedestrian_movement, pedestrian_road_maintenance_worker, sex_of_casualty, adjusted_serious, adjusted_slight, injury_based, accident_ref_no, effective_date_of_change, previously_published_value, replacement_value, variable
-NAs introduced by coercion
-NAs introduced by coercion</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">"stats19"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats19)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>ac <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"collision"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>ca <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"cas"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ve <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install stats19</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> stats19</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>ac <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"collision"</span>)</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>ca <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"cas"</span>)</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>ve <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2019</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install stats19</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> stats19</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>ac <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2020</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"collision"</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>ca <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2020</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"cas"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ve <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2020</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -476,8 +398,8 @@ NAs introduced by coercion</code></pre>
 -   Work through Chapter 5 starting with the following code: -->
 <!-- library(tidyverse) # Load the package -->
 </section>
-<section id="data-science-foundations-1" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Data Science foundations</h1>
+<section id="data-science-and-transport" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Data science and transport</h1>
 <p>Work through <a href="https://r.geocompx.org/transport.html">Chapter 13</a> of the book Geocomputation with R, taking care to ask questions about any aspects that you don’t understand (your homework will be to complete and make notes on the chapter, including reproducible code).</p>
 </section>
 <section id="homework" class="level1" data-number="3">
