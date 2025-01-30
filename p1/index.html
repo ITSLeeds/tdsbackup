@@ -196,7 +196,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#how-to-come-up-with-a-good-research-question" id="toc-how-to-come-up-with-a-good-research-question" class="nav-link" data-scroll-target="#how-to-come-up-with-a-good-research-question">How to come up with a good research question</a></li>
   </ul></li>
-  <li><a href="#data-science-foundations" id="toc-data-science-foundations" class="nav-link" data-scroll-target="#data-science-foundations"><span class="header-section-number">1</span> Data Science foundations</a></li>
+  <li><a href="#data-science-foundations" id="toc-data-science-foundations" class="nav-link" data-scroll-target="#data-science-foundations"><span class="header-section-number">1</span> Data Science foundations</a>
+  <ul class="collapse">
+  <li><a href="#data-manipulation-basics" id="toc-data-manipulation-basics" class="nav-link" data-scroll-target="#data-manipulation-basics"><span class="header-section-number">1.1</span> Data manipulation basics</a></li>
+  <li><a href="#data-science-on-real-data" id="toc-data-science-on-real-data" class="nav-link" data-scroll-target="#data-science-on-real-data"><span class="header-section-number">1.2</span> Data science on real data</a></li>
+  </ul></li>
   <li><a href="#data-science-and-transport" id="toc-data-science-and-transport" class="nav-link" data-scroll-target="#data-science-and-transport"><span class="header-section-number">2</span> Data science and transport</a></li>
   <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">3</span> Homework</a></li>
   </ul>
@@ -344,34 +348,92 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Make sure that you also execute the code in the console so that the objects are created in memory. Do that by placing the cursor in the code chunk and pressing Ctrl+Enter (or Cmd+Enter on a Mac) or by copying and pasting the code into the console (not recommended). We now have a data frame object stored in memory (technically in the global environment) that is used as the basis of the questions.</p>
+<section id="data-manipulation-basics" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="data-manipulation-basics"><span class="header-section-number">1.1</span> Data manipulation basics</h2>
+<ol type="1">
+<li>Use the <code>$</code> operator to print the <code>vehicle_type</code> column of <code>crashes</code>.</li>
+</ol>
+<details>
+<p>In R the <code>$</code> symbol is used to refer to elemements of a list. So the answer is simply:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>crashes<span class="sc">$</span>vehicle_type</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "car"  "bus"  "tank"</code></pre>
+</div>
+</div>
+</details>
+<ol start="2" type="1">
+<li>Subset the crashes with the <code>[,]</code> syntax</li>
+</ol>
+<details>
+<p>Try out different combinations on the dataframe <code>crashes</code> to see what happens. For example, try:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>crashes[<span class="dv">1</span>,]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  casualty_type casualty_age vehicle_type
+1    pedestrian           20          car</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>crashes[,<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "pedestrian" "cyclist"    "cat"       </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>crashes[<span class="dv">1</span>,<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "pedestrian"</code></pre>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Subset the object with the <code>[[</code> syntax.</li>
+</ol>
+<details>
+<p>The <code>[[</code> operator is used to extract elements from a list. Try:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>crashes[[<span class="dv">1</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "pedestrian" "cyclist"    "cat"       </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>crashes[[<span class="dv">2</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 20 40 60</code></pre>
+</div>
+</div>
+</details>
+<ol start="4" type="1">
+<li><strong>Bonus</strong>: what is the <code>class()</code> of the objects created by each of the previous exercises?</li>
+</ol>
+<ul>
+<li>Explore how many R classes you can find</li>
+</ul>
+</details></section>
+<section id="data-science-on-real-data" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="data-science-on-real-data"><span class="header-section-number">1.2</span> Data science on real data</h2>
 <p>To get some larger datasets, try the following (from Chapter 8 of RSRR)</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset" data-group="language">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Python</a></li></ul>
 <div class="tab-content" data-group="language">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">"stats19"</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats19)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>ac <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"collision"</span>)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>ca <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"cas"</span>)</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>ve <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_cran</span>(<span class="st">"stats19"</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stats19)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>ac <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"collision"</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>ca <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"cas"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>ve <span class="ot">=</span> <span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">type =</span> <span class="st">"veh"</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co"># population hurt by road traffic collisions in 2020:</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>(<span class="fu">nrow</span>(ca) <span class="sc">/</span> <span class="fl">67e6</span>) <span class="sc">*</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.1725134</code></pre>
+</div>
 </div>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pip install stats19</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> stats19</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>ac <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2020</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"collision"</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>ca <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2020</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"cas"</span>)</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>ve <span class="op">=</span> stats19.get_stats19(year <span class="op">=</span> <span class="dv">2020</span>, <span class="bu">type</span> <span class="op">=</span> <span class="st">"veh"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Challenge: reproduce the above code in Python using the <code>pystats19</code> package</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install the package, e.g. with pip</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install pystats19</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pystats19</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># See the documentation at https://github.com/Mayazure/py-stats19</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-<p>2.3.1. Use the <code>$</code> operator to print the <code>vehicle_type</code> column of <code>crashes</code>.</p>
-<pre><code>- In R the `$` symbol is used to refer to elemements of a list. So the answer is simply `crashes$vehicle_type`</code></pre>
-<p>2.3.2. Subsetting the crashes with the <code>[,]</code> syntax</p>
-<pre><code>- Try out different combinations on the dataframe</code></pre>
-<p>2.3.3. <strong>Bonus</strong>: what is the <code>class()</code> of the objects created by each of the previous exercises?</p>
-<pre><code>- Explore how many R classes you can find</code></pre>
 <p>Let’s go through these exercises together:</p>
 <ol type="1">
 <li>Subset the <code>casualty_age</code> object using the inequality (<code>&lt;</code>) so that only elements less than 50 are returned.</li>
@@ -397,6 +459,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 -   Work through Chapter 5 starting with the following code: -->
 <!-- library(tidyverse) # Load the package -->
+</section>
 </section>
 <section id="data-science-and-transport" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Data science and transport</h1>
