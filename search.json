@@ -140,11 +140,11 @@
     "text": "How to come up with a good research question\n\nThink about the data you have access to\nThink about the problems you want to solve\nThink about the methods you want to use and skills you want to learn\nThink about how the final report will look and hold-together\n\n\nHow much potential is there for cycling across the transport network?\n\n\n\nHow can travel to schools be made safer?\n\n\nHow can hospitals encourage visitors to get there safely?\n\n\nWhere’s the best place to build electric car charging points?\nSee openstreetmap.org or search for other open access datasets for more ideas"
   },
   {
-    "objectID": "p1/index.html#data-manipulation-basics",
-    "href": "p1/index.html#data-manipulation-basics",
+    "objectID": "p1/index.html#data-object-manipulation-basics",
+    "href": "p1/index.html#data-object-manipulation-basics",
     "title": "Practical 1: Introduction to Transport Data Science",
-    "section": "1.1 Data manipulation basics",
-    "text": "1.1 Data manipulation basics\n\nUse the $ operator to print the vehicle_type column of crashes.\n\n\nIn R the $ symbol is used to refer to elemements of a list. So the answer is simply:\n\ncrashes$vehicle_type\n\n[1] \"car\"  \"bus\"  \"tank\"\n\n\n\n\nSubset the crashes with the [,] syntax\n\n\nTry out different combinations on the dataframe crashes to see what happens. For example, try:\n\ncrashes[1,]\n\n  casualty_type casualty_age vehicle_type\n1    pedestrian           20          car\n\ncrashes[,1]\n\n[1] \"pedestrian\" \"cyclist\"    \"cat\"       \n\ncrashes[1,1]\n\n[1] \"pedestrian\"\n\n\n\nSubset the object with the [[ syntax.\n\n\nThe [[ operator is used to extract elements from a list. Try:\n\ncrashes[[1]]\n\n[1] \"pedestrian\" \"cyclist\"    \"cat\"       \n\ncrashes[[2]]\n\n[1] 20 40 60\n\n\n\n\nBonus: what is the class() of the objects created by each of the previous exercises?\n\n\nExplore how many R classes you can find"
+    "section": "1.1 Data object manipulation basics",
+    "text": "1.1 Data object manipulation basics\n\nUse the $ operator to print the vehicle_type column of crashes.\n\n\nIn R the $ symbol is used to refer to elemements of a list. So the answer is simply:\n\ncrashes$vehicle_type\n\n[1] \"car\"  \"bus\"  \"tank\"\n\n\n\n\nSubset the crashes with the [,] syntax\n\n\nTry out different combinations on the dataframe crashes to see what happens. For example, try:\n\ncrashes[1,]\n\n  casualty_type casualty_age vehicle_type\n1    pedestrian           20          car\n\ncrashes[,1]\n\n[1] \"pedestrian\" \"cyclist\"    \"cat\"       \n\ncrashes[1,1]\n\n[1] \"pedestrian\"\n\n\n\nSubset the object with the [[ syntax.\n\n\nThe [[ operator is used to extract elements from a list. Try:\n\ncrashes[[1]]\n\n[1] \"pedestrian\" \"cyclist\"    \"cat\"       \n\ncrashes[[2]]\n\n[1] 20 40 60\n\n\n\n\nBonus: what is the class() of the objects created by each of the previous exercises?\n\n\nExplore how many R classes you can find\n\n\nBonus (advanced): reproduce the above with Python using the pandas or polars package"
   },
   {
     "objectID": "p1/index.html#data-science-on-real-data",
@@ -152,6 +152,13 @@
     "title": "Practical 1: Introduction to Transport Data Science",
     "section": "1.2 Data science on real data",
     "text": "1.2 Data science on real data\nTo get some larger datasets, try the following (from Chapter 8 of RSRR)\n\nRPython\n\n\n\nremotes::install_cran(\"stats19\")\nlibrary(stats19)\nac = get_stats19(year = 2020, type = \"collision\")\nca = get_stats19(year = 2020, type = \"cas\")\nve = get_stats19(year = 2020, type = \"veh\")\n# population hurt by road traffic collisions in 2020:\n(nrow(ca) / 67e6) * 100\n\n[1] 0.1725134\n\n\n\n\nChallenge: reproduce the above code in Python using the pystats19 package\n# Install the package, e.g. with pip\n!pip install pystats19\nimport pystats19\n# See the documentation at https://github.com/Mayazure/py-stats19\n\n\n\nLet’s go through these exercises together:\n\nSubset the casualty_age object using the inequality (&lt;) so that only elements less than 50 are returned.\nSubset the crashes data frame so that only tanks are returned using the == operator.\nBonus: assign the age of all tanks to 61.\n\n\nTry running the subsetting code on a larger dataset, e.g. the ac object created previously\n\n\nCoerce the vehicle_type column of crashes to the class character.\nCoerce the crashes object into a matrix. What happened to the values?\nBonus: What is the difference between the output of summary() on character and factor variables?\n\n\nWe’ll explore this together"
+  },
+  {
+    "objectID": "p1/index.html#practical-on-your-own",
+    "href": "p1/index.html#practical-on-your-own",
+    "title": "Practical 1: Introduction to Transport Data Science",
+    "section": "1.3 Practical on your own",
+    "text": "1.3 Practical on your own\nRead and try to complete the exercises in Chapters 1 to 4 of the book Reproducible Road Safety Research with R.\nIt assumes that you have recently updated R and RStudio on your computer. For details on installing packages see here."
   },
   {
     "objectID": "s2/index.html",
