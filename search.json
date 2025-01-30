@@ -413,7 +413,7 @@
     "href": "p1/slides.html#timetable",
     "title": "Introduction to transport data science",
     "section": "Timetable",
-    "text": "Timetable\nSee the schedule for details\n\n\nDeeper question: why transport data science?\n\nYou must answer that question"
+    "text": "Timetable\nSee the schedule for details"
   },
   {
     "objectID": "p1/slides.html#what-is-science",
@@ -427,7 +427,14 @@
     "href": "p1/slides.html#transport-planning-software",
     "title": "Introduction to transport data science",
     "section": "Transport planning software",
-    "text": "Transport planning software\nTransport modelling software products are a vital component of modern transport planning and research.\n\nThey generate the evidence base on which strategic investments are made and, furthermore,\nprovide a powerful mechanism for researching alternative futures.\n\n–\nIt would not be an overstatement to say that software determines the range of futures that are visible to policymakers. This makes status of transport modelling software and how it may evolve in the future important questions.\nWhat will transport software look like? What will their capabilities be? And who will control? Answers to each of these questions will affect the future of transport systems.\n–\n\nPremise: transport planning/modelling software used in practice will become is becoming increasingly data-driven, modular and open."
+    "text": "Transport planning software\nTransport modelling software products are a vital component of modern transport planning and research.\n\nThey generate the evidence base on which strategic investments are made and, furthermore,\nprovide a powerful mechanism for researching alternative futures.\n\nIt would not be an overstatement to say that software determines the range of futures that are visible to policymakers. This makes status of transport modelling software and how it may evolve in the future important questions.\nWhat will transport software look like? What will their capabilities be? And who will control? Answers to each of these questions will affect the future of transport systems.\n\nPremise: transport planning/modelling software used in practice will become is becoming increasingly data-driven, modular and open."
+  },
+  {
+    "objectID": "p1/slides.html#current-transport-software",
+    "href": "p1/slides.html#current-transport-software",
+    "title": "Introduction to transport data science",
+    "section": "Current transport software",
+    "text": "Current transport software\n\n\n\n\n\n\n\n\n\n4-stage model still dominates transport planning models (Boyce and Williams 2015)\nThe four stage model (left)\n\nImpacts the current software landscape\nDominated by a few proprietary products\nLimited support community online\nHigh degree of lock-in\nLimited cross-department collaboration"
   },
   {
     "objectID": "p1/slides.html#how-is-data-science-used-in-the-pct",
