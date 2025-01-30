@@ -427,7 +427,42 @@
     "href": "p1/slides.html#current-transport-software",
     "title": "Introduction to transport data science",
     "section": "Current transport software",
-    "text": "Current transport software\n\n\n\n\n\n\n\n\n\n4-stage model still dominates transport planning models (Boyce and Williams 2015)\nThe four stage model (left)\n\nImpacts the current software landscape\nDominated by a few proprietary products\nLimited support community online\nHigh degree of lock-in\nLimited cross-department collaboration"
+    "text": "Current transport software\n\n\n\n\n\n\n\n\n\n4-stage model still dominates transport planning models (Boyce and Williams 2015)"
+  },
+  {
+    "objectID": "p1/slides.html#the-four-stage-model",
+    "href": "p1/slides.html#the-four-stage-model",
+    "title": "Introduction to transport data science",
+    "section": "The four stage model",
+    "text": "The four stage model\n\nImpacts the current software landscape\nDominated by a few proprietary products\nLimited support community online\nHigh degree of lock-in\nLimited cross-department collaboration"
+  },
+  {
+    "objectID": "p1/slides.html#existing-products",
+    "href": "p1/slides.html#existing-products",
+    "title": "Introduction to transport data science",
+    "section": "Existing products",
+    "text": "Existing products\nSample of transport modelling software in use by practitioners. \n\n\n\n\n\nSoftware\nCompany/Developer\nCompany HQ\nLicence\nCitations\n\n\n\n\nVisum\nPTV\nGermany\nProprietary\n1810\n\n\nMATSim\nTU Berlin\nGermany\nOpen source (GPL)\n1470\n\n\nTransCAD\nCaliper\nUSA\nProprietary\n1360\n\n\nSUMO\nDLR\nGermany\nOpen source (EPL)\n1310\n\n\nEmme\nINRO\nCanada\nProprietary\n780\n\n\nCube\nCitilabs\nUSA\nProprietary\n400\n\n\nsDNA\nCardiff University\nUK\nOpen source (GPL)\n170"
+  },
+  {
+    "objectID": "p1/slides.html#user-support",
+    "href": "p1/slides.html#user-support",
+    "title": "Introduction to transport data science",
+    "section": "User support",
+    "text": "User support\nGetting help is vital for leaning/improving software\n\n“10-Hour Service Pack $2,000” (source: caliper.com/tcprice.htm)"
+  },
+  {
+    "objectID": "p1/slides.html#online-communities",
+    "href": "p1/slides.html#online-communities",
+    "title": "Introduction to transport data science",
+    "section": "Online communities",
+    "text": "Online communities\n\ngis.stackexchange.com has 21,314 questions\nr-sig-geo has 1000s of posts\nRStudio’s Discourse community has 65,000+ posts already!\nNo clear transport equivalent (e.g. earthscience.stackexchange.com is in beta)\nSolution: build our own community!\n\nSee https://github.com/ITSLeeds/TDS/issues for example\nPlace for discussions: https://github.com/itsleeds/tds/discussions"
+  },
+  {
+    "objectID": "p1/slides.html#best-way-to-get-support-is-peer-to-peer",
+    "href": "p1/slides.html#best-way-to-get-support-is-peer-to-peer",
+    "title": "Introduction to transport data science",
+    "section": "Best way to get support is peer-to-peer:",
+    "text": "Best way to get support is peer-to-peer:\n\nSource: https://community.rstudio.com/about"
   },
   {
     "objectID": "p1/slides.html#how-is-data-science-used-in-the-pct",
@@ -441,7 +476,14 @@
     "href": "p1/slides.html#visualising-data",
     "title": "Introduction to transport data science",
     "section": "Visualising data",
-    "text": "Visualising data\nA fundamental part of data science is being able to understand your data.\nThat requires visualisation, R is great for that:\n.pull-left[\n\n]\n.pull-right[ - Interactively:\n]"
+    "text": "Visualising data\nA fundamental part of data science is being able to understand your data.\nThat requires visualisation, R is great for that:"
+  },
+  {
+    "objectID": "p1/slides.html#interactively",
+    "href": "p1/slides.html#interactively",
+    "title": "Introduction to transport data science",
+    "section": "Interactively",
+    "text": "Interactively"
   },
   {
     "objectID": "p1/slides.html#processing-data-with-code",
@@ -458,11 +500,18 @@
     "text": "Checking the results:"
   },
   {
-    "objectID": "p1/slides.html#practical-session-will-involve",
-    "href": "p1/slides.html#practical-session-will-involve",
+    "objectID": "p1/slides.html#r-vs-python",
+    "href": "p1/slides.html#r-vs-python",
     "title": "Introduction to transport data science",
-    "section": "Practical session will involve…",
-    "text": "Practical session will involve…\nSee https://github.com/ITSLeeds/TDS/blob/master/practicals/1-intro.md\nThat’s your working document for today."
+    "section": "R vs Python",
+    "text": "R vs Python\n\nLots of debate on this topic - see https://blog.usejournal.com/python-vs-and-r-for-data-science-833b48ccc91d\n\nHow to decide?\n\nIf priority: getting things done quick (with support from me ;) go with R\nIf you already know Python and are 100% confident you can generate reproducible results, go with that\nIf you want to be avant-garde and try something else like Julia, do it (as long as it’s reproducible)\n\n\nGamification\n\n\n\n\n\n\n\n\n\n\nCompletely open source, written in rust\nSource: video at https://github.com/dabreegster/abstreet/#ab-street"
+  },
+  {
+    "objectID": "p1/slides.html#summary",
+    "href": "p1/slides.html#summary",
+    "title": "Introduction to transport data science",
+    "section": "Summary",
+    "text": "Summary\n\nWalk and understand the data before doing complex things\nVisualise the data, ask questions of it, descriptive stats\nOnly then add complexity to your analysis\nStarting point for this: Transport chapter of Geocomputation with R (lovelace_geocomputation_2018?)"
   },
   {
     "objectID": "index.html",
