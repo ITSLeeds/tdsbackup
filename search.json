@@ -374,25 +374,11 @@
     "text": "History of TDS II\n\nJanuary 2020: Available, Data Science MSc course\nMarch 2020: Switch to online teaching\n2021-2023: Updated module, focus on methods\n2024: Switch to combined practical sessions and lectures\n2025+: Expand, online course? book? stay in touch!\n\n\n\nMilestone passed in my academic career, first online-only delivery of lecture (ITSLeeds?), seems to have worked, live code demo with #rstats/(rstudio?), recording, chat + all🎉Thanks students for ‘attending’ + remote participation, we’ll get through this together.#coronavirus pic.twitter.com/wlAUxmZj5r\n\n— Robin Lovelace ((robinlovelace?)) March 17, 2020"
   },
   {
-    "objectID": "p1/slides.html#essential-reading",
-    "href": "p1/slides.html#essential-reading",
+    "objectID": "p1/slides.html#reading-list",
+    "href": "p1/slides.html#reading-list",
     "title": "Introduction to transport data science",
-    "section": "Essential reading",
-    "text": "Essential reading\n\nChapter 12, Transportation of Geocomputation with R, a open book on geographic data in R (available free online) (Lovelace et al. 2019)\nReproducible Road Safety Research with R (RRSRR): https://itsleeds.github.io/rrsrr/"
-  },
-  {
-    "objectID": "p1/slides.html#core-reading-materials",
-    "href": "p1/slides.html#core-reading-materials",
-    "title": "Introduction to transport data science",
-    "section": "Core reading materials",
-    "text": "Core reading materials\n\nR for Data Science, an introduction to data science with R (available free online)\nPython equivalent"
-  },
-  {
-    "objectID": "p1/slides.html#optional",
-    "href": "p1/slides.html#optional",
-    "title": "Introduction to transport data science",
-    "section": "Optional",
-    "text": "Optional\nThere are many good resources on data science for transport applications. Do your own research and reading! The following are good:\n\nIf you’re interested in network analysis/Python, see this paper on analysing OSM data in Python (Boeing and Waddell, 2017) (available online)\nIf you’re interested in the range of transport modelling tools, see Lovelace (2021). \n\nFor more references, see the bibliography at github.com/ITSLeeds/TDS"
+    "section": "Reading list",
+    "text": "Reading list\nSee the reading list for details"
   },
   {
     "objectID": "p1/slides.html#objectives",
