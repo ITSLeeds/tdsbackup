@@ -158,11 +158,12 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#review-homework" id="toc-review-homework" class="nav-link active" data-scroll-target="#review-homework"><span class="header-section-number">1</span> Review Homework</a></li>
-  <li><a href="#getting-started-with-gis-in-r" id="toc-getting-started-with-gis-in-r" class="nav-link" data-scroll-target="#getting-started-with-gis-in-r"><span class="header-section-number">2</span> Getting started with GIS in R</a></li>
-  <li><a href="#getting-openstreetmap-data" id="toc-getting-openstreetmap-data" class="nav-link" data-scroll-target="#getting-openstreetmap-data"><span class="header-section-number">3</span> Getting OpenStreetMap data</a></li>
-  <li><a href="#getting-road-traffic-casualty-data" id="toc-getting-road-traffic-casualty-data" class="nav-link" data-scroll-target="#getting-road-traffic-casualty-data"><span class="header-section-number">4</span> Getting road traffic casualty data</a></li>
-  <li><a href="#getting-started-with-open-access-origin-destination-data" id="toc-getting-started-with-open-access-origin-destination-data" class="nav-link" data-scroll-target="#getting-started-with-open-access-origin-destination-data"><span class="header-section-number">5</span> Getting started with open access origin-destination data</a></li>
-  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">6</span> Homework</a></li>
+  <li><a href="#prerequisites" id="toc-prerequisites" class="nav-link" data-scroll-target="#prerequisites"><span class="header-section-number">2</span> Prerequisites</a></li>
+  <li><a href="#getting-started-with-gis-in-r" id="toc-getting-started-with-gis-in-r" class="nav-link" data-scroll-target="#getting-started-with-gis-in-r"><span class="header-section-number">3</span> Getting started with GIS in R</a></li>
+  <li><a href="#getting-openstreetmap-data" id="toc-getting-openstreetmap-data" class="nav-link" data-scroll-target="#getting-openstreetmap-data"><span class="header-section-number">4</span> Getting OpenStreetMap data</a></li>
+  <li><a href="#getting-road-traffic-casualty-data" id="toc-getting-road-traffic-casualty-data" class="nav-link" data-scroll-target="#getting-road-traffic-casualty-data"><span class="header-section-number">5</span> Getting road traffic casualty data</a></li>
+  <li><a href="#getting-started-with-open-access-origin-destination-data" id="toc-getting-started-with-open-access-origin-destination-data" class="nav-link" data-scroll-target="#getting-started-with-open-access-origin-destination-data"><span class="header-section-number">6</span> Getting started with open access origin-destination data</a></li>
+  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">7</span> Homework</a></li>
   </ul>
 </nav>
     </div>
@@ -192,27 +193,32 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="1"><span class="header-section-number">1</span> Review Homework</h1>
 <p>You should now be familiar with the basics of R and the structure of transport datasets, having completed the <a href="https://itsleeds.github.io/tds/p1/#homework">homework</a> from the previous session.</p>
 </section>
-<section id="getting-started-with-gis-in-r" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Getting started with GIS in R</h1>
+<section id="prerequisites" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Prerequisites</h1>
+<p>Note: you may need to install the <code>pct</code> package as follows:</p>
+<pre><code>remotes::install_github("ITSLeeds/pct")</code></pre>
+</section>
+<section id="getting-started-with-gis-in-r" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Getting started with GIS in R</h1>
 <p>Note that this practical builds on content in <a href="https://r.geocompx.org">Geocomputation with R</a>.</p>
 </section>
-<section id="getting-openstreetmap-data" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Getting OpenStreetMap data</h1>
+<section id="getting-openstreetmap-data" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Getting OpenStreetMap data</h1>
 <p>Work through the reproducible code in the “Introducing osmextract” vignette hosted at <a href="https://docs.ropensci.org/osmextract/articles/osmextract.html">https://docs.ropensci.org/osmextract/articles/osmextract.html</a>.</p>
 </section>
-<section id="getting-road-traffic-casualty-data" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Getting road traffic casualty data</h1>
+<section id="getting-road-traffic-casualty-data" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Getting road traffic casualty data</h1>
 <p>Work through the reproducible code in the <a href="https://docs.ropensci.org/stats19/articles/stats19.html">“Getting started with stats19” vignette hosted at docs.ropensci.org/stats19</a>.</p>
 </section>
-<section id="getting-started-with-open-access-origin-destination-data" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Getting started with open access origin-destination data</h1>
+<section id="getting-started-with-open-access-origin-destination-data" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Getting started with open access origin-destination data</h1>
 <ul>
 <li>Take a read of and try to reproduce the code in the <a href="https://cran.r-project.org/web/packages/od/vignettes/od.html">vignette “An introduction to origin-destination data”</a> for the <code>od</code> package. <!-- https://itsleeds.github.io/pct/articles/pct.html --></li>
 <li>Import some OD data using the <code>pct</code> package, as documented at <a href="https://itsleeds.github.io/pct/articles/pct.html">itsleeds.github.io/pct</a>.</li>
 </ul>
 </section>
-<section id="homework" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Homework</h1>
+<section id="homework" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Homework</h1>
 <ol type="1">
 <li>Download and visualise 3 transport-related datasets of your choice and save the results in a reproducible .qmd file.
 <ul>
