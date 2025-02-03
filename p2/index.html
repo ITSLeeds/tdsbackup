@@ -162,7 +162,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#getting-started-with-gis-in-r" id="toc-getting-started-with-gis-in-r" class="nav-link" data-scroll-target="#getting-started-with-gis-in-r"><span class="header-section-number">3</span> Getting started with GIS in R</a></li>
   <li><a href="#getting-openstreetmap-data" id="toc-getting-openstreetmap-data" class="nav-link" data-scroll-target="#getting-openstreetmap-data"><span class="header-section-number">4</span> Getting OpenStreetMap data</a></li>
   <li><a href="#getting-road-traffic-casualty-data" id="toc-getting-road-traffic-casualty-data" class="nav-link" data-scroll-target="#getting-road-traffic-casualty-data"><span class="header-section-number">5</span> Getting road traffic casualty data</a></li>
-  <li><a href="#getting-started-with-open-access-origin-destination-data" id="toc-getting-started-with-open-access-origin-destination-data" class="nav-link" data-scroll-target="#getting-started-with-open-access-origin-destination-data"><span class="header-section-number">6</span> Getting started with open access origin-destination data</a></li>
+  <li><a href="#census-data" id="toc-census-data" class="nav-link" data-scroll-target="#census-data"><span class="header-section-number">6</span> Census data</a>
+  <ul class="collapse">
+  <li><a href="#the-ons-create-a-custom-dataset-tool" id="toc-the-ons-create-a-custom-dataset-tool" class="nav-link" data-scroll-target="#the-ons-create-a-custom-dataset-tool"><span class="header-section-number">6.1</span> The ONS “create a custom dataset” tool</a></li>
+  </ul></li>
   <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">7</span> Homework</a></li>
   </ul>
 </nav>
@@ -210,16 +213,20 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="5"><span class="header-section-number">5</span> Getting road traffic casualty data</h1>
 <p>Work through the reproducible code in the <a href="https://docs.ropensci.org/stats19/articles/stats19.html">“Getting started with stats19” vignette hosted at docs.ropensci.org/stats19</a>.</p>
 </section>
-<section id="getting-started-with-open-access-origin-destination-data" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Getting started with open access origin-destination data</h1>
-<ul>
-<li>Take a read of and try to reproduce the code in the <a href="https://cran.r-project.org/web/packages/od/vignettes/od.html">vignette “An introduction to origin-destination data”</a> for the <code>od</code> package. <!-- https://itsleeds.github.io/pct/articles/pct.html --></li>
-<li>Import some OD data using the <code>pct</code> package, as documented at <a href="https://itsleeds.github.io/pct/articles/pct.html">itsleeds.github.io/pct</a>.</li>
-</ul>
+<section id="census-data" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Census data</h1>
+<section id="the-ons-create-a-custom-dataset-tool" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="the-ons-create-a-custom-dataset-tool"><span class="header-section-number">6.1</span> The ONS “create a custom dataset” tool</h2>
+<p>The Office for National Statistics (ONS) provides a tool to create custom datasets. The tool is flexible and provides datasets in a variety of formats, including CSV. Give the tool a try at <a href="https://www.ons.gov.uk/datasets/create">www.ons.gov.uk/datasets/create</a>.</p>
+</section>
 </section>
 <section id="homework" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Homework</h1>
 <ol type="1">
+<li>In preparation for the next practical session, take a read of and try to reproduce the code in the <a href="https://cran.r-project.org/web/packages/od/vignettes/od.html">vignette “An introduction to origin-destination data”</a> for the <code>od</code> package. <!-- https://itsleeds.github.io/pct/articles/pct.html -->
+<ul>
+<li>Import some OD data using the <code>pct</code> package, as documented at <a href="https://itsleeds.github.io/pct/articles/pct.html">itsleeds.github.io/pct</a>.</li>
+</ul></li>
 <li>Download and visualise 3 transport-related datasets of your choice and save the results in a reproducible .qmd file.
 <ul>
 <li>Bonus: generate a .pdf document showing the results.</li>
