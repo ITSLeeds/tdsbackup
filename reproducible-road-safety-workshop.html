@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -188,14 +208,14 @@ ul.task-list li input[type="checkbox"] {
 <p>The session will build on the following resources, we recommend taking a read of one or more of these before signing-up:</p>
 <ul>
 <li>The first practical session of the Transport Data Science module, freely available at <a href="https://itsleeds.github.io/tds/p1/">itsleeds.github.io/tds/p1/</a>, for an introduction to data science for transport research</li>
-<li><a href="https://itsleeds.github.io/rrsrr/">Reproducible Road Safety Research with R</a> <span class="citation" data-cites="lovelace_reproducible_2020">[@lovelace_reproducible_2020]</span>
+<li><a href="https://itsleeds.github.io/rrsrr/">Reproducible Road Safety Research with R</a> <span class="citation" data-cites="lovelace_reproducible_2020">(<a href="#ref-lovelace_reproducible_2020" role="doc-biblioref">Lovelace, 2020</a>)</span>
 <ul>
 <li>Introductory guide for analyzing road safety data in R</li>
 </ul></li>
-<li>Geocomputation with R and <a href="https://r.geocompx.org/transport.html">Chapter 13</a> in particular <span class="citation" data-cites="lovelace_geocomputation_2025">[@lovelace_geocomputation_2025]</span></li>
-<li>A paper exploring the spatial distribution of cycling casualties in West Yorkshire, using exploratory data analysis (EDA) techniques <span class="citation" data-cites="lovelace2016">[@lovelace2016]</span></li>
-<li>A paper exploring social inequalities in cycling casualties nationwide <span class="citation" data-cites="vidaltortosa2021">[@vidaltortosa2021]</span></li>
-<li>Papers investigating the relationships between new contraflow interventions and traffic levels and collision rates in London <span class="citation" data-cites="tait2024 tait2023">[@tait2024; @tait2023]</span></li>
+<li>Geocomputation with R and <a href="https://r.geocompx.org/transport.html">Chapter 13</a> in particular <span class="citation" data-cites="lovelace_geocomputation_2025">(<a href="#ref-lovelace_geocomputation_2025" role="doc-biblioref">Lovelace et al., 2025</a>)</span></li>
+<li>A paper exploring the spatial distribution of cycling casualties in West Yorkshire, using exploratory data analysis (EDA) techniques <span class="citation" data-cites="lovelace2016">(<a href="#ref-lovelace2016" role="doc-biblioref">Lovelace et al., 2016</a>)</span></li>
+<li>A paper exploring social inequalities in cycling casualties nationwide <span class="citation" data-cites="vidaltortosa2021">(<a href="#ref-vidaltortosa2021" role="doc-biblioref">Vidal Tortosa et al., 2021</a>)</span></li>
+<li>Papers investigating the relationships between new contraflow interventions and traffic levels and collision rates in London <span class="citation" data-cites="tait2024 tait2023">(<a href="#ref-tait2024" role="doc-biblioref">Tait et al., 2024</a>, <a href="#ref-tait2023" role="doc-biblioref">2023</a>)</span></li>
 </ul>
 </section>
 <section id="where-and-when" class="level2" data-number="1.2">
@@ -213,12 +233,32 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 <section id="references" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> References</h1>
+
+
 
 
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">2 References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-lovelace_reproducible_2020" class="csl-entry" role="listitem">
+Lovelace, R., 2020. <a href="https://www.racfoundation.org/wp-content/uploads/Reproducible_road_safety_research_with_R_Lovelace_December_2020.pdf">Reproducible road safety research with <span>R</span></a>. RAC Foundation.
+</div>
+<div id="ref-lovelace_geocomputation_2025" class="csl-entry" role="listitem">
+Lovelace, R., Nowosad, J., Münchow, J., 2025. <a href="https://r.geocompx.org/">Geocomputation with <span>R</span></a>. CRC Press.
+</div>
+<div id="ref-lovelace2016" class="csl-entry" role="listitem">
+Lovelace, R., Roberts, H., Kellar, I., 2016. Who, where, when: The demographic and geographic distribution of bicycle crashes in west yorkshire. Transportation Research Part F: Traffic Psychology and Behaviour, Bicycling and bicycle safety 41, Part B. <a href="https://doi.org/10.1016/j.trf.2015.02.010">https://doi.org/10.1016/j.trf.2015.02.010</a>
+</div>
+<div id="ref-tait2024" class="csl-entry" role="listitem">
+Tait, C., Beecham, R., Lovelace, R., Barber, S., 2024. Build it but will they come? Exploring the impact of introducing contraflow cycling on cycling volumes with crowd-sourced data. Journal of Transport &amp; Health 35, 101758. <a href="https://doi.org/10.1016/j.jth.2024.101758">https://doi.org/10.1016/j.jth.2024.101758</a>
+</div>
+<div id="ref-tait2023" class="csl-entry" role="listitem">
+Tait, C., Beecham, R., Lovelace, R., Barber, S., 2023. Contraflows and cycling safety: Evidence from 22&nbsp;years of data involving 508 one-way streets. Accident Analysis &amp; Prevention 179, 106895. <a href="https://doi.org/10.1016/j.aap.2022.106895">https://doi.org/10.1016/j.aap.2022.106895</a>
+</div>
+<div id="ref-vidaltortosa2021" class="csl-entry" role="listitem">
+Vidal Tortosa, E., Lovelace, R., Heinen, E., Mann, R.P., 2021. Socioeconomic inequalities in cycling safety: An analysis of cycling injury risk by residential deprivation level in England. Journal of Transport &amp; Health 23, 101291. <a href="https://doi.org/10.1016/j.jth.2021.101291">https://doi.org/10.1016/j.jth.2021.101291</a>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
