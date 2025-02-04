@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -162,11 +196,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#getting-started-with-gis-in-r" id="toc-getting-started-with-gis-in-r" class="nav-link" data-scroll-target="#getting-started-with-gis-in-r"><span class="header-section-number">3</span> Getting started with GIS in R</a></li>
   <li><a href="#getting-openstreetmap-data" id="toc-getting-openstreetmap-data" class="nav-link" data-scroll-target="#getting-openstreetmap-data"><span class="header-section-number">4</span> Getting OpenStreetMap data</a></li>
   <li><a href="#getting-road-traffic-casualty-data" id="toc-getting-road-traffic-casualty-data" class="nav-link" data-scroll-target="#getting-road-traffic-casualty-data"><span class="header-section-number">5</span> Getting road traffic casualty data</a></li>
-  <li><a href="#census-data" id="toc-census-data" class="nav-link" data-scroll-target="#census-data"><span class="header-section-number">6</span> Census data</a>
+  <li><a href="#boundary-datasets" id="toc-boundary-datasets" class="nav-link" data-scroll-target="#boundary-datasets"><span class="header-section-number">6</span> Boundary datasets</a></li>
+  <li><a href="#census-data" id="toc-census-data" class="nav-link" data-scroll-target="#census-data"><span class="header-section-number">7</span> Census data</a>
   <ul class="collapse">
-  <li><a href="#the-ons-create-a-custom-dataset-tool" id="toc-the-ons-create-a-custom-dataset-tool" class="nav-link" data-scroll-target="#the-ons-create-a-custom-dataset-tool"><span class="header-section-number">6.1</span> The ONS “create a custom dataset” tool</a></li>
+  <li><a href="#the-ons-create-a-custom-dataset-tool" id="toc-the-ons-create-a-custom-dataset-tool" class="nav-link" data-scroll-target="#the-ons-create-a-custom-dataset-tool"><span class="header-section-number">7.1</span> The ONS “create a custom dataset” tool</a></li>
   </ul></li>
-  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">7</span> Homework</a></li>
+  <li><a href="#joining-datasets" id="toc-joining-datasets" class="nav-link" data-scroll-target="#joining-datasets"><span class="header-section-number">8</span> Joining datasets</a></li>
+  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">9</span> Homework</a></li>
   </ul>
 </nav>
     </div>
@@ -194,12 +230,18 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="review-homework" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Review Homework</h1>
-<p>You should now be familiar with the basics of R and the structure of transport datasets, having completed the <a href="https://itsleeds.github.io/tds/p1/#homework">homework</a> from the previous session.</p>
+<p>You should now be familiar with the basics of R, Quarto and the structure of transport datasets, having completed the <a href="https://itsleeds.github.io/tds/p1/#homework">homework</a> from the previous session.</p>
+<p>We will do a demo of trying to reproduce the demo from last week and discuss any issues you had running the code in Chapter 13 of <a href="https://r.geocompx.org">Geocomputation with R</a>.</p>
 </section>
 <section id="prerequisites" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Prerequisites</h1>
 <p>Note: you may need to install the <code>pct</code> package as follows:</p>
 <pre><code>remotes::install_github("ITSLeeds/pct")</code></pre>
+<p>We will also load the following packages:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="getting-started-with-gis-in-r" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Getting started with GIS in R</h1>
@@ -213,15 +255,204 @@ ul.task-list li input[type="checkbox"] {
 <h1 data-number="5"><span class="header-section-number">5</span> Getting road traffic casualty data</h1>
 <p>Work through the reproducible code in the <a href="https://docs.ropensci.org/stats19/articles/stats19.html">“Getting started with stats19” vignette hosted at docs.ropensci.org/stats19</a>.</p>
 </section>
-<section id="census-data" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Census data</h1>
-<section id="the-ons-create-a-custom-dataset-tool" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="the-ons-create-a-custom-dataset-tool"><span class="header-section-number">6.1</span> The ONS “create a custom dataset” tool</h2>
-<p>The Office for National Statistics (ONS) provides a tool to create custom datasets. The tool is flexible and provides datasets in a variety of formats, including CSV. Give the tool a try at <a href="https://www.ons.gov.uk/datasets/create">www.ons.gov.uk/datasets/create</a>.</p>
+<section id="boundary-datasets" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Boundary datasets</h1>
+<p>Boundary datasets are useful for mapping and spatial analysis, providing the geographical context for other datasets. You can download geographic datasets directly from the <a href="https://geoportal.statistics.gov.uk/">ONS Geoportal</a>.</p>
+<p>You can also search for boundary datasets using the <code>esri2sf</code> package, which provides a function <code>esrisearch</code> to search for datasets on the ESRI ArcGIS platform. To illustrate this programatic way of getting boundary data, we will search for the “Local Authority Districts December 2024 Boundaries UK” dataset and download it using the <code>arcgis</code> package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>pak<span class="sc">::</span><span class="fu">pkg_install</span>(<span class="st">"elipousson/esri2sf"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"r-arcgis/arcgis"</span>, <span class="at">dependencies =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>res <span class="ot">=</span> esri2sf<span class="sc">::</span><span class="fu">esrisearch</span>(<span class="st">"Local Authority Districts (May 2023) Boundaries UK"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>res <span class="ot">=</span> res <span class="sc">|&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(type <span class="sc">==</span> <span class="st">"Feature Service"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># # 2023 versions:</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># dplyr::filter(str_detect(title, "2023")) |&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="co"># BUC: </span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(<span class="fu">str_detect</span>(title, <span class="st">"BUC"</span>)) </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>res<span class="sc">$</span>title</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>u_from_res <span class="ot">=</span> <span class="fu">paste0</span>(res<span class="sc">$</span>url[<span class="dv">1</span>], <span class="st">"/0"</span>)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(arcgis)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>res_sf <span class="ot">=</span> <span class="fu">arc_read</span>(u_from_res)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(res_sf<span class="sc">$</span>geometry)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="census-data" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Census data</h1>
+<section id="the-ons-create-a-custom-dataset-tool" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="the-ons-create-a-custom-dataset-tool"><span class="header-section-number">7.1</span> The ONS “create a custom dataset” tool</h2>
+<p>The Office for National Statistics (ONS) provides a tool to create custom datasets. The tool is flexible and provides datasets in a variety of formats, including CSV. Give the tool a try at <a href="https://www.ons.gov.uk/datasets/create">www.ons.gov.uk/datasets/create</a>. To test the tool, try to get data on travel to work patterns for all usual residents in England and Wales at the local authority level (note: you may need to change the file name to match the one you downloaded).</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Reading layer `lad_boundaries_2023' from data source 
+  `/home/runner/work/tds/tds/p2/lad_boundaries_2023.geojson' 
+  using driver `GeoJSON'
+Simple feature collection with 361 features and 11 fields
+Geometry type: POLYGON
+Dimension:     XY
+Bounding box:  xmin: -116.1928 ymin: 7054.1 xmax: 655653.9 ymax: 1220310
+Projected CRS: OSGB36 / British National Grid</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>travel_to_work_lad <span class="ot">=</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"custom-filtered-2025-02-04T00_06_30Z.csv"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># names(travel_to_work_lad)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># [1] "Lower tier local authorities Code"                      </span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># [2] "Lower tier local authorities"                           </span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># [3] "Distance travelled to work (8 categories) Code"         </span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># [4] "Distance travelled to work (8 categories)"              </span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># [5] "Method used to travel to workplace (12 categories) Code"</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># [6] "Method used to travel to workplace (12 categories)"     </span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># [7] "Observation" </span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>travel_to_work_updated <span class="ot">=</span> travel_to_work_lad <span class="sc">|&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">LAD23CD =</span> <span class="st">`</span><span class="at">2023 Lower tier local authorities Code</span><span class="st">`</span>,</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Mode =</span> <span class="st">`</span><span class="at">Method used to travel to workplace (12 categories)</span><span class="st">`</span>,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">Distance =</span> <span class="st">`</span><span class="at">Distance travelled to work (8 categories)</span><span class="st">`</span>,</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">Observation =</span> Observation</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Pivot wider:</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>ttw_wide <span class="ot">=</span> travel_to_work_updated <span class="sc">|&gt;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> <span class="fu">c</span>(Distance, Mode), <span class="at">values_from =</span> Observation)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(res_sf[[<span class="st">"LAD23CD"</span>]] <span class="sc">%in%</span> travel_to_work_lad[[<span class="dv">1</span>]]) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Mode   FALSE    TRUE 
+logical      44     317 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Other way around:</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(travel_to_work_lad[[<span class="dv">1</span>]] <span class="sc">%in%</span> res_sf[[<span class="st">"LAD23CD"</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Mode    TRUE 
+logical   30432 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(ttw_wide)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "LAD23CD"                                                                                                                    
+ [2] "Does not apply_Work mainly at or from home"                                                                                 
+ [3] "Does not apply_Underground, metro, light rail, tram"                                                                        
+ [4] "Does not apply_Train"                                                                                                       
+ [5] "Does not apply_Bus, minibus or coach"                                                                                       
+ [6] "Does not apply_Taxi"                                                                                                        
+ [7] "Does not apply_Motorcycle, scooter or moped"                                                                                
+ [8] "Does not apply_Driving a car or van"                                                                                        
+ [9] "Does not apply_Passenger in a car or van"                                                                                   
+[10] "Does not apply_Bicycle"                                                                                                     
+[11] "Does not apply_On foot"                                                                                                     
+[12] "Does not apply_Other method of travel to work"                                                                              
+[13] "Does not apply_Not in employment or aged 15 years and under"                                                                
+[14] "Less than 5km_Work mainly at or from home"                                                                                  
+[15] "Less than 5km_Underground, metro, light rail, tram"                                                                         
+[16] "Less than 5km_Train"                                                                                                        
+[17] "Less than 5km_Bus, minibus or coach"                                                                                        
+[18] "Less than 5km_Taxi"                                                                                                         
+[19] "Less than 5km_Motorcycle, scooter or moped"                                                                                 
+[20] "Less than 5km_Driving a car or van"                                                                                         
+[21] "Less than 5km_Passenger in a car or van"                                                                                    
+[22] "Less than 5km_Bicycle"                                                                                                      
+[23] "Less than 5km_On foot"                                                                                                      
+[24] "Less than 5km_Other method of travel to work"                                                                               
+[25] "Less than 5km_Not in employment or aged 15 years and under"                                                                 
+[26] "5km to less than 10km_Work mainly at or from home"                                                                          
+[27] "5km to less than 10km_Underground, metro, light rail, tram"                                                                 
+[28] "5km to less than 10km_Train"                                                                                                
+[29] "5km to less than 10km_Bus, minibus or coach"                                                                                
+[30] "5km to less than 10km_Taxi"                                                                                                 
+[31] "5km to less than 10km_Motorcycle, scooter or moped"                                                                         
+[32] "5km to less than 10km_Driving a car or van"                                                                                 
+[33] "5km to less than 10km_Passenger in a car or van"                                                                            
+[34] "5km to less than 10km_Bicycle"                                                                                              
+[35] "5km to less than 10km_On foot"                                                                                              
+[36] "5km to less than 10km_Other method of travel to work"                                                                       
+[37] "5km to less than 10km_Not in employment or aged 15 years and under"                                                         
+[38] "10km to less than 30km_Work mainly at or from home"                                                                         
+[39] "10km to less than 30km_Underground, metro, light rail, tram"                                                                
+[40] "10km to less than 30km_Train"                                                                                               
+[41] "10km to less than 30km_Bus, minibus or coach"                                                                               
+[42] "10km to less than 30km_Taxi"                                                                                                
+[43] "10km to less than 30km_Motorcycle, scooter or moped"                                                                        
+[44] "10km to less than 30km_Driving a car or van"                                                                                
+[45] "10km to less than 30km_Passenger in a car or van"                                                                           
+[46] "10km to less than 30km_Bicycle"                                                                                             
+[47] "10km to less than 30km_On foot"                                                                                             
+[48] "10km to less than 30km_Other method of travel to work"                                                                      
+[49] "10km to less than 30km_Not in employment or aged 15 years and under"                                                        
+[50] "30km to less than 60km_Work mainly at or from home"                                                                         
+[51] "30km to less than 60km_Underground, metro, light rail, tram"                                                                
+[52] "30km to less than 60km_Train"                                                                                               
+[53] "30km to less than 60km_Bus, minibus or coach"                                                                               
+[54] "30km to less than 60km_Taxi"                                                                                                
+[55] "30km to less than 60km_Motorcycle, scooter or moped"                                                                        
+[56] "30km to less than 60km_Driving a car or van"                                                                                
+[57] "30km to less than 60km_Passenger in a car or van"                                                                           
+[58] "30km to less than 60km_Bicycle"                                                                                             
+[59] "30km to less than 60km_On foot"                                                                                             
+[60] "30km to less than 60km_Other method of travel to work"                                                                      
+[61] "30km to less than 60km_Not in employment or aged 15 years and under"                                                        
+[62] "60km and over_Work mainly at or from home"                                                                                  
+[63] "60km and over_Underground, metro, light rail, tram"                                                                         
+[64] "60km and over_Train"                                                                                                        
+[65] "60km and over_Bus, minibus or coach"                                                                                        
+[66] "60km and over_Taxi"                                                                                                         
+[67] "60km and over_Motorcycle, scooter or moped"                                                                                 
+[68] "60km and over_Driving a car or van"                                                                                         
+[69] "60km and over_Passenger in a car or van"                                                                                    
+[70] "60km and over_Bicycle"                                                                                                      
+[71] "60km and over_On foot"                                                                                                      
+[72] "60km and over_Other method of travel to work"                                                                               
+[73] "60km and over_Not in employment or aged 15 years and under"                                                                 
+[74] "Works mainly from home_Work mainly at or from home"                                                                         
+[75] "Works mainly from home_Underground, metro, light rail, tram"                                                                
+[76] "Works mainly from home_Train"                                                                                               
+[77] "Works mainly from home_Bus, minibus or coach"                                                                               
+[78] "Works mainly from home_Taxi"                                                                                                
+[79] "Works mainly from home_Motorcycle, scooter or moped"                                                                        
+[80] "Works mainly from home_Driving a car or van"                                                                                
+[81] "Works mainly from home_Passenger in a car or van"                                                                           
+[82] "Works mainly from home_Bicycle"                                                                                             
+[83] "Works mainly from home_On foot"                                                                                             
+[84] "Works mainly from home_Other method of travel to work"                                                                      
+[85] "Works mainly from home_Not in employment or aged 15 years and under"                                                        
+[86] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Work mainly at or from home"                 
+[87] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Underground, metro, light rail, tram"        
+[88] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Train"                                       
+[89] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Bus, minibus or coach"                       
+[90] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Taxi"                                        
+[91] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Motorcycle, scooter or moped"                
+[92] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Driving a car or van"                        
+[93] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Passenger in a car or van"                   
+[94] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Bicycle"                                     
+[95] "Works mainly at an offshore installation, in no fixed place, or outside the UK_On foot"                                     
+[96] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Other method of travel to work"              
+[97] "Works mainly at an offshore installation, in no fixed place, or outside the UK_Not in employment or aged 15 years and under"</code></pre>
+</div>
+</div>
 </section>
 </section>
-<section id="homework" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Homework</h1>
+<section id="joining-datasets" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Joining datasets</h1>
+<p>Two key ways to join datasets are by spatial location and by a common key. We will demonstrate the latter using the <code>dplyr</code> package.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>lad_joined <span class="ot">=</span> <span class="fu">left_join</span>(</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  res_sf,</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  ttw_wide</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let’s visualise the results with a choropleth map made using <code>ggplot2</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lad_joined) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> <span class="st">`</span><span class="at">Less than 5km_Driving a car or van</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>() <span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="homework" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Homework</h1>
 <ol type="1">
 <li>In preparation for the next practical session, take a read of and try to reproduce the code in the <a href="https://cran.r-project.org/web/packages/od/vignettes/od.html">vignette “An introduction to origin-destination data”</a> for the <code>od</code> package. <!-- https://itsleeds.github.io/pct/articles/pct.html -->
 <ul>
@@ -230,6 +461,17 @@ ul.task-list li input[type="checkbox"] {
 <li>Download and visualise 3 transport-related datasets of your choice and save the results in a reproducible .qmd file.
 <ul>
 <li>Bonus: generate a .pdf document showing the results.</li>
+</ul></li>
+<li>Take a quick read of, and try to reproduce some of the code in, at least three of the chapters in R4DS:
+<ul>
+<li><a href="https://r4ds.hadley.nz/data-visualize">Chapter 1: Data visualisation</a></li>
+<li><a href="https://r4ds.hadley.nz/data-transform.html">Chapter 3: Data transformation</a></li>
+<li>One of you choice, e.g.&nbsp;
+<ul>
+<li><a href="https://r4ds.hadley.nz/data-tidy.html">Chapter 5: Data tidying</a></li>
+<li><a href="https://r4ds.hadley.nz/joins.html">Chapter 19: Joins</a></li>
+<li><a href="https://r4ds.hadley.nz/quarto.html">Chapter 28: Quarto</a></li>
+</ul></li>
 </ul></li>
 </ol>
 
