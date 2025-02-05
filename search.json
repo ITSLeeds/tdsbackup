@@ -321,7 +321,7 @@
     "href": "p1/p1project/foundations.html",
     "title": "1 Python example",
     "section": "",
-    "text": "# load packages\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nHello this is some text.\n\ncasualty_type = c(\"cat\", \"dog\", \"person\")\ncasualty_age = seq(from = 20, to = 60, by = 20)\ncrashes = data.frame(casualty_type, casualty_age)\nplot(crashes$casualty_age)\n\n\n\n\n\n\n\n\nSubsetting.\n\ncrashes$casualty_type\n\n[1] \"cat\"    \"dog\"    \"person\"\n\ncrashes[[1]]\n\n[1] \"cat\"    \"dog\"    \"person\"\n\ncrashes[2,1]\n\n[1] \"dog\"\n\n\n\ncrashes |&gt;\n  select(casualty_type)\n\n  casualty_type\n1           cat\n2           dog\n3        person\n\ncrashes |&gt; \n  filter(casualty_age &gt; 35)\n\n  casualty_type casualty_age\n1           dog           40\n2        person           60\n\ncrashes |&gt; \n  filter(casualty_age-20 &gt; 35)\n\n  casualty_type casualty_age\n1        person           60\n\ncrashes |&gt;\n  ggplot() +\n  geom_bar(aes(x = casualty_age, fill = casualty_type))\n\n\n\n\n\n\n\n\n\nac = stats19::get_stats19(year = 2020, type = \"collision\")\n\nFiles identified: dft-road-casualty-statistics-collision-2020.csv\n\n\n   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2020.csv\n\n\nData saved at /tmp/RtmpeihPjM/dft-road-casualty-statistics-collision-2020.csv\n\n\nReading in: \n\n\n/tmp/RtmpeihPjM/dft-road-casualty-statistics-collision-2020.csv\n\n\ndate and time columns present, creating formatted datetime column\n\nac\n\n# A tibble: 91,199 × 38\n   accident_index accident_year accident_reference location_easting_osgr\n   &lt;chr&gt;                  &lt;int&gt; &lt;chr&gt;                              &lt;int&gt;\n 1 2020010219808           2020 010219808                         521389\n 2 2020010220496           2020 010220496                         529337\n 3 2020010228005           2020 010228005                         526432\n 4 2020010228006           2020 010228006                         538676\n 5 2020010228011           2020 010228011                         529324\n 6 2020010228012           2020 010228012                         537193\n 7 2020010228014           2020 010228014                         539764\n 8 2020010228017           2020 010228017                         536115\n 9 2020010228018           2020 010228018                         530876\n10 2020010228020           2020 010228020                         529718\n# ℹ 91,189 more rows\n# ℹ 34 more variables: location_northing_osgr &lt;int&gt;, longitude &lt;int&gt;,\n#   latitude &lt;int&gt;, police_force &lt;chr&gt;, accident_severity &lt;chr&gt;,\n#   number_of_vehicles &lt;chr&gt;, number_of_casualties &lt;chr&gt;, date &lt;date&gt;,\n#   day_of_week &lt;chr&gt;, time &lt;chr&gt;, local_authority_district &lt;chr&gt;,\n#   local_authority_ons_district &lt;chr&gt;, local_authority_highway &lt;chr&gt;,\n#   first_road_class &lt;chr&gt;, first_road_number &lt;chr&gt;, road_type &lt;chr&gt;, …\n\ndim(ac)\n\n[1] 91199    38\n\nnames(ac)\n\n [1] \"accident_index\"                             \n [2] \"accident_year\"                              \n [3] \"accident_reference\"                         \n [4] \"location_easting_osgr\"                      \n [5] \"location_northing_osgr\"                     \n [6] \"longitude\"                                  \n [7] \"latitude\"                                   \n [8] \"police_force\"                               \n [9] \"accident_severity\"                          \n[10] \"number_of_vehicles\"                         \n[11] \"number_of_casualties\"                       \n[12] \"date\"                                       \n[13] \"day_of_week\"                                \n[14] \"time\"                                       \n[15] \"local_authority_district\"                   \n[16] \"local_authority_ons_district\"               \n[17] \"local_authority_highway\"                    \n[18] \"first_road_class\"                           \n[19] \"first_road_number\"                          \n[20] \"road_type\"                                  \n[21] \"speed_limit\"                                \n[22] \"junction_detail\"                            \n[23] \"junction_control\"                           \n[24] \"second_road_class\"                          \n[25] \"second_road_number\"                         \n[26] \"pedestrian_crossing_human_control\"          \n[27] \"pedestrian_crossing_physical_facilities\"    \n[28] \"light_conditions\"                           \n[29] \"weather_conditions\"                         \n[30] \"road_surface_conditions\"                    \n[31] \"special_conditions_at_site\"                 \n[32] \"carriageway_hazards\"                        \n[33] \"urban_or_rural_area\"                        \n[34] \"did_police_officer_attend_scene_of_accident\"\n[35] \"trunk_road_flag\"                            \n[36] \"lsoa_of_accident_location\"                  \n[37] \"enhanced_severity_collision\"                \n[38] \"datetime\"                                   \n\n# aggregate this by day to show \n# how crash numbers varied over the year\nac_by_year = ac |&gt;\n  group_by(date) |&gt;\n  summarise(\n    n_crashes = n()\n  )\nac_by_year |&gt;\n  mutate(\n    `N. crashes per year` = n_crashes,\n    `Week average` = zoo::rollmean(n_crashes, 7, na.pad = TRUE),\n    Date = date,\n  ) |&gt; \n  ggplot(aes(x = Date, y = `N. crashes per year`)) +\n  geom_point(alpha = 0.1) +\n  ylim(c(0, NA)) +\n  # geom_smooth() +\n  # weekly rolling average\n  geom_line(aes(Date, `Week average`), colour = \"blue\") +\n  theme_minimal()\n\nWarning: Removed 6 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\n\n1 Python example\n\ncasualty_type_py = [\"a\", \"B\", \"c\"]\ncasualty_type_py\n\n['a', 'B', 'c']"
+    "text": "# load packages\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\nHello this is some text.\n\ncasualty_type = c(\"cat\", \"dog\", \"person\")\ncasualty_age = seq(from = 20, to = 60, by = 20)\ncrashes = data.frame(casualty_type, casualty_age)\nplot(crashes$casualty_age)\n\n\n\n\n\n\n\n\nSubsetting.\n\ncrashes$casualty_type\n\n[1] \"cat\"    \"dog\"    \"person\"\n\ncrashes[[1]]\n\n[1] \"cat\"    \"dog\"    \"person\"\n\ncrashes[2,1]\n\n[1] \"dog\"\n\n\n\ncrashes |&gt;\n  select(casualty_type)\n\n  casualty_type\n1           cat\n2           dog\n3        person\n\ncrashes |&gt; \n  filter(casualty_age &gt; 35)\n\n  casualty_type casualty_age\n1           dog           40\n2        person           60\n\ncrashes |&gt; \n  filter(casualty_age-20 &gt; 35)\n\n  casualty_type casualty_age\n1        person           60\n\ncrashes |&gt;\n  ggplot() +\n  geom_bar(aes(x = casualty_age, fill = casualty_type))\n\n\n\n\n\n\n\n\n\nac = stats19::get_stats19(year = 2020, type = \"collision\")\n\nFiles identified: dft-road-casualty-statistics-collision-2020.csv\n\n\n   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2020.csv\n\n\nData saved at /tmp/RtmpqO5TKG/dft-road-casualty-statistics-collision-2020.csv\n\n\nReading in: \n\n\n/tmp/RtmpqO5TKG/dft-road-casualty-statistics-collision-2020.csv\n\n\ndate and time columns present, creating formatted datetime column\n\nac\n\n# A tibble: 91,199 × 38\n   accident_index accident_year accident_reference location_easting_osgr\n   &lt;chr&gt;                  &lt;int&gt; &lt;chr&gt;                              &lt;int&gt;\n 1 2020010219808           2020 010219808                         521389\n 2 2020010220496           2020 010220496                         529337\n 3 2020010228005           2020 010228005                         526432\n 4 2020010228006           2020 010228006                         538676\n 5 2020010228011           2020 010228011                         529324\n 6 2020010228012           2020 010228012                         537193\n 7 2020010228014           2020 010228014                         539764\n 8 2020010228017           2020 010228017                         536115\n 9 2020010228018           2020 010228018                         530876\n10 2020010228020           2020 010228020                         529718\n# ℹ 91,189 more rows\n# ℹ 34 more variables: location_northing_osgr &lt;int&gt;, longitude &lt;int&gt;,\n#   latitude &lt;int&gt;, police_force &lt;chr&gt;, accident_severity &lt;chr&gt;,\n#   number_of_vehicles &lt;chr&gt;, number_of_casualties &lt;chr&gt;, date &lt;date&gt;,\n#   day_of_week &lt;chr&gt;, time &lt;chr&gt;, local_authority_district &lt;chr&gt;,\n#   local_authority_ons_district &lt;chr&gt;, local_authority_highway &lt;chr&gt;,\n#   first_road_class &lt;chr&gt;, first_road_number &lt;chr&gt;, road_type &lt;chr&gt;, …\n\ndim(ac)\n\n[1] 91199    38\n\nnames(ac)\n\n [1] \"accident_index\"                             \n [2] \"accident_year\"                              \n [3] \"accident_reference\"                         \n [4] \"location_easting_osgr\"                      \n [5] \"location_northing_osgr\"                     \n [6] \"longitude\"                                  \n [7] \"latitude\"                                   \n [8] \"police_force\"                               \n [9] \"accident_severity\"                          \n[10] \"number_of_vehicles\"                         \n[11] \"number_of_casualties\"                       \n[12] \"date\"                                       \n[13] \"day_of_week\"                                \n[14] \"time\"                                       \n[15] \"local_authority_district\"                   \n[16] \"local_authority_ons_district\"               \n[17] \"local_authority_highway\"                    \n[18] \"first_road_class\"                           \n[19] \"first_road_number\"                          \n[20] \"road_type\"                                  \n[21] \"speed_limit\"                                \n[22] \"junction_detail\"                            \n[23] \"junction_control\"                           \n[24] \"second_road_class\"                          \n[25] \"second_road_number\"                         \n[26] \"pedestrian_crossing_human_control\"          \n[27] \"pedestrian_crossing_physical_facilities\"    \n[28] \"light_conditions\"                           \n[29] \"weather_conditions\"                         \n[30] \"road_surface_conditions\"                    \n[31] \"special_conditions_at_site\"                 \n[32] \"carriageway_hazards\"                        \n[33] \"urban_or_rural_area\"                        \n[34] \"did_police_officer_attend_scene_of_accident\"\n[35] \"trunk_road_flag\"                            \n[36] \"lsoa_of_accident_location\"                  \n[37] \"enhanced_severity_collision\"                \n[38] \"datetime\"                                   \n\n# aggregate this by day to show \n# how crash numbers varied over the year\nac_by_year = ac |&gt;\n  group_by(date) |&gt;\n  summarise(\n    n_crashes = n()\n  )\nac_by_year |&gt;\n  mutate(\n    `N. crashes per year` = n_crashes,\n    `Week average` = zoo::rollmean(n_crashes, 7, na.pad = TRUE),\n    Date = date,\n  ) |&gt; \n  ggplot(aes(x = Date, y = `N. crashes per year`)) +\n  geom_point(alpha = 0.1) +\n  ylim(c(0, NA)) +\n  # geom_smooth() +\n  # weekly rolling average\n  geom_line(aes(Date, `Week average`), colour = \"blue\") +\n  theme_minimal()\n\nWarning: Removed 6 rows containing missing values or values outside the scale range\n(`geom_line()`).\n\n\n\n\n\n\n\n\n\n\n1 Python example\n\ncasualty_type_py = [\"a\", \"B\", \"c\"]\ncasualty_type_py\n\n['a', 'B', 'c']"
   },
   {
     "objectID": "s2/index.html",
@@ -338,39 +338,109 @@
     "text": "This is a placeholder page, contents will be added"
   },
   {
-    "objectID": "p2/index.html",
-    "href": "p2/index.html",
-    "title": "Getting transport datasets with R",
-    "section": "",
-    "text": "You should now be familiar with the basics of R, Quarto and the structure of transport datasets, having completed the homework from the previous session.\nWe will do a demo of trying to reproduce the demo from last week and discuss any issues you had running the code in Chapter 13 of Geocomputation with R."
+    "objectID": "p2/slides.html#objectives",
+    "href": "p2/slides.html#objectives",
+    "title": "Accessing data from the Internet",
+    "section": "Objectives",
+    "text": "Objectives\n\nLearn where to find large transport datasets and assess data quality"
   },
   {
-    "objectID": "p2/index.html#the-ons-create-a-custom-dataset-tool",
-    "href": "p2/index.html#the-ons-create-a-custom-dataset-tool",
-    "title": "Getting transport datasets with R",
-    "section": "7.1 The ONS “create a custom dataset” tool",
-    "text": "7.1 The ONS “create a custom dataset” tool\nThe Office for National Statistics (ONS) provides a tool to create custom datasets. The tool is flexible and provides datasets in a variety of formats, including CSV. Give the tool a try at www.ons.gov.uk/datasets/create. To test the tool, try to get data on travel to work patterns for all usual residents in England and Wales at the local authority level (note: you may need to change the file name to match the one you downloaded).\n\n\nReading layer `lad_boundaries_2023' from data source \n  `/home/runner/work/tds/tds/p2/lad_boundaries_2023.geojson' \n  using driver `GeoJSON'\nSimple feature collection with 361 features and 11 fields\nGeometry type: POLYGON\nDimension:     XY\nBounding box:  xmin: -116.1928 ymin: 7054.1 xmax: 655653.9 ymax: 1220310\nProjected CRS: OSGB36 / British National Grid\n\n\n\ntravel_to_work_lad = readr::read_csv(\"custom-filtered-2025-02-04T00_06_30Z.csv\")\n# names(travel_to_work_lad)\n# [1] \"Lower tier local authorities Code\"                      \n# [2] \"Lower tier local authorities\"                           \n# [3] \"Distance travelled to work (8 categories) Code\"         \n# [4] \"Distance travelled to work (8 categories)\"              \n# [5] \"Method used to travel to workplace (12 categories) Code\"\n# [6] \"Method used to travel to workplace (12 categories)\"     \n# [7] \"Observation\" \ntravel_to_work_updated = travel_to_work_lad |&gt;\n  select(\n    LAD23CD = `2023 Lower tier local authorities Code`,\n    Mode = `Method used to travel to workplace (12 categories)`,\n    Distance = `Distance travelled to work (8 categories)`,\n    Observation = Observation\n  )\n# Pivot wider:\nttw_wide = travel_to_work_updated |&gt;\n  pivot_wider(names_from = c(Distance, Mode), values_from = Observation)\nsummary(res_sf[[\"LAD23CD\"]] %in% travel_to_work_lad[[1]]) \n\n   Mode   FALSE    TRUE \nlogical      44     317 \n\n# Other way around:\nsummary(travel_to_work_lad[[1]] %in% res_sf[[\"LAD23CD\"]])\n\n   Mode    TRUE \nlogical   30432 \n\n# names(ttw_wide)"
+    "objectID": "p2/slides.html#learning-outcomes",
+    "href": "p2/slides.html#learning-outcomes",
+    "title": "Accessing data from the Internet",
+    "section": "Learning outcomes",
+    "text": "Learning outcomes\n\nIdentify available datasets and access and clean them"
   },
   {
-    "objectID": "p6/index.html",
-    "href": "p6/index.html",
-    "title": "Practical 6: Project work",
-    "section": "",
-    "text": "This is a placeholder page; content will be added soon."
+    "objectID": "p2/slides.html#this-lecture-will",
+    "href": "p2/slides.html#this-lecture-will",
+    "title": "Accessing data from the Internet",
+    "section": "This lecture will…",
+    "text": "This lecture will…\n\n\nBe primarily practical\nProvide an overview of data access options\nShow how R packages and web services provide access to some datasets"
   },
   {
-    "objectID": "d1/index.html",
-    "href": "d1/index.html",
-    "title": "Welcome and set-up",
-    "section": "",
-    "text": "Dear Transport Data Science students,\nAs per your timetable, the first session is Thursday 30th January, from 10:00 to 13:00.\nLocation: Richard Hughes Cluster, in the “Cloth Workers Link Building”. If you’re wondering where that is, you’re not alone, I’m not 100% sure. So the first challenge of the module is to ensure that you get there on time, by 09:50, so you have time to get a seat in time for the 10:00 start."
+    "objectID": "p2/slides.html#data-access-in-context",
+    "href": "p2/slides.html#data-access-in-context",
+    "title": "Accessing data from the Internet",
+    "section": "Data access in context",
+    "text": "Data access in context\n\n\nData cleaning (or ‘tidying’ or ‘wrangling’) is part of a wider process (Wickham, Cetinkaya-Rundel, and Grolemund 2023)\n\n\n\n\n\n\n\n\n\n\n\nIt’s important to have an idea where you’re heading with the analysis\nOften best to start with pen and paper"
   },
   {
-    "objectID": "d1/index.html#homework-for-next-week-deadline-friday-31st-january-1400",
-    "href": "d1/index.html#homework-for-next-week-deadline-friday-31st-january-1400",
-    "title": "Welcome and set-up",
-    "section": "1 Homework for next week (deadline: Friday 31st January, 14:00)",
-    "text": "1 Homework for next week (deadline: Friday 31st January, 14:00)\n\nEnsure that you have the timetable stored safely in your calendar, so you do not miss important practicals or seminars.\nEnsure that you have the necessary software installed on your computer and that you have tested that you can use it for the datasets we will be using in the course, see https://itsleeds.github.io/tds/#software-requirements-and-installation for guidance on installing the software you need.\n\nAny issues you have with the software installation, please get in touch with me as soon as possible.\n\n\nTest that you have the necessary software installed by running the following code in R:\n\nif (!requireNamespace(\"remotes\", quietly = TRUE)) {\n  install.packages(\"remotes\")\n}\nremotes::install_cran(\"tidyverse\")\nremotes::install_cran(\"osmextract\")\nlibrary(tidyverse)\nlibrary(osmextract)\nlibrary(sf)\n\n\nits = oe_get(\"ITS Leeds\", download_directory = tempdir())\n\n\nfigure = its |&gt;\n  ggplot() +\n  geom_sf(aes(colour = highway)) +\n  theme_void()\n# Save figure\nggsave(\"its.png\", figure, width = 6, height = 4)\n\n\nbrowseURL(\"its.png\")\n\n\nShow the map by executing the following code, which simply prints the map to the screen:\n\nfigure\n\n\n\n\n\n\n\n\nIf you see a map of the area around the Institute for Transport Studies, then you are ready for the first session. If you have any issues, please get in touch with me as soon as possible.\n\nTake a look at the reading list at https://itsleeds.github.io/tds/reading.html and have a read of the Transportation chapter of Geocomputation with R book (you will find the link to the book in the reading list).\nSign-up for a GitHub account if you do not already have one, and ensure that you have access to the TDS GitHub repository where you will find the course materials.\n\nPlease send me an email with you GitHub username so I can add you to the private repository that supports the course."
+    "objectID": "p2/slides.html#data-accesscleaning-vs-modelling-time",
+    "href": "p2/slides.html#data-accesscleaning-vs-modelling-time",
+    "title": "Accessing data from the Internet",
+    "section": "Data access/cleaning vs modelling time",
+    "text": "Data access/cleaning vs modelling time\n\n\nTapson’s Rules of Machine Learning:4. Time spent on data cleaning is an order of magnitude more productive than time spent on hyperparameter tuning.(Extreme example: achieved a Top 10 result in Kaggle using linear regression, as the only team that cleaned 50/60Hz noise first.)\n\n— Jonathan Tapson ((jontapson?)) March 5, 2019\n\n\nSource: https://twitter.com/jontapson/status/1103024752019402753\nbackground-image: url() background-size: cover class: center, middle"
+  },
+  {
+    "objectID": "p2/slides.html#information-and-data-pyramids",
+    "href": "p2/slides.html#information-and-data-pyramids",
+    "title": "Accessing data from the Internet",
+    "section": "Information and data pyramids",
+    "text": "Information and data pyramids\nData science is climbing the DIKW pyramid"
+  },
+  {
+    "objectID": "p2/slides.html#a-geographic-availability-pyramid",
+    "href": "p2/slides.html#a-geographic-availability-pyramid",
+    "title": "Accessing data from the Internet",
+    "section": "A geographic availability pyramid",
+    "text": "A geographic availability pyramid\n\nRecommendations\nBuild this here!\nCity-specific datasets\n\nBristol cycle count data\n\nHard-to-access national data\nOpen international/national datasets\n\nOpen origin-destination data from UK Census\n\nGlobally available, low-grade data (bottom)\n\nOpenStreetMap, Elevation data"
+  },
+  {
+    "objectID": "p2/slides.html#an-ease-of-access-pyramid",
+    "href": "p2/slides.html#an-ease-of-access-pyramid",
+    "title": "Accessing data from the Internet",
+    "section": "An ease-of access pyramid",
+    "text": "An ease-of access pyramid\n\nData provision packages\n\nUse the pct package\nstats19 package\n\nPre-processed data\n\nE.g. downloading data from website www.pct.bike\n\nMessy official data\n\nRaw STATS19 data"
+  },
+  {
+    "objectID": "p2/slides.html#a-geographic-level-of-detail-pyramid",
+    "href": "p2/slides.html#a-geographic-level-of-detail-pyramid",
+    "title": "Accessing data from the Internet",
+    "section": "A geographic level of detail pyramid",
+    "text": "A geographic level of detail pyramid\n\nAgents\nRoute networks\nNodes\nRoutes\nDesire lines\nTransport zones"
+  },
+  {
+    "objectID": "p2/slides.html#observations",
+    "href": "p2/slides.html#observations",
+    "title": "Accessing data from the Internet",
+    "section": "Observations",
+    "text": "Observations\n\nOfficial sources are often smaller in sizes but higher in Quality\nUnofficial sources provide higher volumes but tend to be noisy\nAnother way to classify data is by quality: signal/noise ratios\nGlobally available datasets would be at the bottom of this pyramid; local surveys at the top.\nWhich would be best to inform policy?"
+  },
+  {
+    "objectID": "p2/slides.html#portals",
+    "href": "p2/slides.html#portals",
+    "title": "Accessing data from the Internet",
+    "section": "Portals",
+    "text": "Portals\n\nUK geoportal, providing geographic data at many levels\nOther national geoportals exist\nA good source of cleaned origin destination data is the Region downloads tab in the Propensity to Cycle Tool - see the Region data tab for West Yorkshire here, for example\nOpenStreetMap is an excellent source of geographic data with global coverage. You can download data on specific queries (e.g. highway=cycleway) from the overpass-turbo service or with the osmdata or osmextract packages"
+  },
+  {
+    "objectID": "p2/slides.html#online-lists",
+    "href": "p2/slides.html#online-lists",
+    "title": "Accessing data from the Internet",
+    "section": "Online lists",
+    "text": "Online lists\nFor other datasets, search online! Good starting points in your research may be:\n\nThe open data section in Geocomputation with R (r.geocompx.org/read-write) \nTransport datasets mentioned in data.world \nUK government transport data: Department for Transport"
+  },
+  {
+    "objectID": "p2/slides.html#data-packages",
+    "href": "p2/slides.html#data-packages",
+    "title": "Accessing data from the Internet",
+    "section": "Data packages",
+    "text": "Data packages\n\nThe openrouteservice github package provides routing data\nThe stats19 package can get road crash data for anywhere in Great Britain (Lovelace et al. 2019) see docs.ropensci.org/stats19 \nThe pct package provides access to data in the PCT project, including origin-destination data for the UK (Lovelace et al. 2017) see github.com/ITSLeeds/pct \nThere are many other R packages to help access data, including the spanishoddata package for Spanish origin-destination data"
+  },
+  {
+    "objectID": "p2/slides.html#practical-demo",
+    "href": "p2/slides.html#practical-demo",
+    "title": "Accessing data from the Internet",
+    "section": "Practical demo",
+    "text": "Practical demo\nSee practical session at itsleeds.github.io/tds/p2/\n\nThat involves:\nGetting data from OSM: overpass turbo\nData from stats19\nData from the Census\nBonus: getting data from Cadence platform"
+  },
+  {
+    "objectID": "p2/slides.html#references",
+    "href": "p2/slides.html#references",
+    "title": "Accessing data from the Internet",
+    "section": "References",
+    "text": "References\n\n\n\n\nLovelace, Robin, Anna Goodman, Rachel Aldred, Nikolai Berkoff, Ali Abbas, and James Woodcock. 2017. “The Propensity to Cycle Tool: An Open Source Online System for Sustainable Transport Planning.” Journal of Transport and Land Use 10 (1). https://doi.org/10.5198/jtlu.2016.862.\n\n\nLovelace, Robin, Malcolm Morgan, Layik Hama, and Mark Padgham. 2019. “Stats19: A Package for Working with Open Road Crash Data.” Journal of Open Source Software. https://doi.org/10/gkb498.\n\n\nWickham, Hadley, Mine Cetinkaya-Rundel, and Garrett Grolemund. 2023. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. 2nd edition. Beijing Boston Farnham Sebastopol Tokyo: O’Reilly Media. https://r4ds.hadley.nz/."
   },
   {
     "objectID": "reading.html",
@@ -421,6 +491,41 @@
     "crumbs": [
       "Reading list"
     ]
+  },
+  {
+    "objectID": "d1/index.html",
+    "href": "d1/index.html",
+    "title": "Welcome and set-up",
+    "section": "",
+    "text": "Dear Transport Data Science students,\nAs per your timetable, the first session is Thursday 30th January, from 10:00 to 13:00.\nLocation: Richard Hughes Cluster, in the “Cloth Workers Link Building”. If you’re wondering where that is, you’re not alone, I’m not 100% sure. So the first challenge of the module is to ensure that you get there on time, by 09:50, so you have time to get a seat in time for the 10:00 start."
+  },
+  {
+    "objectID": "d1/index.html#homework-for-next-week-deadline-friday-31st-january-1400",
+    "href": "d1/index.html#homework-for-next-week-deadline-friday-31st-january-1400",
+    "title": "Welcome and set-up",
+    "section": "1 Homework for next week (deadline: Friday 31st January, 14:00)",
+    "text": "1 Homework for next week (deadline: Friday 31st January, 14:00)\n\nEnsure that you have the timetable stored safely in your calendar, so you do not miss important practicals or seminars.\nEnsure that you have the necessary software installed on your computer and that you have tested that you can use it for the datasets we will be using in the course, see https://itsleeds.github.io/tds/#software-requirements-and-installation for guidance on installing the software you need.\n\nAny issues you have with the software installation, please get in touch with me as soon as possible.\n\n\nTest that you have the necessary software installed by running the following code in R:\n\nif (!requireNamespace(\"remotes\", quietly = TRUE)) {\n  install.packages(\"remotes\")\n}\nremotes::install_cran(\"tidyverse\")\nremotes::install_cran(\"osmextract\")\nlibrary(tidyverse)\nlibrary(osmextract)\nlibrary(sf)\n\n\nits = oe_get(\"ITS Leeds\", download_directory = tempdir())\n\n\nfigure = its |&gt;\n  ggplot() +\n  geom_sf(aes(colour = highway)) +\n  theme_void()\n# Save figure\nggsave(\"its.png\", figure, width = 6, height = 4)\n\n\nbrowseURL(\"its.png\")\n\n\nShow the map by executing the following code, which simply prints the map to the screen:\n\nfigure\n\n\n\n\n\n\n\n\nIf you see a map of the area around the Institute for Transport Studies, then you are ready for the first session. If you have any issues, please get in touch with me as soon as possible.\n\nTake a look at the reading list at https://itsleeds.github.io/tds/reading.html and have a read of the Transportation chapter of Geocomputation with R book (you will find the link to the book in the reading list).\nSign-up for a GitHub account if you do not already have one, and ensure that you have access to the TDS GitHub repository where you will find the course materials.\n\nPlease send me an email with you GitHub username so I can add you to the private repository that supports the course."
+  },
+  {
+    "objectID": "p6/index.html",
+    "href": "p6/index.html",
+    "title": "Practical 6: Project work",
+    "section": "",
+    "text": "This is a placeholder page; content will be added soon."
+  },
+  {
+    "objectID": "p2/index.html",
+    "href": "p2/index.html",
+    "title": "Getting transport datasets with R",
+    "section": "",
+    "text": "You should now be familiar with the basics of R, Quarto and the structure of transport datasets, having completed the homework from the previous session.\nWe will do a demo of trying to reproduce the demo from last week and discuss any issues you had running the code in Chapter 13 of Geocomputation with R."
+  },
+  {
+    "objectID": "p2/index.html#the-ons-create-a-custom-dataset-tool",
+    "href": "p2/index.html#the-ons-create-a-custom-dataset-tool",
+    "title": "Getting transport datasets with R",
+    "section": "7.1 The ONS “create a custom dataset” tool",
+    "text": "7.1 The ONS “create a custom dataset” tool\nThe Office for National Statistics (ONS) provides a tool to create custom datasets. The tool is flexible and provides datasets in a variety of formats, including CSV. Give the tool a try at www.ons.gov.uk/datasets/create. To test the tool, try to get data on travel to work patterns for all usual residents in England and Wales at the local authority level (note: you may need to change the file name to match the one you downloaded).\n\n\nReading layer `lad_boundaries_2023' from data source \n  `/home/runner/work/tds/tds/p2/lad_boundaries_2023.geojson' \n  using driver `GeoJSON'\nSimple feature collection with 361 features and 11 fields\nGeometry type: POLYGON\nDimension:     XY\nBounding box:  xmin: -116.1928 ymin: 7054.1 xmax: 655653.9 ymax: 1220310\nProjected CRS: OSGB36 / British National Grid\n\n\n\ntravel_to_work_lad = readr::read_csv(\"custom-filtered-2025-02-04T00_06_30Z.csv\")\n# names(travel_to_work_lad)\n# [1] \"Lower tier local authorities Code\"                      \n# [2] \"Lower tier local authorities\"                           \n# [3] \"Distance travelled to work (8 categories) Code\"         \n# [4] \"Distance travelled to work (8 categories)\"              \n# [5] \"Method used to travel to workplace (12 categories) Code\"\n# [6] \"Method used to travel to workplace (12 categories)\"     \n# [7] \"Observation\" \ntravel_to_work_updated = travel_to_work_lad |&gt;\n  select(\n    LAD23CD = `2023 Lower tier local authorities Code`,\n    Mode = `Method used to travel to workplace (12 categories)`,\n    Distance = `Distance travelled to work (8 categories)`,\n    Observation = Observation\n  )\n# Pivot wider:\nttw_wide = travel_to_work_updated |&gt;\n  pivot_wider(names_from = c(Distance, Mode), values_from = Observation)\nsummary(res_sf[[\"LAD23CD\"]] %in% travel_to_work_lad[[1]]) \n\n   Mode   FALSE    TRUE \nlogical      44     317 \n\n# Other way around:\nsummary(travel_to_work_lad[[1]] %in% res_sf[[\"LAD23CD\"]])\n\n   Mode    TRUE \nlogical   30432 \n\n# names(ttw_wide)"
   },
   {
     "objectID": "marking-criteria.html",
