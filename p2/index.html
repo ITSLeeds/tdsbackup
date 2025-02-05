@@ -207,8 +207,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#the-ons-create-a-custom-dataset-tool" id="toc-the-ons-create-a-custom-dataset-tool" class="nav-link" data-scroll-target="#the-ons-create-a-custom-dataset-tool"><span class="header-section-number">7.1</span> The ONS “create a custom dataset” tool</a></li>
   </ul></li>
-  <li><a href="#joining-datasets" id="toc-joining-datasets" class="nav-link" data-scroll-target="#joining-datasets"><span class="header-section-number">8</span> Joining datasets</a></li>
-  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">9</span> Homework</a></li>
+  <li><a href="#the-cadence-platform" id="toc-the-cadence-platform" class="nav-link" data-scroll-target="#the-cadence-platform"><span class="header-section-number">8</span> The cadence platform</a></li>
+  <li><a href="#joining-datasets" id="toc-joining-datasets" class="nav-link" data-scroll-target="#joining-datasets"><span class="header-section-number">9</span> Joining datasets</a></li>
+  <li><a href="#homework" id="toc-homework" class="nav-link" data-scroll-target="#homework"><span class="header-section-number">10</span> Homework</a></li>
   </ul>
 </nav>
     </div>
@@ -334,8 +335,12 @@ logical   30432 </code></pre>
 </div>
 </section>
 </section>
-<section id="joining-datasets" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Joining datasets</h1>
+<section id="the-cadence-platform" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> The cadence platform</h1>
+<p>Sign up to Cadence website at <a href="https://cadence360.cityscience.com/">cadence360.cityscience.com/</a> by clicking ‘Sign In’ in the top right. New users can then either create an account or sign in to an existing account.</p>
+</section>
+<section id="joining-datasets" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Joining datasets</h1>
 <p>Two key ways to join datasets are by spatial location and by a common key. We will demonstrate the latter using the <code>dplyr</code> package.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>lad_joined <span class="ot">=</span> <span class="fu">left_join</span>(</span>
@@ -346,7 +351,7 @@ logical   30432 </code></pre>
 <p>Let’s visualise the results with a choropleth map made using <code>ggplot2</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(lad_joined) <span class="sc">+</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> <span class="st">`</span><span class="at">Less than 5km_Driving a car or van</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> <span class="st">`</span><span class="at">Less than 5km_Driving a car or van</span><span class="st">`</span>), <span class="at">colour =</span> <span class="cn">NA</span>) <span class="sc">+</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_viridis_c</span>() <span class="sc">+</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -358,8 +363,8 @@ logical   30432 </code></pre>
 </div>
 </div>
 </section>
-<section id="homework" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Homework</h1>
+<section id="homework" class="level1" data-number="10">
+<h1 data-number="10"><span class="header-section-number">10</span> Homework</h1>
 <ol type="1">
 <li>In preparation for the next practical session, take a read of and try to reproduce the code in the <a href="https://cran.r-project.org/web/packages/od/vignettes/od.html">vignette “An introduction to origin-destination data”</a> for the <code>od</code> package. <!-- https://itsleeds.github.io/pct/articles/pct.html -->
 <ul>
