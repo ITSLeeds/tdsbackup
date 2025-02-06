@@ -294,45 +294,157 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2020.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Data saved at /tmp/RtmpZLDNw0/dft-road-casualty-statistics-collision-2020.csv</code></pre>
+<pre><code>Data saved at /tmp/Rtmppo45Ry/dft-road-casualty-statistics-collision-2020.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Reading in: </code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>/tmp/RtmpZLDNw0/dft-road-casualty-statistics-collision-2020.csv</code></pre>
+<pre><code>/tmp/Rtmppo45Ry/dft-road-casualty-statistics-collision-2020.csv</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>date and time columns present, creating formatted datetime column</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>ac</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 91,199 × 38
-   accident_index accident_year accident_reference location_easting_osgr
-   &lt;chr&gt;                  &lt;int&gt; &lt;chr&gt;                              &lt;int&gt;
- 1 2020010219808           2020 010219808                         521389
- 2 2020010220496           2020 010220496                         529337
- 3 2020010228005           2020 010228005                         526432
- 4 2020010228006           2020 010228006                         538676
- 5 2020010228011           2020 010228011                         529324
- 6 2020010228012           2020 010228012                         537193
- 7 2020010228014           2020 010228014                         539764
- 8 2020010228017           2020 010228017                         536115
- 9 2020010228018           2020 010228018                         530876
-10 2020010228020           2020 010228020                         529718
-# ℹ 91,189 more rows
-# ℹ 34 more variables: location_northing_osgr &lt;int&gt;, longitude &lt;int&gt;,
-#   latitude &lt;int&gt;, police_force &lt;chr&gt;, accident_severity &lt;chr&gt;,
-#   number_of_vehicles &lt;chr&gt;, number_of_casualties &lt;chr&gt;, date &lt;date&gt;,
-#   day_of_week &lt;chr&gt;, time &lt;chr&gt;, local_authority_district &lt;chr&gt;,
-#   local_authority_ons_district &lt;chr&gt;, local_authority_highway &lt;chr&gt;,
-#   first_road_class &lt;chr&gt;, first_road_number &lt;chr&gt;, road_type &lt;chr&gt;, …</code></pre>
+<pre><code>[1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame" </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 91199    38</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>ac_2021 <span class="ot">=</span> stats19<span class="sc">::</span><span class="fu">get_stats19</span>(<span class="at">year =</span> <span class="dv">2021</span>, <span class="at">type =</span> <span class="st">"collision"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Files identified: dft-road-casualty-statistics-collision-2021.csv</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>   https://data.dft.gov.uk/road-accidents-safety-data/dft-road-casualty-statistics-collision-2021.csv</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Data saved at /tmp/Rtmppo45Ry/dft-road-casualty-statistics-collision-2021.csv</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Reading in: </code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/tmp/Rtmppo45Ry/dft-road-casualty-statistics-collision-2021.csv</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>date and time columns present, creating formatted datetime column</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 91199</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(ac_2021)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 101087</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># # After googling "combine 2 data frames" let's try rbind</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># ??combine</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ?rbind</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>ac <span class="ot">=</span> <span class="fu">rbind</span>(ac, ac_2021)</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 192286     38</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>ac_datetime <span class="ot">=</span> <span class="fu">c</span>(ac<span class="sc">$</span>datetime, ac_2021<span class="sc">$</span>datetime)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">length</span>(ac_datetime)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 293373</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">range</span>(ac_datetime)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "2020-01-01 00:01:00 GMT" "2021-12-31 23:55:00 GMT"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">class</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "spec_tbl_df" "tbl_df"      "tbl"         "data.frame" </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>spc_tbl_ [192,286 × 38] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+ $ accident_index                             : chr [1:192286] "2020010219808" "2020010220496" "2020010228005" "2020010228006" ...
+ $ accident_year                              : int [1:192286] 2020 2020 2020 2020 2020 2020 2020 2020 2020 2020 ...
+ $ accident_reference                         : chr [1:192286] "010219808" "010220496" "010228005" "010228006" ...
+ $ location_easting_osgr                      : int [1:192286] 521389 529337 526432 538676 529324 537193 539764 536115 530876 529718 ...
+ $ location_northing_osgr                     : int [1:192286] 175144 176237 182761 184371 181286 177105 179234 182297 191335 192342 ...
+ $ longitude                                  : int [1:192286] NA NA NA NA NA NA NA NA NA NA ...
+ $ latitude                                   : int [1:192286] NA NA NA NA NA NA NA NA NA NA ...
+ $ police_force                               : chr [1:192286] "Metropolitan Police" "Metropolitan Police" "Metropolitan Police" "Metropolitan Police" ...
+ $ accident_severity                          : chr [1:192286] "Slight" "Slight" "Slight" "Serious" ...
+ $ number_of_vehicles                         : chr [1:192286] "1" "1" "1" "1" ...
+ $ number_of_casualties                       : chr [1:192286] "1" "2" "1" "1" ...
+ $ date                                       : Date[1:192286], format: "2020-02-04" "2020-04-27" ...
+ $ day_of_week                                : chr [1:192286] "Tuesday" "Monday" "Wednesday" "Wednesday" ...
+ $ time                                       : chr [1:192286] "09:00" "13:55" "01:25" "01:50" ...
+ $ local_authority_district                   : chr [1:192286] "Wandsworth" "Lambeth" "Westminster" "Newham" ...
+ $ local_authority_ons_district               : chr [1:192286] "Wandsworth" "Lambeth" "Westminster" "Newham" ...
+ $ local_authority_highway                    : chr [1:192286] "Wandsworth" "Lambeth" "Westminster" "Newham" ...
+ $ first_road_class                           : chr [1:192286] "Unclassified" "A" "C" "A" ...
+ $ first_road_number                          : chr [1:192286] "first_road_class is C or Unclassified. These roads do not have official numbers so recorded as zero" "3036" "first_road_class is C or Unclassified. These roads do not have official numbers so recorded as zero" "11" ...
+ $ road_type                                  : chr [1:192286] "Single carriageway" "Single carriageway" "Single carriageway" "Single carriageway" ...
+ $ speed_limit                                : chr [1:192286] "20" "20" "30" "30" ...
+ $ junction_detail                            : chr [1:192286] "Not at junction or within 20 metres" "Other junction" "T or staggered junction" "Not at junction or within 20 metres" ...
+ $ junction_control                           : chr [1:192286] "Data missing or out of range" "Auto traffic signal" "Authorised person" "Data missing or out of range" ...
+ $ second_road_class                          : chr [1:192286] "Not at junction or within 20 metres" "Unclassified" "Unclassified" "Not at junction or within 20 metres" ...
+ $ second_road_number                         : chr [1:192286] "Unknown" "first_road_class is C or Unclassified. These roads do not have official numbers so recorded as zero" "first_road_class is C or Unclassified. These roads do not have official numbers so recorded as zero" "Unknown" ...
+ $ pedestrian_crossing_human_control          : chr [1:192286] "unknown (self reported)" "None within 50 metres" "None within 50 metres" "None within 50 metres" ...
+ $ pedestrian_crossing_physical_facilities    : chr [1:192286] "unknown (self reported)" "Pelican, puffin, toucan or similar non-junction pedestrian light crossing" "No physical crossing facilities within 50 metres" "Pelican, puffin, toucan or similar non-junction pedestrian light crossing" ...
+ $ light_conditions                           : chr [1:192286] "Daylight" "Daylight" "Darkness - lights lit" "Darkness - lights lit" ...
+ $ weather_conditions                         : chr [1:192286] "Unknown" "Fine no high winds" "Fine no high winds" "Fine no high winds" ...
+ $ road_surface_conditions                    : chr [1:192286] "unknown (self reported)" "Dry" "Wet or damp" "Dry" ...
+ $ special_conditions_at_site                 : chr [1:192286] "None" "None" "None" "None" ...
+ $ carriageway_hazards                        : chr [1:192286] "None" "None" "None" "None" ...
+ $ urban_or_rural_area                        : chr [1:192286] "Urban" "Urban" "Urban" "Urban" ...
+ $ did_police_officer_attend_scene_of_accident: chr [1:192286] "No - accident was reported using a self completion  form (self rep only)" "Yes" "Yes" "Yes" ...
+ $ trunk_road_flag                            : chr [1:192286] "Non-trunk" "Non-trunk" "Non-trunk" "Non-trunk" ...
+ $ lsoa_of_accident_location                  : chr [1:192286] "E01004576" "E01003034" "E01004726" "E01003617" ...
+ $ enhanced_severity_collision                : num [1:192286] -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 ...
+ $ datetime                                   : POSIXct[1:192286], format: "2020-02-04 09:00:00" "2020-04-27 13:55:00" ...
+ - attr(*, "spec")=
+  .. cols(
+  ..   accident_index = col_character(),
+  ..   accident_year = col_integer(),
+  ..   accident_reference = col_character(),
+  ..   location_easting_osgr = col_integer(),
+  ..   location_northing_osgr = col_integer(),
+  ..   longitude = col_integer(),
+  ..   latitude = col_integer(),
+  ..   police_force = col_character(),
+  ..   accident_severity = col_character(),
+  ..   number_of_vehicles = col_character(),
+  ..   number_of_casualties = col_character(),
+  ..   date = col_character(),
+  ..   day_of_week = col_character(),
+  ..   time = col_character(),
+  ..   local_authority_district = col_character(),
+  ..   local_authority_ons_district = col_character(),
+  ..   local_authority_highway = col_character(),
+  ..   first_road_class = col_character(),
+  ..   first_road_number = col_character(),
+  ..   road_type = col_character(),
+  ..   speed_limit = col_character(),
+  ..   junction_detail = col_character(),
+  ..   junction_control = col_character(),
+  ..   second_road_class = col_character(),
+  ..   second_road_number = col_character(),
+  ..   pedestrian_crossing_human_control = col_character(),
+  ..   pedestrian_crossing_physical_facilities = col_character(),
+  ..   light_conditions = col_character(),
+  ..   weather_conditions = col_character(),
+  ..   road_surface_conditions = col_character(),
+  ..   special_conditions_at_site = col_character(),
+  ..   carriageway_hazards = col_character(),
+  ..   urban_or_rural_area = col_character(),
+  ..   did_police_officer_attend_scene_of_accident = col_character(),
+  ..   trunk_road_flag = col_character(),
+  ..   lsoa_of_accident_location = col_character(),
+  ..   enhanced_severity_collision = col_double()
+  .. )
+ - attr(*, "problems")=&lt;externalptr&gt; </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(ac)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> [1] "accident_index"                             
  [2] "accident_year"                              
@@ -373,26 +485,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 [37] "enhanced_severity_collision"                
 [38] "datetime"                                   </code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># aggregate this by day to show </span></span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># how crash numbers varied over the year</span></span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>ac_by_year <span class="ot">=</span> ac <span class="sc">|&gt;</span></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(date) <span class="sc">|&gt;</span></span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_crashes =</span> <span class="fu">n</span>()</span>
-<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>ac_by_year <span class="sc">|&gt;</span></span>
-<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">N. crashes per year</span><span class="st">`</span> <span class="ot">=</span> n_crashes,</span>
-<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Week average</span><span class="st">`</span> <span class="ot">=</span> zoo<span class="sc">::</span><span class="fu">rollmean</span>(n_crashes, <span class="dv">7</span>, <span class="at">na.pad =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">Date =</span> date,</span>
-<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
-<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Date, <span class="at">y =</span> <span class="st">`</span><span class="at">N. crashes per year</span><span class="st">`</span>)) <span class="sc">+</span></span>
-<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
-<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)) <span class="sc">+</span></span>
-<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># geom_smooth() +</span></span>
-<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># weekly rolling average</span></span>
-<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(Date, <span class="st">`</span><span class="at">Week average</span><span class="st">`</span>), <span class="at">colour =</span> <span class="st">"blue"</span>) <span class="sc">+</span></span>
-<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># aggregate this by day to show </span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="co"># how crash numbers varied over the year</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>ac_by_year <span class="ot">=</span> ac <span class="sc">|&gt;</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(date) <span class="sc">|&gt;</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_crashes =</span> <span class="fu">n</span>()</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a>ac_by_year <span class="sc">|&gt;</span></span>
+<span id="cb51-9"><a href="#cb51-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb51-10"><a href="#cb51-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">N. crashes per year</span><span class="st">`</span> <span class="ot">=</span> n_crashes,</span>
+<span id="cb51-11"><a href="#cb51-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Week average</span><span class="st">`</span> <span class="ot">=</span> zoo<span class="sc">::</span><span class="fu">rollmean</span>(n_crashes, <span class="dv">7</span>, <span class="at">na.pad =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb51-12"><a href="#cb51-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">Date =</span> date,</span>
+<span id="cb51-13"><a href="#cb51-13" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">|&gt;</span> </span>
+<span id="cb51-14"><a href="#cb51-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> Date, <span class="at">y =</span> <span class="st">`</span><span class="at">N. crashes per year</span><span class="st">`</span>)) <span class="sc">+</span></span>
+<span id="cb51-15"><a href="#cb51-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>) <span class="sc">+</span></span>
+<span id="cb51-16"><a href="#cb51-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>)) <span class="sc">+</span></span>
+<span id="cb51-17"><a href="#cb51-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># geom_smooth() +</span></span>
+<span id="cb51-18"><a href="#cb51-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># weekly rolling average</span></span>
+<span id="cb51-19"><a href="#cb51-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(Date, <span class="st">`</span><span class="at">Week average</span><span class="st">`</span>), <span class="at">colour =</span> <span class="st">"red"</span>) <span class="sc">+</span></span>
+<span id="cb51-20"><a href="#cb51-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: Removed 6 rows containing missing values or values outside the scale range
 (`geom_line()`).</code></pre>
@@ -405,11 +517,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Updated plot with title and legend...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <section id="python-example" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Python example</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>casualty_type_py <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"B"</span>, <span class="st">"c"</span>]</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>casualty_type_py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>casualty_type_py <span class="op">=</span> [<span class="st">"a"</span>, <span class="st">"B"</span>, <span class="st">"c"</span>]</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>casualty_type_py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>['a', 'B', 'c']</code></pre>
 </div>
